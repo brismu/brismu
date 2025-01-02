@@ -38,10 +38,10 @@ seen = set()
 
 def visit(t):
     seen.add(t)
-    if t in m: print(t, "→", m[t])
+    if t in m: print(t.ljust(12), "→", m[t])
     else:
         for d in deps[t]:
             if d not in seen: visit(d)
-        print(t)
+        print(t.ljust(28), "(", " ".join(deps[t]), ")")
 
 visit(goal)

@@ -502,6 +502,11 @@ ${
       sbb2 sbb2 sbb1 sbb3 sbb2 id ganai-swap12.0 syl5com $.
 $}
 
+$( A closed version of ~ax-mp
+   (Contributed by la korvo, 1-Jan-2025.) $)
+mpc $p |- ganai broda gi ganai ganai broda gi brode gi brode $=
+  ( bgan id ganai-swap12 ) ABCZABFDE $.
+
 ${
     syl5.0 $e |- ganai broda gi brode $.
     syl5.1 $e |- ganai brodi gi ganai brode gi brodo $.
@@ -556,6 +561,57 @@ ${
        (Contributed by la korvo, 27-Jul-2023.) $)
     mp2 $p |- brodi $=
       sbb1 sbb3 mp2.0 sbb2 sbb1 sbb3 mp2.1 mp2.2 mpi ax-mp $.
+$}
+
+${
+    imim2d.1 $e |- ganai broda gi ganai brode gi brodi $.
+    $( A deduction.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    imim2d $p |- ganai broda gi
+      ganai ganai brodo gi brode gi ganai brodo gi brodi $=
+      ( bgan kd sd ) ADBCABCFDEGH $.
+$}
+
+$( A closed syllogism.
+   (Contributed by la korvo, 1-Jan-2025.) $)
+imim2 $p |- ganai ganai broda gi brode
+  gi ganai ganai brodi gi broda gi ganai brodi gi brode $=
+  ( bgan id imim2d ) ABDZABCGEF $.
+
+${
+    syldd.1 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    syldd.2 $e |- ganai broda gi ganai brode gi ganai brodo gi brodu $.
+    $( Deduction form of ~syld
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    syldd $p |- ganai broda gi ganai brode gi ganai brodi gi brodu $=
+      ( bgan imim2 syl6c ) ABDEHCDHCEHGFDECIJ $.
+$}
+
+${
+    syl5d.1 $e |- ganai broda gi ganai brode gi brodi $.
+    syl5d.2 $e |- ganai broda gi ganai brodo gi ganai brodi gi brodu $.
+    $( Deduction form of ~syl5
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    syl5d $p |- ganai broda gi ganai brodo gi ganai brode gi brodu $=
+      ( bgan kd syldd ) ADBCEABCHDFIGJ $.
+$}
+
+${
+    syl9.1 $e |- ganai broda gi ganai brode gi brodi $.
+    syl9.2 $e |- ganai brodo gi ganai brodi gi brodu $.
+    $( A syllogism.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    syl9 $p |- ganai broda gi ganai brodo gi ganai brode gi brodu $=
+      ( bgan ki syl5d ) ABCDEFDCEHHAGIJ $.
+$}
+
+${
+    ganai-swap23.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
+    $( Naturally swap the second and third antecedents in an internalized
+       inference.
+       (Contributed by la korvo, 30-Jul-2023.) $)
+    ganai-swap23 $p |- ganai broda gi ganai brodi gi ganai brode gi brodo $=
+      ( bgan mpc syl9 ) ABCDFCDECDGH $.
 $}
 
 $(
