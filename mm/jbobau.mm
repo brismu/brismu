@@ -2131,6 +2131,18 @@ ${
       ( nsyl3 con2i ) CAABCDEFG $.
 $}
 
+${
+    stewart.0 $e |- ganai broda gi brode $.
+    stewart.1 $e |- ganai brodi gi brodo $.
+    stewart.2 $e |- ganai brodu gi brodi $.
+    stewart.3 $e |- ganai brode gi naku zo'u brodo $.
+    $( A syllogism underlying the Swallowing Elephants puzzle from chapter 4
+    of [Stewart] p. 22.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    stewart $p |- ganai broda gi naku zo'u brodu $=
+      ( bnk syl nsyl ) ADEABDDJFIKECDHGKL $.
+$}
+
 $(
 #*#*#
 Mutual exclusion I
