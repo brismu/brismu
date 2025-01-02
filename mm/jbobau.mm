@@ -2087,6 +2087,50 @@ ${
       ( efqi ax-mp ) ABDABCEF $.
 $}
 
+${
+    con2d.1 $e |- ganai broda gi ganai brode gi naku zo'u brodi $.
+    $( A contrapositive deduction.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    con2d $p |- ganai broda gi ganai brodi gi naku zo'u brode $=
+      ( bnk bgan ax-efq syl6 ganai-swap23 ax-sdo ) ACBBBEZFKABCKABCCECKFDCKGHIB
+      JH $.
+$}
+
+${
+    mt2d.1 $e |- ganai broda gi brode $.
+    mt2d.2 $e |- ganai broda gi ganai brodi gi naku zo'u brode $.
+    $( Deduction form of modus tollens.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    mt2d $p |- ganai broda gi naku zo'u brodi $=
+      ( bnk con2d mpd ) ABCCFDACBEGH $.
+$}
+
+${
+    nsyl3.1 $e |- ganai broda gi naku zo'u brode $.
+    nsyl3.2 $e |- ganai brodi gi brode $.
+    $( A negated syllogism. Can be seen as a deduction form of modus tollens.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    nsyl3 $p |- ganai brodi gi naku zo'u broda $=
+      ( bnk bgan ki mt2d ) CBAEABBFGCDHI $.
+$}
+
+${
+    con2i.0 $e |- ganai broda gi naku zo'u brode $.
+    $( The standard contrapositive inference.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    con2i $p |- ganai brode gi naku zo'u broda $=
+      ( id nsyl3 ) ABBCBDE $.
+$}
+
+${
+    nsyl.1 $e |- ganai broda gi naku zo'u brode $.
+    nsyl.2 $e |- ganai brodi gi brode $.
+    $( A negated syllogism. Can be seen as a deduction form of modus tollens.
+       (Contributed by la korvo, 1-Jan-2025.) $)
+    nsyl $p |- ganai broda gi naku zo'u brodi $=
+      ( nsyl3 con2i ) CAABCDEFG $.
+$}
+
 $(
 #*#*#
 Mutual exclusion I
