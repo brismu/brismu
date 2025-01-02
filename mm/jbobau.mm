@@ -29,10 +29,6 @@ Conventions:
 * Operators have identities "-id", relations are reflexive "-refl"
 * Operators compose "-syl", relations are transitive "-trans"
 
-References to iset.mm are not just for comparison and contrast, but for
-borrowing; many minor lemmas can be proven by reusing steps from iset.mm.
-Formally, there's a functor from a fragment of iset.mm to jbobau.mm. Cite
-iset.mm as [ILE].
 $)
 
 $( $t
@@ -374,8 +370,7 @@ ${
 $}
 
 $( The principle of simplification. Known as the constant combinator, or K, in
-   combinator calculus.
-   Axiom ax-1 in [ILE] p. 0. $)
+   combinator calculus. $)
 ax-k $a |- ganai broda gi ganai brode gi broda $.
 
 ${
@@ -395,8 +390,7 @@ ${
       sbb2 sbb1 kii.1 sbb1 sbb2 kii.0 ki ax-mp $.
 $}
 
-$( Frege's axiom. Known as the S combinator in combinator calculus.
-   Axiom ax-2 in [ILE] p. 0. $)
+$( Frege's axiom. Known as the S combinator in combinator calculus. $)
 ax-s $a |- ganai ganai broda gi ganai brode gi brodi gi ganai ganai broda gi brode gi ganai broda gi brodi $.
 
 ${
@@ -485,7 +479,6 @@ $}
 ${
     kd.0 $e |- ganai broda gi brode $.
     $( Deductive form of ~ax-k
-       Theorem a1d in [ILE] p. 0.
        (Contributed by la korvo, 30-Jul-2023.) $)
     kd $p |- ganai broda gi ganai brodi gi brode $=
       sbb1 sbb2 sbb3 sbb2 bgan kd.0 sbb2 sbb3 ax-k syl $.
@@ -503,7 +496,7 @@ $}
 ${
     ganai-swap12.0 $e |- ganai broda gi ganai brode gi brodi $.
     $( Naturally swap the first and second antecedents in an internalized
-       inference. Theorem com12 in [ILE] p. 0.
+       inference.
        (Contributed by la korvo, 30-Jul-2023.) $)
     ganai-swap12 $p |- ganai brode gi ganai broda gi brodi $=
       sbb2 sbb2 sbb1 sbb3 sbb2 id ganai-swap12.0 syl5com $.
@@ -549,7 +542,7 @@ $}
 ${
     mpi.0 $e |- broda $.
     mpi.1 $e |- ganai brode gi ganai broda gi brodi $.
-    $( A nested modus ponens. Theorem mpi in [ILE] p. 0.
+    $( A nested modus ponens.
        (Contributed by la korvo, 27-Jul-2023.) $)
     mpi $p |- ganai brode gi brodi $=
       sbb2 sbb1 sbb3 sbb1 sbb2 mpi.0 ki mpi.1 mpd $.
@@ -559,7 +552,7 @@ ${
     mp2.0 $e |- broda $.
     mp2.1 $e |- brode $.
     mp2.2 $e |- ganai broda gi ganai brode gi brodi $.
-    $( Double modus ponens. Theorem mp2 in [ILE] p. 0.
+    $( Double modus ponens.
        (Contributed by la korvo, 27-Jul-2023.) $)
     mp2 $p |- brodi $=
       sbb1 sbb3 mp2.0 sbb2 sbb1 sbb3 mp2.1 mp2.2 mpi ax-mp $.
@@ -574,16 +567,14 @@ $)
 $c ge $.
 bge $a bridi ge broda gi brode $.
 
-$( Elimination of {` ge `} on the left. Curry of the left-hand projection.
-   Axiom ax-ia1 in [ILE] p. 0. $)
+$( Elimination of {` ge `} on the left. Curry of the left-hand projection. $)
 ax-ge-le $a |- ganai ge broda gi brode gi broda $.
 
 $( Elimination of {` ge `} on the right. Curry of the right-hand projection.
-   Axiom ax-ia2 in [ILE] p. 0. $)
+   $)
 ax-ge-re $a |- ganai ge broda gi brode gi brode $.
 
-$( Introduction of {` ge `}. Curry of the I combinator.
-   Axiom ax-ia3 in [ILE] p. 0. $)
+$( Introduction of {` ge `}. Curry of the I combinator. $)
 ax-ge-in $a |- ganai broda gi ganai brode gi ge broda gi brode $.
 
 ${
@@ -627,7 +618,7 @@ ${
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
 
-$( Conjunction implies implication. Theorem pm3.4 in [ILE] p. 0.
+$( Conjunction implies implication.
    (Contributed by la korvo, 22-Jun-2024.) $)
 ge-ganai $p |- ganai ge broda gi brode gi ganai broda gi brode $=
   ( bge ax-ge-re kd ) ABCBAABDE $.
@@ -640,7 +631,6 @@ ge-in-swap12 $p |- ganai broda gi ganai brode gi ge brode gi broda $=
 ${
     cur.0 $e |- ganai broda gi ganai brode gi brodi $.
     $( The natural curry (or "import") for any well-formed statement.
-       Theorem imp in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     cur $p |- ganai ge broda gi brode gi brodi $=
       ( bge ax-ge-le ax-ge-re sylc ) ABEABCABFABGDH $.
@@ -649,7 +639,6 @@ $}
 ${
     uncur.0 $e |- ganai ge broda gi brode gi brodi $.
     $( The natural uncurry (or "export") for any well-formed statement.
-       Theorem ex in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     uncur $p |- ganai broda gi ganai brode gi brodi $=
       ( bge ax-ge-in syl6 ) ABABECABFDG $.
@@ -740,7 +729,6 @@ ${
     $( Biconditional implication may be weakened to unidirectional implication.
        Category-theoretically, this theorem embeds the core of Loj.
        Inference form of left side of ~goli .
-       Theorem biimpi in [ILE] p. 0.
        (Contributed by la korvo, 17-Jul-2023.)
        (Shortened by la korvo, 29-Jul-2023.) $)
     go-ganai $p |- ganai broda gi brode $=
@@ -806,13 +794,12 @@ ${
     isod.0 $e |- ganai broda gi ganai brode gi brodi $.
     isod.1 $e |- ganai broda gi ganai brodi gi brode $.
     $( Deduction form of ~iso
-       Theorem impbid in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     isod $p |- ganai broda gi go brode gi brodi $=
       ( bgo isod-lem ganai-abs ) ABCFAABCDEGH $.
 $}
 
-$( {` go `} is reflexive. Theorem equid in [ILE] p. 0.
+$( {` go `} is reflexive.
    (Contributed by la korvo, 30-Jul-2023.) $)
 go-id $p |- go broda gi broda $=
   sbb1 sbb1 sbb1 id sbb1 id iso $.
@@ -830,7 +817,6 @@ go-com $p |- go go broda gi brode gi go brode gi broda $=
 ${
     go-comi.0 $e |- go broda gi brode $.
     $( Inference form of ~go-com
-       Theorem bicomi in [ILE] p. 0.
        (Contributed by la korvo, 31-Jul-2023.) $)
     go-comi $p |- go brode gi broda $=
       ( bgo go-com-lem ax-mp ) ABDBADCABEF $.
@@ -865,7 +851,6 @@ ${
     bi-rev.0 $e |- broda $.
     bi-rev.1 $e |- go brode gi broda $.
     $( Modus ponens in the other direction.
-       Theorem mpbir in [ILE] p. 0.
        (Contributed by la korvo, 16-Jul-2023.) $)
     bi-rev $p |- brode $=
       sbb1 sbb2 bi-rev.0 sbb2 sbb1 bi-rev.1 go-comi bi $.
@@ -874,7 +859,6 @@ $}
 ${
     bi-rev-syl.0 $e |- go broda gi brode $.
     $( The right-hand side of a {` go `} may also be weakened to a {` ganai `}.
-       Theorem biimpri in [ILE] p. 0.
        (Contributed by la korvo, 10-Jul-2023.) $)
     bi-rev-syl $p |- ganai brode gi broda $=
       sbb2 sbb1 sbb1 sbb2 bi-rev-syl.0 go-comi go-ganai $.
@@ -901,7 +885,7 @@ $}
 ${
     sylibr.0 $e |- ganai broda gi brode $.
     sylibr.1 $e |- go brodi gi brode $.
-    $( Apply a definition to a consequent. Theorem sylibr in [ILE] p. 0.
+    $( Apply a definition to a consequent.
        (Contributed by la korvo, 22-Jun-2024.) $)
     sylibr $p |- ganai broda gi brodi $=
       ( bi-rev-syl syl ) ABCDCBEFG $.
@@ -912,7 +896,6 @@ ${
     sylanbrc.1 $e |- ganai broda gi brodi $.
     sylanbrc.2 $e |- go brodo gi ge brode gi brodi $.
     $( Deductive unpacking of a definition with conjoined components.
-       Theorem sylanbrc in [ILE] p. 0.
        (Contributed by la korvo, 22-Jun-2024.) $)
     sylanbrc $p |- ganai broda gi brodo $=
       ( bge jca sylibr ) ABCHDABCEFIGJ $.
@@ -1329,8 +1312,7 @@ $)
 $c ga $.
 bga $a bridi ga broda gi brode $.
 
-$( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}.
-   Axiom ax-io in [ILE] p. 0. $)
+$( Definition of {` ga `} in terms of {` go `}, {` ganai `}, and {` ge `}. $)
 df-ga $a |- go ganai ga brode gi brodi gi broda gi ge ganai brode gi broda gi ganai brodi gi broda $.
 
 ${
@@ -1358,13 +1340,11 @@ ${
 $}
 
 $( Introduce {` ga `} with the antecedent on the left.
-   Theorem orc in [ILE] p. 0.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-lin $p |- ganai broda gi ga broda gi brode $=
   ( bga bgan bge id df-ga bi ge-lei ) AABCZDZBJDZJJDKLEJFJABGHI $.
 
 $( Introduce {` ga `} with the antecedent on the right.
-   Theorem olc in [ILE] p. 0.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-rin $p |- ganai broda gi ga brode gi broda $=
   ( bga bgan bge id df-ga bi ge-rei ) BBACZDZAJDZJJDKLEJFJBAGHI $.
@@ -1724,12 +1704,12 @@ ${
     ax-gen2 $a |- ro bu'a zo'u broda $.
 $}
 
-$( Axiom of first-order specialization. Axiom ax-4 in [ILE] p. 0. $)
+$( Axiom of first-order specialization. $)
 ax-spec1 $a |- ganai ro da zo'u broda gi broda $.
 
 ${
     spec1i.0 $e |- ro da zo'u broda $.
-    $( Inference form of ~ax-spec1 Theorem spi in [ILE] p. 0.
+    $( Inference form of ~ax-spec1
        (Contributed by la korvo, 22-Jun-2024.) $)
     spec1i $p |- broda $=
       ( brd ax-spec1 ax-mp ) ABADACABEF $.
@@ -1750,8 +1730,7 @@ $( Axiom of quantified implication: if {` ganai broda gi brode `} under some
    universal quantifier, then the universal quantification of {` broda `}
    implies the universal quantification of {` brode `}. Relationally, the
    tuples of the consequent might not have the same data as the tuples of the
-   antecedent; we only know that they exist, not that they are related.
-   Axiom ax-5 in [ILE] p. 0. $)
+   antecedent; we only know that they exist, not that they are related. $)
 ax-qi1 $a |- ganai ro da zo'u ganai broda gi brode
   gi ganai ro da zo'u broda gi ro da zo'u brode $.
 
@@ -2018,8 +1997,7 @@ $( The principle of self-defeating objects. If an object's existence would
    imply that it doesn't exist -- usually via contradiction -- then it doesn't
    exist. As a special case, if some tuple's membership in a relation would
    imply non-membership in that relation, then it's not a member. For a survey
-   of this principle across maths, see [Tao].
-   Axiom ax-in1 in [ILE] p. 0. $)
+   of this principle across maths, see [Tao]. $)
 ax-sdo $a |- ganai ganai broda gi naku zo'u broda gi naku zo'u broda $.
 
 ${
@@ -2073,8 +2051,7 @@ bgon $a bridi gonai broda gi brode $.
 
 $( Standard constructive definition of mutual exclusion ("the exclusive OR"),
    based on the mnemonic given to computer scientists in the USA and UK:
-   "It's cake or tea, but not cake and tea."
-   Definition df-xor in [ILE] p. 0. $)
+   "It's cake or tea, but not cake and tea." $)
 df-gonai $a |- go gonai broda gi brode
   gi ge ga broda gi brode gi naku zo'u ge broda gi brode $.
 
@@ -2980,11 +2957,10 @@ ${
 $}
 
 $( The axiom of existence: at least one element exists in the universe.
-   This is necessary if we want to exclude the trivial empty model.
-   Axiom ax-i9 in [ILE] p. 0. $)
+   This is necessary if we want to exclude the trivial empty model. $)
 ax-ex $a |- su'o da zo'u da du de $.
 
-$( {` su'o da zo'u `} binds {` da `}. Axiom ax-ie1 in [ILE] p. 0. $)
+$( {` su'o da zo'u `} binds {` da `}. $)
 ax-eb $a |- ganai su'o da zo'u broda gi ro da zo'u su'o da zo'u broda $.
 
 ${
@@ -2996,7 +2972,7 @@ ${
 $}
 
 $( Extensional definition of existential quantification in terms of universal
-   quantification. Axiom ax-ie2 in [ILE] p. 0. $)
+   quantification. $)
 ax-eq $a |- ganai ro da zo'u ganai broda gi ro da zo'u broda
   gi go ro da zo'u ganai brode gi broda gi ganai su'o da zo'u brode gi broda $.
 
@@ -3011,7 +2987,7 @@ $}
 
 ${
     eqih.0 $e |- ganai broda gi ro da zo'u broda $.
-    $( Reduced inference from ~ax-eq Theorem 19.23h in [ILE] p. 0.
+    $( Reduced inference from ~ax-eq
        (Contributed by la korvo, 22-Jun-2024.) $)
     eqih $p |- go ro da zo'u ganai brode gi broda
       gi ganai su'o da zo'u brode gi broda $=
@@ -3019,7 +2995,6 @@ ${
 $}
 
 $( Due to ~ax-ex there will always be a spurious witness to any true bridi.
-   Theorem 19.8a in [ILE] p. 0.
    (Contributed by la korvo, 23-Jun-2024.) $)
 wit $p |- ganai broda gi su'o da zo'u broda $=
   ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABACZDZBKKDLBLEKFKABABGHIJ $.
@@ -3054,7 +3029,7 @@ ${
   ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBIZCNJIDABCKL $.
 $}
 
-$( Property of proper substitution. Theorem sb1 in [ILE] p. 0.
+$( Property of proper substitution.
    (Contributed by la korvo, 25-Jun-2024.) $)
 sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
   ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHZCPIZMOQHA
@@ -3068,7 +3043,7 @@ subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
   ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
   ZNBHZCPIZHZNBABCJRNBOQKLM $.
 
-$( An identity for substitutions. Theorem sbid in [ILE] p. 0.
+$( An identity for substitutions.
    (Contributed by la korvo, 22-Jun-2024.) $)
 subid $p |- go [ da / da ] broda gi broda $=
   ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 isod ax-mp go-comi ) ABABCZBBDEZAM
@@ -3098,7 +3073,6 @@ ${
     bi-revg.0 $e |- go broda gi ro da zo'u brode $.
     bi-revg.1 $e |- brode $.
     $( ~bi-rev with generalization on the RHS.
-       Theorem mpgbir in [ILE] p. 0.
        (Contributed by la korvo, 25-Jun-2024.) $)
     bi-revg $p |- broda $=
       ( brd ax-gen1 bi-rev ) BCBFABCEGDH $.
@@ -3149,7 +3123,7 @@ ${
       ( brd efqi nfi ) ABAABADCEF $.
 $}
 
-$( The true relation is closed. Theorem nftru in [ILE] p. 0.
+$( The true relation is closed.
    (Contributed by la korvo, 25-Jun-2024.) $)
 ceihi-nf $p |- na'a'u da zo'u cei'i $=
   ( bceihi ceihi nfth ) BACD $.
