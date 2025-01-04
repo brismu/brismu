@@ -1947,6 +1947,9 @@ ${
       ( sbba bu duis go-syl duris ) ACFAFGBFGCFGABFDHBCFEHIJ $.
 $}
 
+$( An internal version of ~du-trans not known to be provable on its own. $)
+ax-du-trans $a |- ganai ko'a du ko'e gi ganai ko'e du ko'i gi ko'a du ko'i $.
+
 ${
     du-sym.0 $e |- ko'a du ko'e $.
     $( {` du `} is symmetric.
@@ -1964,6 +1967,10 @@ ${
     se-du-elim $p |- ko'a du ko'e $=
       wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei du-sym $.
 $}
+
+$( An axiom of variable substitution. $)
+ax-vsub $a |- ganai da du de gi
+  ganai ro de zo'u broda gi ro da zo'u ganai da du de gi broda $.
 
 $(
 #*#*#
@@ -3246,6 +3253,20 @@ $( The true relation is closed.
    (Contributed by la korvo, 25-Jun-2024.) $)
 ceihi-nf $p |- na'a'u da zo'u cei'i $=
   ( bceihi ceihi nfth ) BACD $.
+
+${
+    $d da broda $.
+
+    $( Special case of first-order generalization where the quantified
+    variable does not occur in the bridi. $)
+    ax-dgen1 $a |- ganai broda gi ro da zo'u broda $.
+
+    $( If a variable does not occur in a bridi, then it is neither free nor
+    bound in that bridi.
+       (Contributed by la korvo, 3-Jan-2025.) $)
+    nfv $p |- na'a'u da zo'u broda $=
+      ( ax-dgen1 nfi ) ABABCD $.
+$}
 
 $(
 #*#*#
