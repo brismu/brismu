@@ -31,7 +31,7 @@ try:
                 vs.append(token)
                 token = next(it)
             if vs[0] == "(": vs = vs[1:vs.index(")") + 1]
-            deps[k] = [v for v in vs if v in deps]
+            deps[k] = [v for v in vs if v in deps or v.startswith("ax-")]
 except StopIteration: pass
 
 seen = set()

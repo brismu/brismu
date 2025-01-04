@@ -4802,6 +4802,66 @@ df-kihirvlina $a |-
 
 $(
 #*#*#
+Complex numbers
+#*#*#
+$)
+
+$(
+=-=-=
+Complex number predicate: {lujna'u}
+=-=-=
+$)
+
+$c lujna'u ka'o $.
+
+sblujnahu $a selbri lujna'u $.
+
+${
+    pc.0 $e PA ku'i'a $.
+    pc.1 $e PA ku'i'e $.
+
+    $( Syntax for complex numbers.
+       (Contributed by la korvo, 3-Jan-2025.) $)
+    pc $a PA ku'i'a ka'o ku'i'e $.
+$}
+
+$( One is a complex number. One of Megill's axioms. $)
+ax-comp-pa $a |- li pa ka'o no lujna'u $.
+
+$( The imaginary unit is a complex number. One of Megill's axioms. $)
+ax-comp-kaho $a |- li no ka'o pa lujna'u $.
+
+$( Complex numbers are closed under addition. One of Megill's axioms. $)
+ax-comp-suhi $a |- ganai li ku'i'a .e li ku'i'e lujna'u gi li su'i ku'i'a ku'i'e lujna'u $.
+
+$( Complex numbers are closed under multiplication. One of Megill's axioms. $)
+ax-comp-pihi $a |- ganai li ku'i'a .e li ku'i'e lujna'u gi li pi'i ku'i'a ku'i'e lujna'u $.
+
+$( The imaginary unit is a square root of negative one. One of Megill's
+axioms. $)
+ax-comp-i2m1 $a |- li su'i pi'i no ka'o pa no ka'o pa pa du li no $.
+
+$( One is not zero. One of Megill's axioms. $)
+ax-comp-1ne0 $a |- naku zo'u li pa du li no $.
+
+$(
+=-=-=
+Real number predicate: {mrena'u}
+=-=-=
+$)
+
+$c mrena'u $.
+
+sbmrenahu $a selbri mrena'u $.
+
+$( Real numbers are closed under addition. One of Megill's axioms. $)
+ax-real-suhi $a |- ganai li ku'i'a .e li ku'i'e mrena'u gi li su'i ku'i'a ku'i'e mrena'u $.
+
+$( Real numbers are closed under multiplication. One of Megill's axioms. $)
+ax-real-pihi $a |- ganai li ku'i'a .e li ku'i'e mrena'u gi li pi'i ku'i'a ku'i'e mrena'u $.
+
+$(
+#*#*#
 Functions I
 #*#*#
 $)
