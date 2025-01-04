@@ -1755,6 +1755,15 @@ ${
 $}
 
 ${
+    mpg1.0 $e |- ganai ro da zo'u broda gi brode $.
+    mpg1.1 $e |- broda $.
+    $( Modus ponens with generalization.
+       (Contributed by la korvo, 3-Jan-2025.) $)
+    mpg1 $p |- brode $=
+      ( brd ax-gen1 ax-mp ) ACAFBACEGDH $.
+$}
+
+${
     ax-gen2.0 $e |- broda $.
     $( Axiom of second-order generalization. $)
     ax-gen2 $a |- ro bu'a zo'u broda $.
@@ -3213,14 +3222,12 @@ $}
 
 ${
     hbth.0 $e |- broda $.
+
     $( Hypothesis builder: theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
     hbth $p |- ganai broda gi ro da zo'u broda $=
       ( brd ax-gen1 ki ) ABADAABCEF $.
-$}
 
-${
-    nfth.0 $e |- broda $.
     $( Theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfth $p |- na'a'u da zo'u broda $=

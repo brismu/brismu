@@ -35,13 +35,18 @@ try:
 except StopIteration: pass
 
 seen = set()
+missing = 0
 
 def visit(t):
+    global missing
     seen.add(t)
-    if t in m: print(t.ljust(12), "→", m[t])
+    if t in m:
+        if missing < 50: print(t.ljust(12), "→", m[t])
     else:
         for d in deps[t]:
             if d not in seen: visit(d)
-        print(t.ljust(28), "(", " ".join(deps[t]), ")")
+        if missing < 50: print(t.ljust(28), "(", " ".join(deps[t]), ")")
+        missing += 1
 
 visit(goal)
+print("Total leaves in tree:", len(seen), "Missing theorems:", missing)
