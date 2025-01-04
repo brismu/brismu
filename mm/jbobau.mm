@@ -2085,11 +2085,8 @@ $c gai'o naku $.
 
 bgaiho $a bridi gai'o $.
 
-${
-    bnk.0 $e bridi broda $.
-    $( Syntax for negation over an empty row of quantifiers. $)
-    bnk $a bridi naku zo'u broda $.
-$}
+$( Syntax for negation over an empty row of quantifiers. $)
+bnk $a bridi naku zo'u broda $.
 
 $( Traditional definition of intuitionistic negation. $)
 df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
@@ -2097,13 +2094,13 @@ df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
 $( Uncurried form of ~df-naku
    (Contributed by la korvo, 20-Aug-2023.) $)
 naku-uncur $p |- ganai ge naku zo'u broda gi broda gi gai'o $=
-  ( bnk bgaiho bgan df-naku go-ganai cur ) AABZACHACDAEFG $.
+  ( bnk bgaiho bgan df-naku go-ganai cur ) ABZACHACDAEFG $.
 
 $( The law of non-contradiction. No bridi is simultaneously inhabited and
    uninhabited.
    (Contributed by la korvo, 19-Sep-2024.) $)
 lnc $p |- naku zo'u ge naku zo'u broda gi broda $=
-  ( bnk bge bgaiho bgan naku-uncur df-naku bi-rev ) AABACZDEIIBAFIGH $.
+  ( bnk bge bgaiho bgan naku-uncur df-naku bi-rev ) ABACZDEIBAFIGH $.
 
 ${
     lnci.0 $e |- ge broda gi naku zo'u broda $.
@@ -2111,7 +2108,7 @@ ${
        and uninhabited, then we reach an absurdity.
        (Contributed by la korvo, 20-Aug-2023.) $)
     lnci $p |- gai'o $=
-      ( bnk bge bgaiho ge-com bi naku-uncur ax-mp ) AACZADZEAJDKBAJFGAHI $.
+      ( bnk bge bgaiho ge-com bi naku-uncur ax-mp ) ACZADZEAJDKBAJFGAHI $.
 $}
 
 ${
@@ -2119,7 +2116,7 @@ ${
     $( Inference form of ~df-naku
        (Contributed by la korvo, 9-Aug-2023.) $)
     nakui $p |- ganai broda gi gai'o $=
-      ( bnk bgaiho bgan df-naku bi ) AACADEBAFG $.
+      ( bnk bgaiho bgan df-naku bi ) ACADEBAFG $.
 $}
 
 ${
@@ -2136,7 +2133,7 @@ ${
     $( Reverse inference form of ~df-naku
        (Contributed by la korvo, 9-Aug-2023.) $)
     nakuri $p |- naku zo'u broda $=
-      ( bgaiho bgan bnk df-naku bi-rev ) ACDAAEBAFG $.
+      ( bgaiho bgan bnk df-naku bi-rev ) ACDAEBAFG $.
 $}
 
 $( {` gai'o `} is uninhabited.
@@ -2156,7 +2153,7 @@ ${
     $( Inference form of ~ax-sdo
        (Contributed by la korvo, 9-Aug-2023.) $)
     sdoi $p |- naku zo'u broda $=
-      ( bnk bgan ax-sdo ax-mp ) AAACZDGBAEF $.
+      ( bnk bgan ax-sdo ax-mp ) AACZDGBAEF $.
 $}
 
 $( The principle of explosion. If a tuple both is and is not a member of some
@@ -2170,7 +2167,7 @@ ${
     $( Inference form of ~ax-efq
        (Contributed by la korvo, 25-Jun-2024.) $)
     efqi $p |- ganai broda gi brode $=
-      ( bnk bgan ax-efq ax-mp ) AADABECABFG $.
+      ( bnk bgan ax-efq ax-mp ) ADABECABFG $.
 $}
 
 ${
@@ -2187,8 +2184,8 @@ ${
     $( A contrapositive deduction.
        (Contributed by la korvo, 1-Jan-2025.) $)
     con2d $p |- ganai broda gi ganai brodi gi naku zo'u brode $=
-      ( bnk bgan ax-efq syl6 ganai-swap23 ax-sdo ) ACBBBEZFKABCKABCCECKFDCKGHIB
-      JH $.
+      ( bnk bgan ax-efq syl6 ganai-swap23 ax-sdo ) ACBBEZFKABCKABCECKFDCKGHIBJH
+      $.
 $}
 
 ${
@@ -2197,7 +2194,7 @@ ${
     $( Deduction form of modus tollens.
        (Contributed by la korvo, 1-Jan-2025.) $)
     mt2d $p |- ganai broda gi naku zo'u brodi $=
-      ( bnk con2d mpd ) ABCCFDACBEGH $.
+      ( bnk con2d mpd ) ABCFDACBEGH $.
 $}
 
 ${
@@ -2206,7 +2203,7 @@ ${
     $( A negated syllogism. Can be seen as a deduction form of modus tollens.
        (Contributed by la korvo, 1-Jan-2025.) $)
     nsyl3 $p |- ganai brodi gi naku zo'u broda $=
-      ( bnk bgan ki mt2d ) CBAEABBFGCDHI $.
+      ( bnk bgan ki mt2d ) CBAEABFGCDHI $.
 $}
 
 ${
@@ -2220,7 +2217,7 @@ $}
 $( Double negation is a functor.
    (Contributed by la korvo, 4-Jan-2025.) $)
 nakunaku $p |- ganai broda gi naku zo'u naku zo'u broda $=
-  ( bnk id con2i ) AABZAECD $.
+  ( bnk id con2i ) ABZAECD $.
 
 ${
     nsyl.1 $e |- ganai broda gi naku zo'u brode $.
@@ -2240,7 +2237,7 @@ ${
     of [Stewart] p. 22.
        (Contributed by la korvo, 1-Jan-2025.) $)
     stewart $p |- ganai broda gi naku zo'u brodu $=
-      ( bnk syl nsyl ) ADEABDDJFIKECDHGKL $.
+      ( bnk syl nsyl ) ADEABDJFIKECDHGKL $.
 $}
 
 $(
@@ -2272,7 +2269,7 @@ ${
     $( Inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonaii $p |- ge ga broda gi brode gi naku zo'u ge broda gi brode $=
-      ( bgon bga bge bnk df-gonai bi ) ABDABEABFZJGFCABHI $.
+      ( bgon bga bge bnk df-gonai bi ) ABDABEABFGFCABHI $.
 $}
 
 ${
@@ -2280,7 +2277,7 @@ ${
     $( Inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonaiil $p |- ga broda gi brode $=
-      ( bga bge bnk gonaii ge-lei ) ABDABEZIFABCGH $.
+      ( bga bge bnk gonaii ge-lei ) ABDABEFABCGH $.
 $}
 
 ${
@@ -2288,7 +2285,7 @@ ${
     $( Inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonaiir $p |- naku zo'u ge broda gi brode $=
-      ( bga bge bnk gonaii ge-rei ) ABDABEZIFABCGH $.
+      ( bga bge bnk gonaii ge-rei ) ABDABEFABCGH $.
 $}
 
 ${
@@ -2296,7 +2293,7 @@ ${
     $( Reverse inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonairi $p |- gonai broda gi brode $=
-      ( bga bge bnk bgon df-gonai bi-rev ) ABDABEZJFEABGCABHI $.
+      ( bga bge bnk bgon df-gonai bi-rev ) ABDABEFEABGCABHI $.
 $}
 
 $(
