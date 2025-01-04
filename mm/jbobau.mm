@@ -2138,6 +2138,11 @@ ${
       ( id nsyl3 ) ABBCBDE $.
 $}
 
+$( Double negation is a functor.
+   (Contributed by la korvo, 4-Jan-2025.) $)
+nakunaku $p |- ganai broda gi naku zo'u naku zo'u broda $=
+  ( bnk id con2i ) AABZAECD $.
+
 ${
     nsyl.1 $e |- ganai broda gi naku zo'u brode $.
     nsyl.2 $e |- ganai brodi gi brode $.

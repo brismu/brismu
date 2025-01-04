@@ -6,8 +6,8 @@ from Lojban syntax. Specifically, it is the poset
 [nLab](https://ncatlab.org/nlab/show/partial+order)) whose:
 
 * objects are equivalence classes of
-  [closed](https://en.wikipedia.org/wiki/Free_variables_and_bound_variables) well-formed bridi, and
-* arrows are implications from one bridi to another.
+  [closed](https://en.wikipedia.org/wiki/Free_variables_and_bound_variables) well-formed *bridi*, and
+* arrows are implications from one *bridi* to another.
 
 To read Metamath theorems as statements about **Loj**, encode:
 
@@ -21,7 +21,7 @@ non-thin. This is not a serious issue.
 
 ## Table of proofs
 
-Metamath statement | Lojban bridi | What it means
+Metamath statement | Lojban *bridi* | What it means
 ---|---|---
 ~id | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
 ~syl | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
@@ -53,8 +53,8 @@ The [core](https://ncatlab.org/nlab/show/core+groupoid) of a category is the
 groupoid which includes all of its isomorphisms. The core of **Loj**, written
 **Core(Loj)**, is the groupoid whose:
 
-* objects are equivalence classes of bridi, and
-* arrows are bi-implications from one bridi to another.
+* objects are equivalence classes of *bridi*, and
+* arrows are bi-implications from one *bridi* to another.
 
 To read Metamath theorems as statements about **Core(Loj)**, encode:
 
@@ -64,9 +64,29 @@ To read Metamath theorems as statements about **Core(Loj)**, encode:
 
 ### Table of proofs
 
-Metamath statement | Lojban bridi | What it means
+Metamath statement | Lojban *bridi* | What it means
 ---|---|---
 ~go-id | {go broda gi broda} | identity arrows exist
 ~go-syl | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
 ~go-ganai | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
 ~go-comi | {go broda gi brode} => {go brode gi broda} | the core is its own opposite category
+
+## Double Negation
+
+Negating a *bridi* twice, known as double negation
+([WP](https://en.wikipedia.org/wiki/Double-negation_translation),
+[nLab](https://ncatlab.org/nlab/show/double+negation+translation)), is a
+functorial action which maps classical logic to intuitionistic logic. It can
+also be constructed as an endofunctor on intuitionistic logic, which yields a
+[continuation monad](https://ncatlab.org/nlab/show/continuation+monad). The
+functor's image yields a category whose:
+
+* objects are (equivalence classes of) refutations of supposed counterexamples
+  to *bridi*, and
+* arrows are implications from one refutation-equipped *bridi* to another.
+
+### Table of proofs
+
+Metamath statement | Lojban *bridi* | What it means
+---|---|---
+~nakunaku | {ganai broda gi naku zo'u naku zo'u broda} | the functor exists and is covariant
