@@ -418,6 +418,11 @@ $( The principle of identity. This is distantly related to, but not the same
 id $p |- ganai broda gi broda $=
   ( sbb2 bgan ax-k mpd ) ABACZAABDAFDE $.
 
+$( Deduction form of ~id
+   (Contributed by la korvo, 4-Jan-2025.) $)
+idd $p |- ganai broda gi ganai brode gi brode $=
+  ( bgan id ki ) BBCABDE $.
+
 ${
     syl.0 $e |- ganai broda gi brode $.
     syl.1 $e |- ganai brode gi brodi $.
@@ -827,6 +832,14 @@ bi3 $p |- ganai
   gi ganai ganai brode gi broda
     gi go broda gi brode $=
   ( bgan bgo bge df-go ge-rei uncur ) ABCZBACZABDZKIJEZCLKCABFGH $.
+
+${
+    go-ganaid.0 $e |- ganai broda gi go brode gi brodi $.
+    $( Deduction form of ~go-ganai
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    go-ganaid $p |- ganai broda gi ganai brode gi brodi $=
+      ( bgo bgan bi1 syl ) ABCEBCFDBCGH $.
+$}
 
 ${
     isodd.0 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
@@ -1429,6 +1442,34 @@ $( {` ga `} commutes.
 ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
   ( bga ga-com-lem iso ) ABCBACABDBADE $.
 
+${
+    ga-i.0 $e |- broda $.
+
+    $( Deduce a disjunction on the left.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    ga-li $p |- ga broda gi brode $=
+      ( bga ga-lin ax-mp ) AABDCABEF $.
+
+    $( Deduce a disjunction on the right.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    ga-ri $p |- ga brode gi broda $=
+      ( bga ga-rin ax-mp ) ABADCABEF $.
+$}
+
+${
+    ga-id.0 $e |- ganai broda gi brode $.
+
+    $( Deduction form of ~ga-li
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    ga-lid $p |- ganai broda gi ga brode gi brodi $=
+      ( bga ga-lin syl ) ABBCEDBCFG $.
+
+    $( Deduction form of ~ga-ri
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    ga-rid $p |- ganai broda gi ga brodi gi brode $=
+      ( bga ga-rin syl ) ABCBEDBCFG $.
+$}
+
 $(
 =-=-=
 {.a}
@@ -1780,6 +1821,14 @@ ${
       ( brd ax-spec1 ax-mp ) ABADACABEF $.
 $}
 
+${
+    spec1d.0 $e |- ganai broda gi ro da zo'u brode $.
+    $( Deduction form of ~ax-spec1
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    spec1d $p |- ganai broda gi brode $=
+      ( brd ax-spec1 syl ) ABCBEBDBCFG $.
+$}
+
 $( Axiom of second-order specialization, by analogy with ~ax-spec1 $)
 ax-spec2 $a |- ganai ro bu'a zo'u broda gi broda $.
 
@@ -1885,6 +1934,10 @@ ${
       ( go-comi go-ganai ro2-mp ) ABCDABBAEFGH $.
 $}
 
+$( First-order universal quantifiers commute. $)
+ax-ro1-com $a |- ganai ro da zo'u ro de zo'u broda
+  gi ro de zo'u ro da zo'u broda $.
+
 $(
 #*#*#
 Identity: {du}
@@ -1947,17 +2000,27 @@ ${
       ( sbba bu duis go-syl duris ) ACFAFGBFGCFGABFDHBCFEHIJ $.
 $}
 
-$( An internal version of ~du-trans not known to be provable on its own. $)
-ax-du-trans $a |- ganai ko'a du ko'e gi ganai ko'e du ko'i gi ko'a du ko'i $.
+$( A not-quite-transitive law of equality. $)
+ax-du-trans $a |- ganai ko'a du ko'e gi ganai ko'a du ko'i gi ko'e du ko'i $.
 
 ${
-    du-sym.0 $e |- ko'a du ko'e $.
+    du-symi.0 $e |- ko'a du ko'e $.
     $( {` du `} is symmetric.
        (Contributed by la korvo, 16-Aug-2023.)
        (Shortened by la korvo, 23-Jun-2024.) $)
-    du-sym $p |- ko'e du ko'a $=
+    du-symi $p |- ko'e du ko'a $=
       ( sbba bu duis go-comi duris ) BADADEBDEABDCFGH $.
 $}
+
+$( An internal version of ~du-symi
+   (Contributed by la korvo, 4-Jan-2025.) $)
+du-sym-ganai $p |- ganai ko'a du ko'e gi ko'e du ko'a $=
+  ( sbdu bb du-refl ax-du-trans mpi ) AACDABCDBACDAEABAFG $.
+
+$( An internal version of ~du-symi
+   (Contributed by la korvo, 4-Jan-2025.) $)
+du-sym-go $p |- go ko'a du ko'e gi ko'e du ko'a $=
+  ( sbdu bb du-sym-ganai iso ) ABCDBACDABEBAEF $.
 
 ${
     se-du-elim.0 $e |- ko'a se du ko'e $.
@@ -1965,12 +2028,19 @@ ${
        Theorem Cat.Allegory.Base.dual-id in [1Lab] p. 0.
        (Contributed by la korvo, 9-Jul-2023.) $)
     se-du-elim $p |- ko'a du ko'e $=
-      wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei du-sym $.
+      wk2 wk1 wk2 wk1 sbdu se-du-elim.0 sei du-symi $.
 $}
 
 $( An axiom of variable substitution. $)
 ax-vsub $a |- ganai da du de gi
   ganai ro de zo'u broda gi ro da zo'u ganai da du de gi broda $.
+
+$( First-order quantifier substitution. $)
+ax-ro1-sub $a |- ganai ro da zo'u da du de gi ro de zo'u de du da $.
+
+$( First-order universal quantifier introduction with a scope gadget. $)
+ax-ro-int $a |- ga ro di zo'u di du da gi ga ro di zo'u di du de
+  gi ro di zo'u ganai da du de gi ro di zo'u da du de $.
 
 $(
 #*#*#
@@ -1983,13 +2053,22 @@ bceihi $a bridi cei'i $.
 
 $( The predicate which is always true. Note that both sides are relational:
    the left-hand side definitionally only has one inhabitant, so this
-   definition asserts that {` ko'a du ko'a `} is only true via one path. $)
+   definition asserts that {` ko'a du ko'a `} is only true via one path. For
+   related statements which reinforce this idea, see ~ceihi or ~ceihi-nf . $)
 df-ceihi $a |- go cei'i gi ko'a du ko'a $.
 
 $( {` cei'i `} is always true.
    (Contributed by la korvo, 18-Jul-2023.) $)
 ceihi $p |- cei'i $=
   wk1 wk1 sbdu bb bceihi wk1 du-refl wk1 df-ceihi bi-rev $.
+
+${
+    mp-ceihi.0 $e |- ganai cei'i gi broda $.
+    $( A proposition implied by {` cei'i `} is always true.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    mp-ceihi $p |- broda $=
+      ( bceihi ceihi ax-mp ) CADBE $.
+$}
 
 $(
 #*#*#
@@ -2353,6 +2432,10 @@ sbcmima $a selbri cmima $.
 sbselcmi $a selbri selcmi $.
 
 df-selcmi $a |- go ko'a selcmi ko'e gi ko'a se cmima ko'e $.
+
+$( The Axiom of Extensionality: If no elements differ in elementhood for two
+sets, then they are the same set. $)
+ax-cmima-ext $a |- ganai ro da zo'u da cmima ko'a .o ko'e gi ko'a du ko'e $.
 
 $(
 =-=-=
