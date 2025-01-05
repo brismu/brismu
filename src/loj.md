@@ -25,6 +25,7 @@ Metamath statement | Lojban *bridi* | What it means
 ---|---|---
 ~id | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
 ~syl | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
+~k-ceihi | {ganai broda gi cei'i} | trivial truth is the terminal object
 ~iso | {ganai broda gi brode} & {ganai brode gi broda} => {go broda gi brode} | isomorphisms are allowed
 ~ax-ge-le | {ganai ge broda gi brode gi broda} | conjunction is a left lower bound
 ~ax-ge-re | {ganai ge broda gi brode gi brode} | conjunction is a right lower bound
@@ -89,4 +90,4 @@ functor's image yields a category whose:
 
 Metamath statement | Lojban *bridi* | What it means
 ---|---|---
-~nakunaku | {ganai broda gi naku zo'u naku zo'u broda} | the functor exists and is covariant
+~nakunaku | {ganai broda gi naku naku broda} | the functor exists and is covariant

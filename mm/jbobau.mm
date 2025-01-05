@@ -382,6 +382,15 @@ ${
 $}
 
 ${
+    mpki.0 $e |- broda $.
+    mpki.1 $e |- ganai broda gi brode $.
+    $( Discharge a proven antecedent and replace it with another one.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    mpki $p |- ganai brodi gi brode $=
+      ( ax-mp ki ) BCABDEFG $.
+$}
+
+${
     kii.0 $e |- broda $.
     kii.1 $e |- brode $.
     $( Inference form of ~ki
@@ -1938,6 +1947,14 @@ $( First-order universal quantifiers commute. $)
 ax-ro1-com $a |- ganai ro da zo'u ro de zo'u broda
   gi ro de zo'u ro da zo'u broda $.
 
+${
+    ro1-coms.0 $e |- ganai ro da zo'u ro de zo'u broda gi brode $.
+    $( Swap quantifiers on the antecedent.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    ro1-coms $p |- ganai ro de zo'u ro da zo'u broda gi brode $=
+      ( brd ax-ro1-com syl ) ACAFZDIFADAFZCJFBADCGEH $.
+$}
+
 $(
 #*#*#
 Identity: {du}
@@ -2070,6 +2087,11 @@ ${
       ( bceihi ceihi ax-mp ) CADBE $.
 $}
 
+$( {` cei'i `} is the terminal object.
+   (Contributed by la korvo, 4-Jan-2025.) $)
+k-ceihi $p |- ganai broda gi cei'i $=
+  ( bceihi ceihi ki ) BACD $.
+
 $(
 #*#*#
 Negation I: {gai'o}, {naku}
@@ -2086,24 +2108,24 @@ $c gai'o naku $.
 bgaiho $a bridi gai'o $.
 
 $( Syntax for negation over an empty row of quantifiers. $)
-bnk $a bridi naku zo'u broda $.
+bnk $a bridi naku broda $.
 
 $( Traditional definition of intuitionistic negation. $)
-df-naku $a |- go naku zo'u broda gi ganai broda gi gai'o $.
+df-naku $a |- go naku broda gi ganai broda gi gai'o $.
 
 $( Uncurried form of ~df-naku
    (Contributed by la korvo, 20-Aug-2023.) $)
-naku-uncur $p |- ganai ge naku zo'u broda gi broda gi gai'o $=
+naku-uncur $p |- ganai ge naku broda gi broda gi gai'o $=
   ( bnk bgaiho bgan df-naku go-ganai cur ) ABZACHACDAEFG $.
 
 $( The law of non-contradiction. No bridi is simultaneously inhabited and
    uninhabited.
    (Contributed by la korvo, 19-Sep-2024.) $)
-lnc $p |- naku zo'u ge naku zo'u broda gi broda $=
+lnc $p |- naku ge naku broda gi broda $=
   ( bnk bge bgaiho bgan naku-uncur df-naku bi-rev ) ABACZDEIBAFIGH $.
 
 ${
-    lnci.0 $e |- ge broda gi naku zo'u broda $.
+    lnci.0 $e |- ge broda gi naku broda $.
     $( The law of non-contradiction. If a bridi is simultaneously inhabited
        and uninhabited, then we reach an absurdity.
        (Contributed by la korvo, 20-Aug-2023.) $)
@@ -2112,7 +2134,7 @@ ${
 $}
 
 ${
-    nakui.0 $e |- naku zo'u broda $.
+    nakui.0 $e |- naku broda $.
     $( Inference form of ~df-naku
        (Contributed by la korvo, 9-Aug-2023.) $)
     nakui $p |- ganai broda gi gai'o $=
@@ -2120,7 +2142,7 @@ ${
 $}
 
 ${
-    nakuii.0 $e |- naku zo'u broda $.
+    nakuii.0 $e |- naku broda $.
     nakuii.1 $e |- broda $.
     $( Inference form of ~df-naku
        (Contributed by la korvo, 9-Aug-2023.) $)
@@ -2132,13 +2154,13 @@ ${
     nakuri.0 $e |- ganai broda gi gai'o $.
     $( Reverse inference form of ~df-naku
        (Contributed by la korvo, 9-Aug-2023.) $)
-    nakuri $p |- naku zo'u broda $=
+    nakuri $p |- naku broda $=
       ( bgaiho bgan bnk df-naku bi-rev ) ACDAEBAFG $.
 $}
 
 $( {` gai'o `} is uninhabited.
    (Contributed by la korvo, 9-Aug-2023.) $)
-na-gaiho $p |- naku zo'u gai'o $=
+na-gaiho $p |- naku gai'o $=
   ( bgaiho id nakuri ) AABC $.
 
 $( The principle of self-defeating objects. If an object's existence would
@@ -2146,24 +2168,32 @@ $( The principle of self-defeating objects. If an object's existence would
    exist. As a special case, if some tuple's membership in a relation would
    imply non-membership in that relation, then it's not a member. For a survey
    of this principle across maths, see [Tao]. $)
-ax-sdo $a |- ganai ganai broda gi naku zo'u broda gi naku zo'u broda $.
+ax-sdo $a |- ganai ganai broda gi naku broda gi naku broda $.
 
 ${
-    sdoi.0 $e |- ganai broda gi naku zo'u broda $.
+    sdoi.0 $e |- ganai broda gi naku broda $.
     $( Inference form of ~ax-sdo
        (Contributed by la korvo, 9-Aug-2023.) $)
-    sdoi $p |- naku zo'u broda $=
+    sdoi $p |- naku broda $=
       ( bnk bgan ax-sdo ax-mp ) AACZDGBAEF $.
+$}
+
+${
+    sdod.0 $e |- ganai broda gi ganai brode gi naku brode $.
+    $( Deduction form of ~ax-sdo
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    sdod $p |- ganai broda gi naku brode $=
+      ( bnk bgan ax-sdo syl ) ABBDZEHCBFG $.
 $}
 
 $( The principle of explosion. If a tuple both is and is not a member of some
    relation, then we are inconsistent and any theorem whatsoever may be
    derived. The short name "efq" comes from the Latin phrase, "ex falso
    quodlibet". $)
-ax-efq $a |- ganai naku zo'u broda gi ganai broda gi brode $.
+ax-efq $a |- ganai naku broda gi ganai broda gi brode $.
 
 ${
-    efqi.0 $e |- naku zo'u broda $.
+    efqi.0 $e |- naku broda $.
     $( Inference form of ~ax-efq
        (Contributed by la korvo, 25-Jun-2024.) $)
     efqi $p |- ganai broda gi brode $=
@@ -2171,7 +2201,15 @@ ${
 $}
 
 ${
-    efqii.0 $e |- naku zo'u broda $.
+    efqd.0 $e |- ganai broda gi naku brode $.
+    $( Deduction form of ~ax-efq
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    efqd $p |- ganai broda gi ganai brode gi brodi $=
+      ( bnk bgan ax-efq syl ) ABEBCFDBCGH $.
+$}
+
+${
+    efqii.0 $e |- naku broda $.
     efqii.1 $e |- broda $.
     $( Inference form of ~ax-efq
        (Contributed by la korvo, 25-Jun-2024.) $)
@@ -2180,51 +2218,59 @@ ${
 $}
 
 ${
-    con2d.1 $e |- ganai broda gi ganai brode gi naku zo'u brodi $.
+    con2d.1 $e |- ganai broda gi ganai brode gi naku brodi $.
     $( A contrapositive deduction.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    con2d $p |- ganai broda gi ganai brodi gi naku zo'u brode $=
+    con2d $p |- ganai broda gi ganai brodi gi naku brode $=
       ( bnk bgan ax-efq syl6 ganai-swap23 ax-sdo ) ACBBEZFKABCKABCECKFDCKGHIBJH
       $.
 $}
 
 ${
     mt2d.1 $e |- ganai broda gi brode $.
-    mt2d.2 $e |- ganai broda gi ganai brodi gi naku zo'u brode $.
+    mt2d.2 $e |- ganai broda gi ganai brodi gi naku brode $.
     $( Deduction form of modus tollens.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    mt2d $p |- ganai broda gi naku zo'u brodi $=
+    mt2d $p |- ganai broda gi naku brodi $=
       ( bnk con2d mpd ) ABCFDACBEGH $.
 $}
 
 ${
-    nsyl3.1 $e |- ganai broda gi naku zo'u brode $.
+    nsyl3.1 $e |- ganai broda gi naku brode $.
     nsyl3.2 $e |- ganai brodi gi brode $.
     $( A negated syllogism. Can be seen as a deduction form of modus tollens.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    nsyl3 $p |- ganai brodi gi naku zo'u broda $=
+    nsyl3 $p |- ganai brodi gi naku broda $=
       ( bnk bgan ki mt2d ) CBAEABFGCDHI $.
 $}
 
 ${
-    con2i.0 $e |- ganai broda gi naku zo'u brode $.
+    con2i.0 $e |- ganai broda gi naku brode $.
     $( The standard contrapositive inference.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    con2i $p |- ganai brode gi naku zo'u broda $=
+    con2i $p |- ganai brode gi naku broda $=
       ( id nsyl3 ) ABBCBDE $.
 $}
 
 $( Double negation is a functor.
    (Contributed by la korvo, 4-Jan-2025.) $)
-nakunaku $p |- ganai broda gi naku zo'u naku zo'u broda $=
+nakunaku $p |- ganai broda gi naku naku broda $=
   ( bnk id con2i ) ABZAECD $.
 
 ${
-    nsyl.1 $e |- ganai broda gi naku zo'u brode $.
+    nakunakui.0 $e |- broda $.
+    $( Inference form of ~nakunaku
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    nakunakui $p |- naku naku broda $=
+      ( bnk nakunaku ax-mp ) AACCBADE $.
+$}
+
+${
+    nsyl.1 $e |- ganai broda gi naku brode $.
     nsyl.2 $e |- ganai brodi gi brode $.
     $( A negated syllogism. Can be seen as a deduction form of modus tollens.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    nsyl $p |- ganai broda gi naku zo'u brodi $=
+    nsyl $p |- ganai broda gi naku brodi $=
       ( nsyl3 con2i ) CAABCDEFG $.
 $}
 
@@ -2232,11 +2278,11 @@ ${
     stewart.0 $e |- ganai broda gi brode $.
     stewart.1 $e |- ganai brodi gi brodo $.
     stewart.2 $e |- ganai brodu gi brodi $.
-    stewart.3 $e |- ganai brode gi naku zo'u brodo $.
+    stewart.3 $e |- ganai brode gi naku brodo $.
     $( A syllogism underlying the Swallowing Elephants puzzle from chapter 4
     of [Stewart] p. 22.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    stewart $p |- ganai broda gi naku zo'u brodu $=
+    stewart $p |- ganai broda gi naku brodu $=
       ( bnk syl nsyl ) ADEABDJFIKECDHGKL $.
 $}
 
@@ -2262,13 +2308,13 @@ $( Standard constructive definition of mutual exclusion ("the exclusive OR"),
    based on the mnemonic given to computer scientists in the USA and UK:
    "It's cake or tea, but not cake and tea." $)
 df-gonai $a |- go gonai broda gi brode
-  gi ge ga broda gi brode gi naku zo'u ge broda gi brode $.
+  gi ge ga broda gi brode gi naku ge broda gi brode $.
 
 ${
     gonaii.0 $e |- gonai broda gi brode $.
     $( Inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
-    gonaii $p |- ge ga broda gi brode gi naku zo'u ge broda gi brode $=
+    gonaii $p |- ge ga broda gi brode gi naku ge broda gi brode $=
       ( bgon bga bge bnk df-gonai bi ) ABDABEABFGFCABHI $.
 $}
 
@@ -2284,12 +2330,12 @@ ${
     gonaiir.0 $e |- gonai broda gi brode $.
     $( Inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
-    gonaiir $p |- naku zo'u ge broda gi brode $=
+    gonaiir $p |- naku ge broda gi brode $=
       ( bga bge bnk gonaii ge-rei ) ABDABEFABCGH $.
 $}
 
 ${
-    gonairi.0 $e |- ge ga broda gi brode gi naku zo'u ge broda gi brode $.
+    gonairi.0 $e |- ge ga broda gi brode gi naku ge broda gi brode $.
     $( Reverse inference form of ~df-gonai
        (Contributed by la korvo, 8-Aug-2023.) $)
     gonairi $p |- gonai broda gi brode $=
@@ -2447,7 +2493,7 @@ snomei $a sumti le nomei ku $.
 $( {` le nomei `} is the empty set. Literally it is the set with zero
 cardinality. By standard folklore of sets, it is unique up to isomorphism,
 justifying {` le `}. $)
-df-nomei $a |- naku zo'u ko'a cmima le nomei ku $.
+df-nomei $a |- naku ko'a cmima le nomei ku $.
 
 ${
     nomei-gaiho.0 $e |- ko'a cmima le nomei ku $.
@@ -3173,6 +3219,15 @@ $( The axiom of existence: at least one element exists in the universe.
    This is necessary if we want to exclude the trivial empty model. $)
 ax-ex $a |- su'o da zo'u da du de $.
 
+${
+    $d da de $.
+    $( A weaker version of ~ax-ex which requires {` da `} and {` de `} to be
+    distinct.
+       (Contributed by la korvo, 4-Jan-2025.) $)
+    exv $p |- su'o da zo'u da du de $=
+      ( ax-ex ) ABC $.
+$}
+
 $( {` su'o da zo'u `} binds {` da `}. $)
 ax-eb $a |- ganai su'o da zo'u broda gi ro da zo'u su'o da zo'u broda $.
 
@@ -3211,6 +3266,9 @@ $( Due to ~ax-ex there will always be a spurious witness to any true bridi.
    (Contributed by la korvo, 23-Jun-2024.) $)
 wit $p |- ganai broda gi su'o da zo'u broda $=
   ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABACZDZBKKDLBLEKFKABABGHIJ $.
+
+$( The Axiom of Null Set: there exists a set with no elements. $)
+ax-cmima-nul $a |- su'o da zo'u ro de zo'u naku de cmima da $.
 
 $(
 #*#*#
@@ -3327,7 +3385,7 @@ ${
 $}
 
 ${
-    nfnth.0 $e |- naku zo'u broda $.
+    nfnth.0 $e |- naku broda $.
     $( Non-theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfnth $p |- na'a'u da zo'u broda $=
@@ -3351,6 +3409,15 @@ ${
        (Contributed by la korvo, 3-Jan-2025.) $)
     nfv $p |- na'a'u da zo'u broda $=
       ( ax-dgen1 nfi ) ABABCD $.
+$}
+
+${
+    ax-cmima-coll.0 $e |- na'a'u da zo'u broda $.
+    $( The Axiom of Collection: If a bridi is inhabited when parameterized
+    over elements of some set, then the inhabitants also form a set. $)
+    ax-cmima-coll $a |-
+      ganai ro de poi ke'a cmima ko'a ku'o zo'u su'o di zo'u broda
+      gi su'o da zo'u ro de poi ke'a cmima ko'a ku'o zo'u su'o di poi ke'a cmima da ku'o zo'u broda $.
 $}
 
 $(
@@ -3811,17 +3878,17 @@ $c nalti $.
 
 sbnalti $a selbri nalti $.
 
-$( {` nalti `} internalizes negation. This direction adds the {` naku zo'u `}
+$( {` nalti `} internalizes negation. This direction adds the {` naku `}
    prenex to the second bridi. $)
 df-nalti-ana $a |-
   pa du'u broda kei
   nalti
-  pa du'u naku zo'u broda kei $.
+  pa du'u naku broda kei $.
 
-$( {` nalti `} internalizes negation. This direction adds the {` naku zo'u `}
+$( {` nalti `} internalizes negation. This direction adds the {` naku `}
    prenex to the first bridi. $)
 df-nalti-kata $a |-
-  pa du'u naku zo'u broda kei
+  pa du'u naku broda kei
   nalti
   pa du'u broda kei $.
 
@@ -4268,7 +4335,7 @@ df-kaclihe $a |- go li ku'i'a kacli'e ko'a
   gi li bai'ei ku'i'a du ko'a $.
 
 $( Zero is not a successor. A standard axiom of second-order arithmetic. $)
-ax-succ-zero $a |- naku zo'u ko'a kacli'e li no $.
+ax-succ-zero $a |- naku ko'a kacli'e li no $.
 
 ${
     succ-zero-ref.0 $e |- ko'a kacli'e li no $.
@@ -4495,7 +4562,7 @@ $c kacme'a $.
 bkacmeha $a selbri kacme'a $.
 
 $( Zero is not greater than any natural number. This is Robinson axiom 8. $)
-ax-gt-zero $a |- naku zo'u ko'a kacme'a li no $.
+ax-gt-zero $a |- naku ko'a kacme'a li no $.
 
 ${
     gt-zero-ref.0 $e |- ko'a kacme'a li no $.
@@ -4592,7 +4659,7 @@ $}
 $( A unary relation describes the empty set when it never holds. An axiom of
    Fregean cardinality. $)
 ax-card-ex $a |- go li no kazmi pa ka ce'u bo'a kei
-  gi naku zo'u su'o da zo'u da bo'a $.
+  gi naku su'o da zo'u da bo'a $.
 
 $(
 #####
@@ -4948,7 +5015,7 @@ axioms. $)
 ax-comp-i2m1 $a |- li su'i pi'i no ka'o pa no ka'o pa pa du li no $.
 
 $( One is not zero. One of Megill's axioms. $)
-ax-comp-1ne0 $a |- naku zo'u li pa du li no $.
+ax-comp-1ne0 $a |- naku li pa du li no $.
 
 $(
 =-=-=
@@ -5061,7 +5128,7 @@ $c drata $.
 sbdrata $a selbri drata $.
 
 $( {` drata `} is irreflexive. $)
-ax-drata-irrefl $a |- naku zo'u ko'a drata ko'a ko'e $.
+ax-drata-irrefl $a |- naku ko'a drata ko'a ko'e $.
 
 $(
 =-=-=
@@ -5073,7 +5140,7 @@ $c frica $.
 sbfrica $a selbri frica $.
 
 $( {` frica `} is irreflexive. $)
-ax-frica-irrefl $a |- naku zo'u ko'a frica ko'a ko'e $.
+ax-frica-irrefl $a |- naku ko'a frica ko'a ko'e $.
 
 $(
 =-=-=
