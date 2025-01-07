@@ -9,6 +9,8 @@ Colors are described by the following class schema:
 
     xinmo2: skari2
 
+The class of skari2 is known as *skaselbri*.
+
 A color is a ratio of red, green, and blue. Exact ratios are yet to be
 decided, but there is [a good survey of
 colors](https://blog.xkcd.com/2010/05/03/color-survey-results/) for future
@@ -24,20 +26,22 @@ is a color:
 
 The baseline contains the following colors:
 
-* blabi: white
-* blanu: blue
-* bunre: brown, tan
-* cicna: cyan, turquoise, green-blue
-* crino: green, verdant
-* grusi: grey
-* labyxu'e: rose
-* narju: orange
-* nukni: magenta, fuchsia, purple-red
-* pelxu: yellow, gold
-* xekri: black
-* xunblabi: pink
-* xunre: red, crimson, ruddy
-* zirpu: purple, violet
+Lojban | International English
+---|---
+blabi | white
+blanu | blue
+bunre | brown, tan
+cicna | cyan, turquoise, green-blue
+crino | green, verdant
+grusi | grey
+labyxu'e | rose
+narju | orange
+nukni | magenta, fuchsia, purple-red
+pelxu | yellow, gold
+xekri | black
+xunblabi | pink
+xunre | red, crimson, ruddy
+zirpu | purple, violet
 
 The physical environments include nothing at all (blackbody radiation),
 electric fields (fluorescence), temperature (incandescence), etc.

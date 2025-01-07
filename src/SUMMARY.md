@@ -32,6 +32,7 @@
 - [Cultures](2-saske/cultures.md)
 - [Elements](2-saske/elements.md)
 - [Families](2-saske/families.md)
+- [Flavors](2-saske/flavors.md)
 - [Geometry](2-saske/geometry.md)
 - [Measurements & Units](2-saske/units.md)
 

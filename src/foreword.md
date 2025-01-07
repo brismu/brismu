@@ -78,12 +78,13 @@ assorted | 10
 chemical elements | 13
 colors | 14
 cultures | 57
+flavors | 6
 formalized | 14
 groups of chemical elements | 4
 molecules | 1
 plants | 13
 units of measurement | 15
-Total | 183 / 1342 (13.63%)
+Total | 189 / 1342 (14.08%)
 
 ## Credits
 
@@ -104,6 +105,7 @@ ended up using:
 * la krtisfranks
 * la lalxu
 * la latros
+* la lorxus
 
 ## Praise from Lojbanists
 
