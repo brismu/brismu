@@ -25,6 +25,10 @@ Pairing, and Union:
 
 ~table df-nomei df-ce df-johe
 
+Axioms of Extension, Empty Set, Singleton, and Collection:
+
+~table ax-cmima-ext ax-pamei-cmima ax-cmima-nul ax-cmima-coll
+
 And also extensionally define a fair number of *selbri* in terms of `{cmima}`:
 
 ~table df-zilcmi
