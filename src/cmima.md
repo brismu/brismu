@@ -96,3 +96,135 @@ It is not a common feature of most logics, but is used in other Metamath
 databases to ease the implementation of proper substitution. A noteworthy
 theorem here is ~ceihi-nf, which demonstrates that `{cei'i}` really is a
 nullary relation in semantics and not merely an aesthetic choice of our syntax.
+
+## ETCS
+
+And now for something completely different. Consider the following ten axioms:
+
+1. Composition of functions is monoidal; identity functions exist.
+1. There is a set with exactly one element.
+1. A function is determined by its effect on elements.
+1. There is a set with no elements.
+1. All Cartesian products exist.
+1. For any two sets X and Y, there is a set of the functions X → Y.
+1. For all X → Y and all elements in Y, the preimage is a set.
+1. The subsets of any set X correspond to the functions X → 2.
+1. There is a set of natural numbers.
+1. Every surjection has a right inverse.
+
+These are the axioms of ETCS, a theory as strong as ZFC for most purposes. It
+neatly decomposes; axiom 10 is Choice and axiom 9 is Infinity. To set up ETCS,
+we require the following syntax:
+
+*selbri* | primitive concept
+---|---
+zilcmi | z1 (set)
+fancu | f1 : f2 → f3 is a function defined by restricting f4 (ka) to f2 × f3
+lutfancu | l1 (fancu) is the composite of l3 (fancu) followed by l2 (fancu)
+dubyfancu | d1 : d2 → d2 is the unique identity function on d2 (zilcmi)
+
+We'll later need:
+
+*selbri* | primitive concept
+---|---
+fatfancu | f1 is an inverse of f2
+zilfatfancu | f1 is/has an isomorphism
+kazmydu'i | k1 (zilcmi) is isomorphic to k2 (zilcmi)
+cmima | given/type annotation: c1 is an element of c2
+gripau | g1 is a subset of g2
+stepau | s1 is the powerset of s2
+
+### Composition
+
+Axiom 1 has several formal pieces. First, {zilcmi} and {fancu} are set up.
+Also, we have the following statements:
+
+* {lutfancu} has an l1 for each l2 and l3, provided that the types line
+  up, whose relational rule is a composite of l2 and l3
+* Given any zilcmi1, there is {dubyfancu} with the appropriate types, whose
+  relational rule is given by {du}
+* Define {fatfancu}
+
+And lemmas:
+
+* {ko'a fatfancu ko'e} <=> {ko'e fatfancu ko'a}
+
+That's the preamble. The axiom is:
+
+* {lutfancu} is associative
+* {lutfancu} has units given by {dubyfancu}
+
+At a high level: sets and functions form a category.
+
+After this, we should be able to prove:
+
+* {ko'a fatfancu ko'e} & {ko'a fatfancu ko'i} => {ko'e du ko'i}
+* Define {zilfatfancu}
+* {ko'a dubyfancu ko'e} => {ko'a fatfancu ko'a}
+* {ko'a lutfancu ko'e ko'i} & {ko'e zilfatfancu} & {ko'i zilfatfancu} =>
+  {ko'a zilfatfancu}
+* {ko'a kazmydu'i ko'a}
+* {ko'a kazmydu'i ko'e} => {ko'e kazmydu'i ko'a}
+* {ko'a kazmydu'i ko'e} & {ko'e kazmydu'i ko'i} => {ko'a kazmydu'i ko'i}
+
+We can see how we will eventually justify defining {kazmydu'i} as {dunli fi lo
+ka kazmi}.
+
+### Terminal object
+
+There exists a terminal set:
+
+    su'o da poi zilcmi zo'u: ro de poi zilcmi zo'u: pa di zo'u:
+    di fancu de da pa ka cei'i
+
+Afterwards, we should be able to prove:
+
+* terminal sets are isomorphic
+* a stronger version: the terminal set is unique
+
+At this point, we might want to create a new sort of definition for
+generalized-the and terminality. Then:
+
+* For any set, there is exactly one function to the terminal set
+  (expanding axiom 2 with the unique terminal set)
+* Define {cmima} in terms of {fancu}
+* Define application?
+
+### Well-pointedness
+
+    If two functions are equal on all elements, then they are equal.
+
+Then:
+
+* A set is terminal <=> that set has exactly one element
+
+### Initial object
+
+There is an empty set:
+
+    su'o da poi zilcmi zo'u: naku ko'a cmima da
+
+### Products
+
+We add syntax: for two sets {da} and {de}, {da pi'u de} is also a set, and
+there are projection functions:
+
+    ro da poi zilcmi zo'u: ro de poi zilcmi zo'u: su'o di zo'u:
+    di fancu da pi'u de da pa ka ce'u orne ce'u zi'o
+
+    ro da poi zilcmi zo'u: ro de poi zilcmi zo'u: su'o di zo'u:
+    di fancu da pi'u de de pa ka ce'u orne zi'o ce'u
+
+The universal quantifiers here constitute axiom 4. Existence and uniqueness
+should follow. Afterwards, it should be possible to define pairs and
+diagonals, and then:
+
+* {da pi'u de kazmydu'i de pi'u da}
+* {da pi'u le pamei kazmydu'i da}
+* {pi'u} is associative
+
+### Replacement
+
+Very technically, ETCS requires Replacement to match ZFC. However, the nature
+of Replacement is dependent on the syntax which hosts it, and it is not yet
+clear what Replacement should look like in Lojban.
