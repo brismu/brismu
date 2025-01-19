@@ -3411,15 +3411,6 @@ ${
       ( ax-dgen1 nfi ) ABABCD $.
 $}
 
-${
-    ax-cmima-coll.0 $e |- na'a'u da zo'u broda $.
-    $( The Axiom of Collection: If a bridi is inhabited when parameterized
-    over elements of some set, then the inhabitants also form a set. $)
-    ax-cmima-coll $a |-
-      ganai ro de poi ke'a cmima ko'a ku'o zo'u su'o di zo'u broda
-      gi su'o da zo'u ro de poi ke'a cmima ko'a ku'o zo'u su'o di poi ke'a cmima da ku'o zo'u broda $.
-$}
-
 $(
 #*#*#
 Sets II: {zilcmi}
@@ -3539,6 +3530,15 @@ ${
        (Contributed by la korvo, 12-Sep-2023.) $)
     ro-quantri $p |- ro bu'a cu bu'e $=
       ( bu tsb brd brdp brbc df-ro-quant bi-rev ) CBEZAFCLCLGHABIDABCJK $.
+$}
+
+${
+    ax-cmima-coll.0 $e |- na'a'u da zo'u broda $.
+    $( The Axiom of Collection: If a bridi is inhabited when parameterized
+    over elements of some set, then the inhabitants also form a set. $)
+    ax-cmima-coll $a |-
+      ganai ro de poi ke'a cmima ko'a ku'o zo'u su'o di zo'u broda
+      gi su'o da zo'u ro de poi ke'a cmima ko'a ku'o zo'u su'o di poi ke'a cmima da ku'o zo'u broda $.
 $}
 
 $(
