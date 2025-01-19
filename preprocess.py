@@ -24,7 +24,7 @@ def parse(db):
 
 with open("mm/jbobau.mm", "r") as handle: db = parse(handle.read().split())
 
-THEOREM_RE = re.compile("~([-\.'\w]*\w)")
+THEOREM_RE = re.compile(r"~([-\.'\w]*\w)")
 makeLink = "[{0}]({0}.html)".format
 subLink = functools.partial(THEOREM_RE.sub, lambda m: makeLink(m.group(1)))
 
