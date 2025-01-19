@@ -134,6 +134,13 @@ cmima | given/type annotation: c1 is an element of c2
 gripau | g1 is a subset of g2
 stepau | s1 is the powerset of s2
 
+And:
+
+cmavo be zo JOI | primitive concept
+---|---
+pi'u | Cartesian product
+te'au | Exponential
+
 ### Composition
 
 Axiom 1 has several formal pieces. First, {zilcmi} and {fancu} are set up.
@@ -222,6 +229,62 @@ diagonals, and then:
 * {da pi'u de kazmydu'i de pi'u da}
 * {da pi'u le pamei kazmydu'i da}
 * {pi'u} is associative
+
+### Function sets
+
+Axiom 6, as given by Leinster, is almost too trivial to formalize: given sets
+{da} and {de}, {de te'au da} is a set too. However, it must come with, at
+least, an evaluation arrow:
+
+    ro da poi zilcmi zo'u: ro de poi zilcmi zo'u: su'o di zo'u:
+    di fancu de te'au da pi'u da de
+       pa ka su'o da zo'u: su'o de zo'u:
+       ge ce'u orne de da
+       gi ce'u lutfancu de da
+
+The wiring comes out fairly nicely. Note that we will need parentheses for JOI
+at some point. From here we should be able to prove that:
+
+* evaluation is unique
+* precomposition is unique
+* postcomposition is unique
+* {le pamei te'au da} <=> {le pamei}
+* {da te'au le pamei} <=> {da}
+
+### Fibers
+
+At this point, we run out of notation to discuss families and fibers; we can
+write out everything longhand, but I'm not in the mood. Axiom 7:
+
+    All fibers exist.
+
+We can then define injectivity, surjectivity, and bijectivity.
+
+### Subobject classifier
+
+We have subsets, but that's not enough to state axiom 8:
+
+    A subset classifier exists.
+
+Then:
+
+* the classifier is unique
+* define {gripau} in terms of function sets
+* define {stepau} in terms of function sets
+* bijections are isomorphisms
+* initial sets are isomorphic
+* the initial set is unique
+
+### Natural numbers
+
+Axiom 9 declares an NNO. We might do this in the way that has already been
+started in the database, using {kacna'u}.
+
+### Choice
+
+Axiom 10 is Choice. Leinster's phrasing is that every surjection has a
+section. As with the rest of the database, we will always treat Choice as an
+antecedent and never as an axiom or theorem.
 
 ### Replacement
 
