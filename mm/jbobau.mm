@@ -5244,3 +5244,11 @@ ax-lanzu-cmima $a |- ganai ko'a lanzu ko'e ko'i gi ko'e cmima ko'a $.
 $( Definition of {` lazmi'u `} in terms of {` lanzu `} and {` cmima `} from the baseline notes. $)
 df-lazmihu $a |- go ko'a lazmi'u ko'e
   gi su'o da poi ke'a lanzu ku'o zo'u ko'a mintu ko'e pa ka ce'u cmima da kei $.
+
+$(
+=-=-=
+More constants
+=-=-=
+$)
+
+$c mivyselbri mreselbri selraklyselbri vusyselbri xumselbri xumsleselbri $.

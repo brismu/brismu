@@ -71,12 +71,6 @@ Metamath, not including automatically-generated rules.
 The following table shows how many *selbri* have been ontologized: given partial
 meaning relative to other *selbri*, but not necessarily formally defined.
 
-Class | Count
----|---
-assorted | 10
-formalized | 14
-Total | 189 / 1342 (14.08%)
-
 {{#include ontology.md}}
 
 ## Credits
@@ -99,6 +93,7 @@ ended up using:
 * la lalxu
 * la latros
 * la lorxus
+* la varik valefor
 
 ## Praise from Lojbanists
 
