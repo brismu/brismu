@@ -55,7 +55,8 @@
             python3 gen-class.py > gen-valsi-class.json
 
             # Generate tables and posets from valsi listings.
-            python3 gen.py coverage > src/coverage.md
+            python3 gen.py cover_defs > src/coverage.md
+            python3 gen.py cover_ontology > src/ontology.md
             python3 gen.py dependencies > dependencies.dot
             python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md

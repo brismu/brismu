@@ -45,9 +45,34 @@ def crack(ts):
 # Hack: Remove df-sub, which introduces metasyntax.
 if "sub" in dfs: del dfs["sub"]
 
-dfc = Counter(vc[k] for k in dfs)
-dff = Counter(vc[k] for k in fs)
-count = sum(dfc.values()) + sum(dff.values())
+baseline = set()
+first = True
+for line in open("gismu.txt"):
+    if first:
+        first = False
+        continue
+    k, _ = line.split(maxsplit=1)
+    baseline.add(k)
+baselineCount = len(baseline)
+
+first = True
+ls = tuple("1234567890*")
+for line in open("cmavo.txt"):
+    if first:
+        first = False
+        continue
+    k, v, _ = line.split(maxsplit=2)
+    if k.startswith("."): k = k[1:]
+    if v.endswith(ls): v = v[:-1]
+    baseline.add(k)
+
+# all constants and floatings
+dfac = Counter(vc[k] for k in dfs)
+dfaf = Counter(vc[k] for k in fs)
+# baseline constants and floatings
+dfbc = Counter(vc[k] for k in dfs if k in baseline)
+dfbf = Counter(vc[k] for k in fs if k in baseline)
+count = sum(dfbc.values()) + sum(dfbf.values())
 
 def tableHeaders(*columns):
     print(" | ".join(columns) + "\n" + "|".join(["---"] * len(columns)))
@@ -59,14 +84,24 @@ SUBS = {
 def vlaste(v): return SUBS.get(v, v)
 
 cmd = sys.argv[-1]
-if cmd == "coverage":
-    tableHeaders("Grammatical class", "Metamath class", "# of formal definitions")
-    lines = [f"{cls} | metavariable | {dff[cls]} / {clss[cls]}" for cls in dff]
-    lines.extend(f"{cls} | constant | {dfc[cls]} / {clss[cls]}" for cls in dfc)
+if cmd == "cover_defs":
+    tableHeaders("Grammatical class", "Metamath class",
+                 "# of baseline definitions", "total # of definitions")
+    lines = [f"{cls} | metavariable | {dfbf[cls]} / {clss[cls]} | {dfaf[cls]}"
+             for cls in dfaf]
+    lines.extend(f"{cls} | constant | {dfbc[cls]} / {clss[cls]} | {dfac[cls]}"
+                 for cls in dfac)
     for line in sorted(lines): print(line)
     total = len(vc)
     print("total", "| - |", count, "/", total,
           "(%0.2f%%)" % (count * 100 / total))
+elif cmd == "cover_ontology":
+    tableHeaders("Ontological class", "# of members")
+    with open("classes.json") as handle: classes = json.load(handle)
+    classCount = sum(map(len, classes.values()))
+    for c, l in classes.items(): print("*" + c + "*", "|", len(l))
+    print("total |", classCount, "/", baselineCount,
+          "(%0.2f%%)" % (classCount * 100 / baselineCount))
 elif cmd == "metavars":
     tableHeaders("Metamath type", "*cmavo*")
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
