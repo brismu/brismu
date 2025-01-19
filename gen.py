@@ -96,12 +96,18 @@ if cmd == "cover_defs":
     print("total", "| - |", count, "/", total,
           "(%0.2f%%)" % (count * 100 / total))
 elif cmd == "cover_ontology":
-    tableHeaders("Ontological class", "# of members")
+    tableHeaders("Ontological class", "# of baseline members",
+                 "total # of members")
     with open("classes.json") as handle: classes = json.load(handle)
-    classCount = sum(map(len, classes.values()))
-    for c, l in classes.items(): print("*" + c + "*", "|", len(l))
-    print("total |", classCount, "/", baselineCount,
-          "(%0.2f%%)" % (classCount * 100 / baselineCount))
+    classac = classbc = 0
+    for c, l in classes.items():
+        ac = len(l)
+        bc = sum(1 for x in l if x in baseline)
+        print("*" + c + "*", "|", bc, "|", ac)
+        classac += ac
+        classbc += bc
+    print("total |", classbc, "/", baselineCount,
+          "(%0.2f%%)" % (classbc * 100 / baselineCount), "|", classac)
 elif cmd == "metavars":
     tableHeaders("Metamath type", "*cmavo*")
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
