@@ -26,6 +26,7 @@
 # logji ke zasti saske
 
 - [Classes of gismu](2-saske/classes.md)
+- [Acoustics](2-saske/acoustics.md)
 - [Anatomy](2-saske/anatomy.md)
 - [Biology](2-saske/biology.md)
 - [Colors](2-saske/colors.md)
