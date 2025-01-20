@@ -7,41 +7,41 @@ Acoustics is the study of waves vibrating in air.
 The baseline does not have a verb for playing musical instruments. We start
 with the [Hornbostel—Sachs
 system](https://en.wikipedia.org/wiki/Hornbostel%E2%80%93Sachs), which gives
-us a topology for classifying instruments in lieu of a schema.
+us a topology for classifying instruments in lieu of a schema. We take a
+cladistic approach: each *selbri* will designate the most specific
+Hornbostel—Sachs number which gives a common prefix for all of its
+culturally-grounded examples, which might not correspond to any particular
+instrument but will provide a culturally-neutral family of instruments.
 
-*selbri* | HS number
----|---
-damri | drum (21), cymbal (111.142), gong (111.241)
-kimbali | cymbal (111.142), gong (111.241)
-flani | flute (421.2), pipe, fife (421.121.12), recorder (421.221.12)
-janbe | bell (111.242), chime (111.232), tuning fork (111.211)
-jgita | guitar (321.322), violin (321.322), fiddle (321.322), harp (322)
-pipno | piano (314.122), harpsichord (314.122), synthesizer (53), organ
-siclu | whistle (421.1)
-tabra | horn (423.2), trumpet (423), trombone (423.22), bugle (423.121.22)
-xagri | oboe (422.112), clarinet (422.211.2), saxophone (422.212)
-termeni | theremin (531.1)
-skilofo | xylophone (111.212)
-marmiba | marimba (111.212)
-embira | mbira (122.1)
-glokesi | glockenspiel (111.222)
-virbafo | vibraphone (111.222)
-timpani | kettledrums (211.11)
-marxaka | maracas (112.1)
+*selbri* | HS prefix | HS family
+---|---|---
+kimbali | (111) | directly struck idiophones
+janbe | (111.2) | percussion idiophones
+skilofo, marmiba | (111.212) | percussion sticks
+glokesi, virbafo | (111.222) | percussion plaques
+marxaka | (112.1) | shaken idiophones
+embira | (122.1) | comb idiophones
+damri | (21) | struck membranophones
+timpani | (211.11) | kettle drums
+klavire | (314.122) | true board zithers
+jgita | (32) | composite chordophones
+kordu | (412.132) | free-reed aerophones
+flani | (421) | edge-blown aerophones
+xagri | (422) | reed aerophones
+tabra | (423) | trumpets
+termeni | (531.1) | theremins
 
-{damri} must have a beater (11).
-
-{janbe} produces a single resonant tone (1).
-
-{jgita} must have a plectrum/bow (3).
-
-{siclu} might not belong here?
-
-{tabra} must be brass, wind, lip, or reed (42).
-
-{xagri} must have reeds (422).
+There is one problematic *gismu*, {pipno}, which conflates many different
+instruments in an ad-hoc manner. It doesn't give a prefix and I don't think it
+can be fixed or saved.
 
 ### Notes
+
+We allow {kimbali} to take some responsibilities from {damri}. Otherwise
+{damri} doesn't even have a single-digit prefix, since it mixes membranophones
+and idiophones.
+
+{siclu} might not belong here? I guessed it might have prefix (421.1).
 
 Perhaps {te tonga} is the proper path for collecting instruments:
 
