@@ -35,6 +35,10 @@ There is one problematic *gismu*, {pipno}, which conflates many different
 instruments in an ad-hoc manner. It doesn't give a prefix and I don't think it
 can be fixed or saved.
 
+I don't have a non-trivial class yet. They all belong to *terto'aselbri*,
+where {terto'a} is merely an emitter of pitches. Yes, even idiophones like
+drums and cymbals emit pitches, merely not ones described by harmonic series.
+
 ### Notes
 
 We allow {kimbali} to take some responsibilities from {damri}. Otherwise
