@@ -180,6 +180,7 @@ htmldef "nenri" as "<span class='gismu'>nenri</span> ";
 htmldef "nibli" as "<span class='gismu'>nibli</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
+htmldef "pombo" as "<span class='gismu'>pombo</span> ";
 htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
@@ -4177,6 +4178,23 @@ ${
     poi-pari $p |- pa da poi ke'a bo'a ku'o zo'u broda $=
       ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCACGHDABCIJ $.
 $}
+
+$(
+=-=-=
+Uniqueness: {pombo}
+=-=-=
+$)
+
+$c pombo $.
+
+sbpombo $a selbri pombo $.
+
+$( Definition of {` pombo `}, by analogy with ~df-pa-da . This is a slightly
+   stronger claim than existential uniqueness; {` pa da `} asserts that
+   something exists with the given property, but {` pombo `} goes further and
+   witnesses the thing. $)
+df-pombo $a |- go ko'a pombo ko'e
+  gi ro da zo'u go da ckaji ko'e gi ko'a du da $.
 
 $(
 =-=-=
