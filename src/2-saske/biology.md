@@ -184,16 +184,12 @@ xruki | cipni
 
 ### Related Words
 
-* grute: fruit
-* tsiju: seed
 * dembi: seeds of bean, pea, legume
-* pezli: leaf
-* xrula: flower, blossom, bloom
 * narge: nut
-* genja: root
 
 * tricu: tree
 * jbari: berry
+* kotledona: cotyledon
 
 * fusra: rot, decay, fermentation
 * birje: beer, ale

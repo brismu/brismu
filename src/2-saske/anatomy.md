@@ -3,7 +3,7 @@
 In sufficiently complex multicellular life, some structures are discernable and
 categorized by function. I'm not going to write a paragraph on each one.
 
-## rango
+## Animal organs
 
 These are all rango1.
 
@@ -34,6 +34,20 @@ These are all rango1.
 * tuple: limb
 * xance: hand
 * xedja: jaw
+
+## Plant structures
+
+There isn't an organizing schema for these yet, but they all follow the basic
+pattern of "x1 is a plant structure of species x2". The implied lack of
+personhood for plants is outside our scope.
+
+* balji: bulb
+* genja: root
+* grute: fruit
+* pezli: leaf
+* stani: stalk, stem, trunk
+* tsiju: seed
+* xrula: flower, blossom, bloom
 
 ## Misc
 
