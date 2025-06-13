@@ -1,7 +1,7 @@
 {
   description = "Lojban notes";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
     flake-utils.url = "github:numtide/flake-utils";
     zaha = {
       url = "github:MostAwesomeDude/zaha";
