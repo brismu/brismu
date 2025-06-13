@@ -6,7 +6,7 @@ jobs:
     name: Lint and build Nix flake
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: DeterminateSystems/flake-checker-action@v4
         with:
           check-outdated: false
