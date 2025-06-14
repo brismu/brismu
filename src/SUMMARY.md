@@ -9,6 +9,7 @@
 - [Non-Logical Connectives](cmima.md)
 - [Natural Numbers](kacnahu.md)
 - [Mereology](pagbu.md)
+- [Contradiction & Inconsistency](natfe.md)
 
 # logji midju
 
