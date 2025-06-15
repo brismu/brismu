@@ -3722,6 +3722,22 @@ sbselbri $a selbri selbri $.
 
 df-selbri $a |- go ko'a selbri ko'e ko'i gi ko'a se bridi ko'e ko'i $.
 
+${
+    selbrii.0 $e |- ko'a selbri ko'e ko'i $.
+    $( Inference form of ~df-selbri
+       (Contributed by la korvo, 15-Jun-2025.) $)
+    selbrii $p |- ko'a se bridi ko'e ko'i $=
+      ( sbselbri bt sbbridi sbs df-selbri bi ) ABCEFABCGHFDABCIJ $.
+$}
+
+${
+    selbriri.0 $e |- ko'a se bridi ko'e ko'i $.
+    $( Reverse inference form of ~df-selbri
+       (Contributed by la korvo, 15-Jun-2025.) $)
+    selbriri $p |- ko'a selbri ko'e ko'i $=
+      ( sbbridi sbs bt sbselbri df-selbri bi-rev ) ABCEFGABCHGDABCIJ $.
+$}
+
 $(
 =-=-=
 {fatci}
