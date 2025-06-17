@@ -1793,11 +1793,8 @@ ${
     brd $a bridi ro da zo'u broda $.
 $}
 
-${
-    brb.0 $e bridi broda $.
-    $( Syntax for second-order universal quantification. $)
-    brb $a bridi ro bu'a zo'u broda $.
-$}
+$( Syntax for second-order universal quantification. $)
+brb $a bridi ro bu'a zo'u broda $.
 
 ${
     ax-gen1.0 $e |- broda $.
@@ -1847,7 +1844,7 @@ ${
     $( Inference form of ~ax-spec2
        (Contributed by la korvo, 23-Jun-2024.) $)
     spec2i $p |- broda $=
-      ( brb ax-spec2 ax-mp ) ABADACABEF $.
+      ( brb ax-spec2 ax-mp ) ABDACABEF $.
 $}
 
 $( Axiom of quantified implication: if {` ganai broda gi brode `} under some
@@ -1888,7 +1885,7 @@ ${
     $( Inference form of ~ax-qi2
        (Contributed by la korvo, 23-Jun-2024.) $)
     qi2i $p |- ganai ro bu'a zo'u broda gi ro bu'a zo'u brode $=
-      ( bgan brb ax-qi2 ax-mp ) ABEZCIFACAFBCBFEDABCGH $.
+      ( bgan brb ax-qi2 ax-mp ) ABECFACFBCFEDABCGH $.
 $}
 
 ${
@@ -1898,7 +1895,7 @@ ${
        Like ~ax-mp under {` ro bu'a `}.
        (Contributed by la korvo, 23-Jun-2024.) $)
     qi2-mp $p |- ro bu'a zo'u brode $=
-      ( brb qi2i ax-mp ) ACAFBCBFEABCDGH $.
+      ( brb qi2i ax-mp ) ACFBCFEABCDGH $.
 $}
 
 ${
@@ -1974,7 +1971,7 @@ ${
     $( Inference form of ~df-du
        (Contributed by la korvo, 18-Jul-2023.) $)
     dui $p |- ro bu'a zo'u ko'a .o ko'e bu'a $=
-      ( sbdu bb sjo bu brb df-du bi ) ABEFABGCHZCLIDABCJK $.
+      ( sbdu bb sjo bu brb df-du bi ) ABEFABGCHCIDABCJK $.
 $}
 
 ${
@@ -1990,7 +1987,7 @@ ${
     $( Reverse inference form of ~df-du
        (Contributed by la korvo, 18-Jul-2023.) $)
     duri $p |- ko'a du ko'e $=
-      ( sjo bu brb sbdu bb df-du bi-rev ) ABECFZCLGABHIDABCJK $.
+      ( sjo bu brb sbdu bb df-du bi-rev ) ABECFCGABHIDABCJK $.
 $}
 
 ${
