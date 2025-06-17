@@ -304,11 +304,8 @@ wdi $f sumti di $.
 $( Any selbri is a valid brirebla. $)
 tsb $a brirebla bu'a $.
 
-${
-    tss.0 $e brirebla bo'a $.
-    $( Any brirebla can have an additional trailing sumti. $)
-    tss $a brirebla bo'a ko'a $.
-$}
+$( Any brirebla can have an additional trailing sumti. $)
+tss $a brirebla bo'a ko'a $.
 
 $( Build a bridi from a sumti and brirebla. $)
 btb $a bridi ko'a bo'a $.
@@ -320,20 +317,20 @@ bu $p bridi ko'a bu'a $=
 $( Normal form for binary selbri.
    (Contributed by la korvo, 14-Aug-2023.) $)
 bb $p bridi ko'a bu'a ko'e $=
-  ( tsb tss btb ) ABCDZGEF $.
+  ( tsb tss btb ) ABCDEF $.
 $( Normal form for ternary selbri.
    (Contributed by la korvo, 14-Aug-2023.) $)
 bt $p bridi ko'a bu'a ko'e ko'i $=
-  ( tsb tss btb ) ACBDEZHFZIFG $.
+  ( tsb tss btb ) ACBDEFFG $.
 $( Normal form for quaternary selbri.
    (Contributed by la korvo, 19-Mar-2024.) $)
 bq $p bridi ko'a bu'a ko'e ko'i ko'o $=
-  ( tsb tss btb ) ADCBEFZIGZJGZKGH $.
+  ( tsb tss btb ) ADCBEFGGGH $.
 $( Normal form for quinary selbri. To avoid conflict with ~bq this syntax is
    "bp" for "bridi pentad".
    (Contributed by la korvo, 22-Jun-2024.) $)
 bp $p bridi ko'a bu'a ko'e ko'i ko'o ko'u $=
-  ( tsb tss btb ) AEDCBFGZJHZKHZLHZMHI $.
+  ( tsb tss btb ) AEDCBFGHHHHI $.
 
 $(
 #*#*#
@@ -1787,11 +1784,8 @@ $c ro zo'u $.
 
 $( XXX occurs checks are missing! $)
 
-${
-    brd.0 $e bridi broda $.
-    $( Syntax for first-order universal quantification. $)
-    brd $a bridi ro da zo'u broda $.
-$}
+$( Syntax for first-order universal quantification. $)
+brd $a bridi ro da zo'u broda $.
 
 $( Syntax for second-order universal quantification. $)
 brb $a bridi ro bu'a zo'u broda $.
@@ -1808,7 +1802,7 @@ ${
     $( Modus ponens with generalization.
        (Contributed by la korvo, 3-Jan-2025.) $)
     mpg1 $p |- brode $=
-      ( brd ax-gen1 ax-mp ) ACAFBACEGDH $.
+      ( brd ax-gen1 ax-mp ) ACFBACEGDH $.
 $}
 
 ${
@@ -1825,7 +1819,7 @@ ${
     $( Inference form of ~ax-spec1
        (Contributed by la korvo, 22-Jun-2024.) $)
     spec1i $p |- broda $=
-      ( brd ax-spec1 ax-mp ) ABADACABEF $.
+      ( brd ax-spec1 ax-mp ) ABDACABEF $.
 $}
 
 ${
@@ -1833,7 +1827,7 @@ ${
     $( Deduction form of ~ax-spec1
        (Contributed by la korvo, 4-Jan-2025.) $)
     spec1d $p |- ganai broda gi brode $=
-      ( brd ax-spec1 syl ) ABCBEBDBCFG $.
+      ( brd ax-spec1 syl ) ABCEBDBCFG $.
 $}
 
 $( Axiom of second-order specialization, by analogy with ~ax-spec1 $)
@@ -1860,7 +1854,7 @@ ${
     $( Inference form of ~ax-qi1
        (Contributed by la korvo, 23-Jun-2024.) $)
     qi1i $p |- ganai ro da zo'u broda gi ro da zo'u brode $=
-      ( bgan brd ax-qi1 ax-mp ) ABEZCIFACAFBCBFEDABCGH $.
+      ( bgan brd ax-qi1 ax-mp ) ABECFACFBCFEDABCGH $.
 $}
 
 ${
@@ -1870,7 +1864,7 @@ ${
        Like ~ax-mp under {` ro da `}.
        (Contributed by la korvo, 23-Jun-2024.) $)
     qi1-mp $p |- ro da zo'u brode $=
-      ( brd qi1i ax-mp ) ACAFBCBFEABCDGH $.
+      ( brd qi1i ax-mp ) ACFBCFEABCDGH $.
 $}
 
 $( A variant of ~ax-qi1 for second-order quantifiers. Very few claims will
@@ -1950,7 +1944,7 @@ ${
     $( Swap quantifiers on the antecedent.
        (Contributed by la korvo, 4-Jan-2025.) $)
     ro1-coms $p |- ganai ro de zo'u ro da zo'u broda gi brode $=
-      ( brd ax-ro1-com syl ) ACAFZDIFADAFZCJFBADCGEH $.
+      ( brd ax-ro1-com syl ) ACFDFADFCFBADCGEH $.
 $}
 
 $(
@@ -2532,7 +2526,7 @@ ${
        (Contributed by la korvo, 16-May-2024.) $)
     pameiii $p |- ko'e du ko'i $=
       ( sje sbpamei sbs tsb tss bb seri ge-ini eri sei pameii ) ABCABCFGBCAGHZI
-      ZRJBAQKCAQKABGDLACGELMNOP $.
+      JBAQKCAQKABGDLACGELMNOP $.
 $}
 
 $( The singleton set has one element. $)
@@ -2582,8 +2576,8 @@ ${
     $( Inference form of ~df-gripau
        (Contributed by la korvo, 19-Jul-2024.) $)
     gripauis $p |- ganai ko'i cmima ko'a gi ko'i cmima ko'e $=
-      ( sbcmima sbs tsb tss sjnaa gripaui seri naai se-ganair ) ACBCEEABCEFGZNH
-      CABIEABCDJKLM $.
+      ( sbcmima sbs tsb tss sjnaa gripaui seri naai se-ganair ) ACBCEEABCEFGHCA
+      BIEABCDJKLM $.
 $}
 
 ${
@@ -2601,14 +2595,13 @@ ${
        (Contributed by la korvo, 19-Jul-2024.) $)
     gripauris $p |- ko'a gripau ko'e $=
       ( sjnaa sbcmima sbs tsb tss se-ganaii naari sei gripauri ) ABCCABEFABCFGH
-      ZNICACBFFDJKLM $.
+      ICACBFFDJKLM $.
 $}
 
 $( {` gripau `} is reflexive.
    (Contributed by la korvo, 15-Jul-2024.) $)
 gripau-refl $p |- ko'a gripau ko'a $=
-  ( wk2 sjnaa sbcmima sbs tsb tss na.a-refl sei gripauri ) AABBAACDABDEFZKGHIJ
-  $.
+  ( wk3 sjnaa sbcmima sbs tsb tss na.a-refl sei gripauri ) AABBAACDABDEFGHIJ $.
 
 ${
     gripau-trans.0 $e |- ko'a gripau ko'e $.
@@ -2692,7 +2685,7 @@ sbckini $a selbri ckini $.
 $( {` ckini `} is often found with this conjugation.
    (Contributed by la korvo, 14-Aug-2023.) $)
 bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $=
-  ( sc tsb tss spk sbckini bt ) ABDDCEZJFGHI $.
+  ( sc tsb tss spk sbckini bt ) ABDDCEFGHI $.
 
 df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u kei gi ko'a bu'a ko'e $.
 
@@ -2769,7 +2762,7 @@ ${
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsail $p |- ko'a ckaji ko'i $=
-      ( sbckaji bb tsb tss simsai ei ge-lei ) ACEFBCEFABCEGZLHABCDIJK $.
+      ( sbckaji bb tsb tss simsai ei ge-lei ) ACEFBCEFABCEGHABCDIJK $.
 $}
 
 ${
@@ -2777,7 +2770,7 @@ ${
     $( Inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsair $p |- ko'e ckaji ko'i $=
-      ( sbckaji bb tsb tss simsai ei ge-rei ) ACEFBCEFABCEGZLHABCDIJK $.
+      ( sbckaji bb tsb tss simsai ei ge-rei ) ACEFBCEFABCEGHABCDIJK $.
 $}
 
 ${
@@ -2794,7 +2787,7 @@ ${
     $( Reverse inference form of ~df-simsa
        (Contributed by la korvo, 6-Aug-2023.) $)
     simsarii $p |- ko'a simsa ko'e ko'i $=
-      ( sbckaji tsb tss bb ge-ini eri simsari ) ABCABCFGZMHACFIBCFIDEJKL $.
+      ( sbckaji tsb tss bb ge-ini eri simsari ) ABCABCFGHACFIBCFIDEJKL $.
 $}
 
 $( {` simsa `} is symmetric. $)
@@ -2813,7 +2806,7 @@ sbdunli $a selbri dunli $.
 $( {` dunli `} is often found with this conjugation.
    (Contributed by la korvo, 23-Jun-2024.) $)
 bdunli $p bridi ko'a dunli ko'e pa ka ce'u bu'a ce'u kei $=
-  ( sc tsb tss spk sbdunli bt ) ABDDCEZJFGHI $.
+  ( sc tsb tss spk sbdunli bt ) ABDDCEFGHI $.
 
 $( Definition of {` dunli `} by la ilmen in terms of {` ckini `}. A
    metavariable is used instead of a universal quantifier to ease manipulation. $)
@@ -2838,14 +2831,14 @@ $}
 $( {` dunli `} is reflexive over any dunli3.
    (Contributed by la korvo, 14-Aug-2024.) $)
 dunli-refl $p |- ko'a dunli ko'a ko'e $=
-  ( wk4 sbckini tsb tss o-refl dunliri ) AABCABCDEZIFZJFGH $.
+  ( wk4 sbckini tsb tss o-refl dunliri ) AABCABCDEFFGH $.
 
 $( Because modal x1 and modal x2 of {` dunli `} are definitionally
    interchangeable, {` dunli `} itself is symmetric.
    (Contributed by la korvo, 20-Sep-2024.) $)
 dunli-sym $p |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $=
   ( wk4 sbdunli bt sjo sbckini df-dunli tsb tss o-com go-syl go-comi ) ABCEFZBA
-  GDCHFZBACEFZOABGDCHFPABCDIABCDHJZRKZSKLMQPBACDINM $.
+  GDCHFZBACEFZOABGDCHFPABCDIABCDHJKKLMQPBACDINM $.
 
 $(
 =-=-=
@@ -2884,14 +2877,14 @@ $}
 $( {` mintu `} is reflexive over any mintu3.
    (Contributed by la korvo, 14-Aug-2024.) $)
 mintu-refl $p |- ko'a mintu ko'a ko'e $=
-  ( sbckaji tsb tss o-refl minturi ) AABABCDZHEFG $.
+  ( sbckaji tsb tss o-refl minturi ) AABABCDEFG $.
 
 $( Because x1 and x2 of {` mintu `} are definitionally interchangeable, it is
    symmetric.
    (Contributed by la korvo, 20-Sep-2024.) $)
 mintu-sym $p |- go ko'a mintu ko'e ko'i gi ko'e mintu ko'a ko'i $=
   ( sbmintu bt sjo sbckaji bb df-mintu tsb tss o-com go-syl go-comi ) ABCDEZBAF
-  CGHZBACDEZOABFCGHPABCIABCGJZRKLMQPBACINM $.
+  CGHZBACDEZOABFCGHPABCIABCGJKLMQPBACINM $.
 
 $( XXX metamath-exe bug(223) when the following proof is compressed and
    printed to HTML $)
@@ -2901,8 +2894,8 @@ ${
        without a standard of comparison, which is a stronger condition.
        (Contributed by la korvo, 25-Jun-2024.) $)
     du-mintu $p |- ko'a mintu ko'e ko'i $=
-      wk1 wk2 wk3 wk1 wk2 sjo wk3 sbckaji tsb sbckaji tsb tss sbba wk3 sbckaji
-      tsb sbckaji tsb tss wk1 wk2 sbba du-mintu.0 dui ax-ro-inst-2u minturi $.
+      ( sbba sjo sbckaji tsb tss dui ax-ro-inst-2u minturi ) ABCABFCGHIZEMABEDJ
+      KL $.
 $}
 
 ${
@@ -2910,8 +2903,8 @@ ${
     $( {` simsa `} implies {` mintu `}.
        (Contributed by la korvo, 25-Jun-2024.) $)
     simsa-mintu $p |- ko'a mintu ko'e ko'i $=
-      ( sbckaji tsb tss bb simsai ei ge-go ori minturi ) ABCABCEFZNGZACEHBCEHAB
-      OABCDIJKLM $.
+      ( sbckaji tsb tss bb simsai ei ge-go ori minturi ) ABCABCEFGZACEHBCEHABNA
+      BCDIJKLM $.
 $}
 
 $(
@@ -3038,7 +3031,7 @@ ${
     simxui $p |- ro da zo'u ro de zo'u
       ganai da .e de cmima ko'a gi da ckini de ko'e $=
       ( sbsimxu bb sje sbcmima sbckini bt bgan brd df-simxu bi ) ABFGCDHAIGCDBJ
-      KLZDPMZCQMEABCDNO $.
+      KLDMCMEABCDNO $.
 $}
 
 ${
@@ -3048,7 +3041,7 @@ ${
        (Contributed by la korvo, 23-Aug-2023.) $)
     simxuri $p |- ko'a simxu ko'e $=
       ( sje sbcmima bb sbckini bt bgan brd sbsimxu df-simxu bi-rev ) CDFAGHCDBI
-      JKZDPLZCQLABMHEABCDNO $.
+      JKDLCLABMHEABCDNO $.
 $}
 
 $(
@@ -3201,11 +3194,8 @@ $)
 
 $c su'o $.
 
-${
-    bsd.0 $e bridi broda $.
-    $( Syntax for first-order existential quantification. $)
-    bsd $a bridi su'o da zo'u broda $.
-$}
+$( Syntax for first-order existential quantification. $)
+bsd $a bridi su'o da zo'u broda $.
 
 $( Syntax for second-order existential quantification. $)
 bsb $a bridi su'o bu'a zo'u broda $.
@@ -3231,7 +3221,7 @@ ${
     $( Inference form of ~ax-eb
        (Contributed by la korvo, 22-Jun-2024.) $)
     ebi $p |- ro da zo'u su'o da zo'u broda $=
-      ( bsd brd ax-eb ax-mp ) ABADZHBHECABFG $.
+      ( bsd brd ax-eb ax-mp ) ABDZHBECABFG $.
 $}
 
 $( Extensional definition of existential quantification in terms of universal
@@ -3245,7 +3235,7 @@ ${
        (Contributed by la korvo, 22-Jun-2024.) $)
     eqi $p |- go ro da zo'u ganai brode gi broda
       gi ganai su'o da zo'u brode gi broda $=
-      ( brd bgan bsd bgo ax-eq ax-mp ) AACAEFZCKEBAFZCLEBCBGAFHDABCIJ $.
+      ( brd bgan bsd bgo ax-eq ax-mp ) AACEFCEBAFCEBCGAFHDABCIJ $.
 $}
 
 ${
@@ -3254,13 +3244,13 @@ ${
        (Contributed by la korvo, 22-Jun-2024.) $)
     eqih $p |- go ro da zo'u ganai brode gi broda
       gi ganai su'o da zo'u brode gi broda $=
-      ( brd bgan ax-gen1 eqi ) ABCAACAEFCDGH $.
+      ( brd bgan ax-gen1 eqi ) ABCAACEFCDGH $.
 $}
 
 $( Due to ~ax-ex there will always be a spurious witness to any true bridi.
    (Contributed by la korvo, 23-Jun-2024.) $)
 wit $p |- ganai broda gi su'o da zo'u broda $=
-  ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABACZDZBKKDLBLEKFKABABGHIJ $.
+  ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABCZDZBKKDLBEKFKABABGHIJ $.
 
 $( The Axiom of Null Set: there exists a set with no elements. $)
 ax-cmima-nul $a |- su'o da zo'u ro de zo'u naku de cmima da $.
@@ -3292,22 +3282,22 @@ ${
        (Contributed by la korvo, 22-Jun-2024.) $)
     subi $p |- ge ganai da du ko'a gi broda
       gi su'o da zo'u ge da du ko'a gi broda $=
-  ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBIZCNJIDABCKL $.
+      ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBICJIDABCKL $.
 $}
 
 $( Property of proper substitution.
    (Contributed by la korvo, 25-Jun-2024.) $)
 sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
-  ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHZCPIZMOQHA
+  ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHCIZMOPHA
   BCJKL $.
 
 subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
   ( sbdu bb bsub bge bgan bsd ge-ganai wit df-sub sylanbrc uncur ) CADEZBABCFZO
-  BGZOBHQCQIPOBJQCKABCLMN $.
+  BGZOBHQCIPOBJQCKABCLMN $.
 
 subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
   ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
-  ZNBHZCPIZHZNBABCJRNBOQKLM $.
+  ZNBHCIZHZNBABCJQNBOPKLM $.
 
 $( An identity for substitutions.
    (Contributed by la korvo, 22-Jun-2024.) $)
@@ -3338,7 +3328,7 @@ ${
     $( ~bi-rev with generalization on the RHS.
        (Contributed by la korvo, 25-Jun-2024.) $)
     bi-revg $p |- broda $=
-      ( brd ax-gen1 bi-rev ) BCBFABCEGDH $.
+      ( brd ax-gen1 bi-rev ) BCFABCEGDH $.
 $}
 
 ${
@@ -3346,20 +3336,20 @@ ${
     $( Inference form of ~df-nahahu
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfi $p |- na'a'u da zo'u broda $=
-      ( bnd brd bgan df-nahahu bi-revg ) ABDAABAEFBABGCH $.
+      ( bnd brd bgan df-nahahu bi-revg ) ABDAABEFBABGCH $.
 $}
 
 $( Property of not-free quantification.
    (Contributed by la korvo, 25-Jun-2024.) $)
 nfr $p |- ganai na'a'u da zo'u broda gi ganai broda gi ro da zo'u broda $=
-  ( bnd brd bgan df-nahahu ax-spec1 sylbi ) ABCAABADEZBIDIABFIBGH $.
+  ( bnd brd bgan df-nahahu ax-spec1 sylbi ) ABCAABDEZBDIABFIBGH $.
 
 ${
     nfri.0 $e |- na'a'u da zo'u broda $.
     $( Inference form of ~nfr
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfri $p |- ganai broda gi ro da zo'u broda $=
-      ( bnd brd bgan nfr ax-mp ) ABDAABAEFCABGH $.
+      ( bnd brd bgan nfr ax-mp ) ABDAABEFCABGH $.
 $}
 
 ${
@@ -3368,7 +3358,7 @@ ${
     $( Hypothesis builder: theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
     hbth $p |- ganai broda gi ro da zo'u broda $=
-      ( brd ax-gen1 ki ) ABADAABCEF $.
+      ( brd ax-gen1 ki ) ABDAABCEF $.
 
     $( Theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
@@ -3381,7 +3371,7 @@ ${
     $( Non-theorems are closed.
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfnth $p |- na'a'u da zo'u broda $=
-      ( brd efqi nfi ) ABAABADCEF $.
+      ( brd efqi nfi ) ABAABDCEF $.
 $}
 
 $( The true relation is closed.
@@ -3429,7 +3419,7 @@ $( The empty set is a set.
    (Contributed by la korvo, 19-Sep-2024.) $)
 zilcmi-nomei $p |- le nomei ku zilcmi $=
   ( wda snomei sbdu bb sbcmima bsd bga sbzilcmi du-refl ga-lin df-zilcmi bi-rev
-  bu ax-mp ) BBCDZABEDZAPFZGZBHMORBIOQJNBAKL $.
+  bu ax-mp ) BBCDZABEDAFZGZBHMOQBIOPJNBAKL $.
 
 ${
     cmima-zilcmi.0 $e |- su'o da zo'u da cmima ko'a $.
@@ -3437,7 +3427,7 @@ ${
        (Contributed by la korvo, 19-Sep-2024.) $)
     cmima-zilcmi $p |- ko'a zilcmi $=
       ( snomei sbdu bb sbcmima bsd bga sbzilcmi ga-rin ax-mp df-zilcmi bi-rev
-      bu ) ADEFZBAGFZBQHZIZAJORSCRPKLABMN $.
+      bu ) ADEFZBAGFBHZIZAJOQRCQPKLABMN $.
 $}
 
 $(
@@ -3448,17 +3438,11 @@ $)
 
 $c poi ke'a ku'o $.
 
-${
-    brdp.0 $e bridi ro da zo'u broda $.
-    $( Restriction for first-order universal quantification. $)
-    brdp $a bridi ro da poi ke'a bo'a ku'o zo'u broda $.
-$}
+$( Restriction for first-order universal quantification. $)
+brdp $a bridi ro da poi ke'a bo'a ku'o zo'u broda $.
 
-${
-    bsdp.0 $e bridi su'o da zo'u broda $.
-    $( Restriction for first-order universal quantification. $)
-    bsdp $a bridi su'o da poi ke'a bo'a ku'o zo'u broda $.
-$}
+$( Restriction for first-order universal quantification. $)
+bsdp $a bridi su'o da poi ke'a bo'a ku'o zo'u broda $.
 
 $( Definition of {` ro da poi `} quantifiers as restricted first-order
    universal quantifiers. $)
@@ -3471,7 +3455,7 @@ ${
     $( Inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
     poi-roi $p |- ro da zo'u ganai da bo'a gi broda $=
-      ( brd brdp btb bgan df-poi-ro bi ) ABCACAEFCBGAHZCKEDABCIJ $.
+      ( brdp btb bgan brd df-poi-ro bi ) ABCECBFAGCHDABCIJ $.
 $}
 
 ${
@@ -3479,7 +3463,7 @@ ${
     $( Reverse inference form of ~df-poi-ro
        (Contributed by la korvo, 11-Aug-2023.) $)
     poi-rori $p |- ro da poi ke'a bo'a ku'o zo'u broda $=
-      ( btb bgan brd brdp df-poi-ro bi-rev ) CBEAFZCKGABCACAGHDABCIJ $.
+      ( btb bgan brd brdp df-poi-ro bi-rev ) CBEAFCGABCHDABCIJ $.
 $}
 
 ${
@@ -3513,7 +3497,7 @@ ${
     $( Inference form of ~df-ro-quant
        (Contributed by la korvo, 12-Sep-2023.) $)
     ro-quanti $p |- ro da poi ke'a bu'a ku'o zo'u da bu'e $=
-      ( brbc bu tsb brd brdp df-ro-quant bi ) ABECBFZAGCLCLHIDABCJK $.
+      ( brbc bu tsb brdp df-ro-quant bi ) ABECBFAGCHDABCIJ $.
 $}
 
 ${
@@ -3521,7 +3505,7 @@ ${
     $( Reverse inference form of ~df-ro-quant
        (Contributed by la korvo, 12-Sep-2023.) $)
     ro-quantri $p |- ro bu'a cu bu'e $=
-      ( bu tsb brd brdp brbc df-ro-quant bi-rev ) CBEZAFCLCLGHABIDABCJK $.
+      ( bu tsb brdp brbc df-ro-quant bi-rev ) CBEAFCGABHDABCIJ $.
 $}
 
 ${
@@ -3577,8 +3561,8 @@ ${
     $( Inference form of ~df-kampu
        (Contributed by la korvo, 17-Aug-2023.) $)
     kampui $p |- ro da poi ke'a cmima ko'e ku'o zo'u da ckaji ko'a $=
-      ( sbkampu bb sbckaji sbcmima tsb tss brd brdp df-kampu bi ) ABEFCAGFZBHIZ
-      PJCOCOKLDABCMN $.
+      ( sbkampu bb sbckaji sbcmima tsb tss brdp df-kampu bi ) ABEFCAGFBHIJCKDAB
+      CLM $.
 $}
 
 ${
@@ -3586,8 +3570,8 @@ ${
     $( Reverse inference form of ~df-kampu
        (Contributed by la korvo, 17-Aug-2023.) $)
     kampuri $p |- ko'a kampu ko'e $=
-      ( sbckaji bb sbcmima tsb tss brd brdp sbkampu df-kampu bi-rev ) CAEFZBGHZ
-      PICOCOJKABLFDABCMN $.
+      ( sbckaji bb sbcmima tsb tss brdp sbkampu df-kampu bi-rev ) CAEFBGHICJABK
+      FDABCLM $.
 $}
 
 $(
@@ -3979,7 +3963,7 @@ ${
     $( Delete the second place of a binary bridi.
        (Contributed by la korvo, 22-Aug-2024.) $)
     zihoit $p |- ko'a bu'a zi'o $=
-      ( sziho sbs tsb tss seri zihoi sei ) AECBACFGZLHABCDIJK $.
+      ( sziho sbs tsb tss seri zihoi sei ) AECBACFGHABCDIJK $.
 $}
 
 $(
@@ -4016,8 +4000,8 @@ ${
       ro de poi ke'a cmima ko'e ku'o zo'u
       ro di poi ke'a cmima ko'e ku'o zo'u
       ganai ge da ckini de ko'a gi de ckini di ko'a gi da ckini di ko'a $=
-      ( sbtakni bb sbckini bt bge bgan sbcmima tsb tss brd brdp df-takni bi ) A
-      BGHCDAIJDEAIJKCEAIJLZBMNZUAOZETETPQZUBDUCDUCPQZUBCUDCUDPQFABCDERS $.
+      ( sbtakni bb sbckini bt bge bgan sbcmima tsb tss brdp df-takni bi ) ABGHC
+      DAIJDEAIJKCEAIJLBMNOZEPSDPSCPFABCDEQR $.
 $}
 
 $(
@@ -4041,8 +4025,8 @@ ${
     $( Reverse inference form of ~df-kinfi
        (Contributed by la korvo, 25-Jun-2024.) $)
     kinfiri $p |- ko'a kinfi ko'e $=
-      ( sbckini bt bgan sbcmima tsb tss brd brdp sbkinfi bb df-kinfi bi-rev ) C
-      DAFGDCAFGHZBIJZSKZDRDRLMZTCUACUALMABNOEABCDPQ $.
+      ( sbckini bt bgan sbcmima tsb tss brdp sbkinfi bb df-kinfi bi-rev ) CDAFG
+      DCAFGHBIJKZDLQCLABMNEABCDOP $.
 $}
 
 $(
@@ -4064,8 +4048,8 @@ ${
     $( Reverse inference form of ~df-kinra
        (Contributed by la korvo, 25-Jun-2024.) $)
     kinrari $p |- ko'a kinra ko'e $=
-      ( sbckini bt sbcmima tsb tss brd brdp sbkinra bb df-kinra bi-rev ) CCAEFZ
-      BGHZQICPCPJKABLMDABCNO $.
+      ( sbckini bt sbcmima tsb tss brdp sbkinra bb df-kinra bi-rev ) CCAEFBGHIC
+      JABKLDABCMN $.
 $}
 
 ${
@@ -4074,8 +4058,8 @@ ${
        reflexive over any domain.
        (Contributed by la korvo, 13-Aug-2024.) $)
     refl-kinra $p |- pa ka ce'u bu'a ce'u kei kinra ko'e $=
-      ( sc tsb tss spk bckini sbcmima ckiniri poi-gen kinrari ) EEBFZNGHACCCBIA
-      JFZOGCCCBDKLM $.
+      ( sc tsb tss spk bckini sbcmima ckiniri poi-gen kinrari ) EEBFGHACCCBIAJF
+      GCCCBDKLM $.
 $}
 
 $( {` du `} is reflexive over any domain.
@@ -4145,8 +4129,7 @@ ${
     $( Inference form of ~pa-da
        (Contributed by la korvo, 20-Aug-2023.) $)
     pa-dai $p |- su'o da zo'u ge da bo'a gi ganai ko'a bo'a gi ko'a du da $=
-      ( btb bpd sbdu bb bgan bge bsd df-pa-da bi ) CBEZCFNABEACGHIJZCOKDABCLM
-      $.
+      ( btb bpd sbdu bb bgan bge bsd df-pa-da bi ) CBEZCFNABEACGHIJCKDABCLM $.
 $}
 
 ${
@@ -4154,15 +4137,12 @@ ${
     $( Reverse inference form of ~pa-da
        (Contributed by la korvo, 20-Aug-2023.) $)
     pa-dari $p |- pa da zo'u da bo'a $=
-      ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHIZCOJNCKDABC
-      LM $.
+      ( btb sbdu bb bgan bge bsd bpd df-pa-da bi-rev ) CBEZABEACFGHICJNCKDABCLM
+      $.
 $}
 
-${
-    bpdp.0 $e bridi pa da zo'u broda $.
-    $( Restriction for first-order uniqueness quantification. $)
-    bpdp $a bridi pa da poi ke'a bo'a ku'o zo'u broda $.
-$}
+$( Restriction for first-order uniqueness quantification. $)
+bpdp $a bridi pa da poi ke'a bo'a ku'o zo'u broda $.
 
 $( Definition of {` pa da poi `} quantifiers as restricted first-order
    uniqueness quantifiers. $)
@@ -4175,7 +4155,7 @@ ${
     $( Inference form of ~df-poi-pa
        (Contributed by la korvo, 15-Oct-2024.) $)
     poi-pai $p |- pa da zo'u ganai da bo'a gi broda $=
-      ( bpd bpdp btb bgan df-poi-pa bi ) ABCACEFCBGAHCEDABCIJ $.
+      ( bpdp btb bgan bpd df-poi-pa bi ) ABCECBFAGCHDABCIJ $.
 $}
 
 ${
@@ -4183,7 +4163,7 @@ ${
     $( Reverse inference form of ~df-poi-pa
        (Contributed by la korvo, 15-Oct-2024.) $)
     poi-pari $p |- pa da poi ke'a bo'a ku'o zo'u broda $=
-      ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCACGHDABCIJ $.
+      ( btb bgan bpd bpdp df-poi-pa bi-rev ) CBEAFCGABCHDABCIJ $.
 $}
 
 $(
@@ -4269,10 +4249,9 @@ ${
        (Contributed by la korvo, 16-Oct-2024.) $)
     sezni-elt $p |- pa de poi ke'a cmima ko'a ku'o zo'u
       ge da bu'a de da gi de bu'a da da $=
-      ( sbcmima bb bt bge tsb tss bpd bpdp bgan sc spk sbkloje brd brdp sbsezni
-      df-sezni bi ge-rei poi-roi spec1i ax-mp ) CAGHZCDCBIDCCBIJZAGKZUJLZDUIDMN
-      ZFUHULOCULUKCAPPPBKZUMLZUNLQZRHZULUKCULCULSTZUOAUAHUPUQJEABCDUBUCUDUEUFUG
-      $.
+      ( sbcmima bb bt bge tsb tss bpdp bgan spk sbkloje brdp sbsezni df-sezni
+      sc bi ge-rei poi-roi spec1i ax-mp ) CAGHZCDCBIDCCBIJAGKLZDMZFUFUHNCUHUGCA
+      TTTBKLLOZPHZUHUGCQZUIARHUJUKJEABCDSUAUBUCUDUE $.
 $}
 
 $(
@@ -4446,8 +4425,8 @@ ${
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indi $p |- ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
-      ( sl0 btb bkaclihe bb bge bsd brd brdp bkacnahu tsb ax-nat-ind ax-mp ) EA
-      FBCGHCAFIZCQJZABRBRKLIBAFZMNBSBSKLDABCOP $.
+      ( sl0 btb bkaclihe bb bge bsd brdp bkacnahu tsb ax-nat-ind ax-mp ) EAFBCG
+      HCAFICJABKIBAFLMBKDABCNO $.
 $}
 
 ${
@@ -4459,8 +4438,8 @@ ${
     $( Inference form of ~ax-nat-ind
        (Contributed by la korvo, 10-Aug-2023.) $)
     nat-indii $p |- ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
-      ( sl0 btb bkaclihe bb bge bsd brd brdp ge-ini nat-indi ) ABCFAGBCHICAGJZC
-      PKZABQBQLMDENO $.
+      ( sl0 btb bkaclihe bb bge bsd brdp ge-ini nat-indi ) ABCFAGBCHICAGJCKABLD
+      EMN $.
 $}
 
 $( Curried form of ~ax-nat-ind
@@ -4471,8 +4450,8 @@ nat-ind-cur $p |- ganai li no bo'a gi
       ge da kacli'e de
       gi de bo'a
   gi ro da poi ke'a kacna'u ku'o zo'u da bo'a $=
-  ( sl0 btb bkaclihe bb bge bsd brd brdp bkacnahu tsb ax-nat-ind uncur ) DAEBCF
-  GCAEHZCPIZABQBQJKBAEZLMBRBRJKABCNO $.
+  ( sl0 btb bkaclihe bb bge bsd brdp bkacnahu tsb ax-nat-ind uncur ) DAEBCFGCAE
+  HCIABJBAEKLBJABCMN $.
 
 $( There are no non-standard natural numbers. This axiom upgrades our
    arithmetic from BA, "baby arithmetic", to Robinson's Q. This is Robinson
@@ -4678,7 +4657,7 @@ ${
        (Contributed by la korvo, 31-Jul-2024.) $)
     kazmi-funii $p |- ko'a du ko'e $=
       ( sje sbkazmi bb sbdu tsb tss ge-ini eri ax-card-fun ax-mp ) ABFCGHABIHAB
-      CGJZPKACGHBCGHDELMABCNO $.
+      CGJKACGHBCGHDELMABCNO $.
 $}
 
 $( A unary relation describes the empty set when it never holds. An axiom of
@@ -4775,7 +4754,7 @@ ${
     $( Inference form of ~df-jompau
        (Contributed by la korvo, 4-Sep-2023.) $)
     jompaui $p |- su'o da zo'u da pagbu ko'a .e ko'e $=
-      ( sbjompau bb sje sbpagbu bsd df-jompau bi ) ABEFCABGHFZCLIDABCJK $.
+      ( sbjompau bb sje sbpagbu bsd df-jompau bi ) ABEFCABGHFCIDABCJK $.
 $}
 
 ${
@@ -4783,7 +4762,7 @@ ${
     $( Reverse inference form of ~df-jompau
        (Contributed by la korvo, 4-Sep-2023.) $)
     jompauri $p |- ko'a jompau ko'e $=
-      ( sje sbpagbu bb bsd sbjompau df-jompau bi-rev ) CABEFGZCLHABIGDABCJK $.
+      ( sje sbpagbu bb bsd sbjompau df-jompau bi-rev ) CABEFGCHABIGDABCJK $.
 $}
 
 $(
@@ -4805,7 +4784,7 @@ ${
     $( Inference form of ~df-kuzypau
        (Contributed by la korvo, 4-Sep-2023.) $)
     kuzypaui $p |- su'o da zo'u ko'a .e ko'e pagbu da $=
-      ( sbkuzypau bb sje sbpagbu bsd df-kuzypau bi ) ABEFABGCHFZCLIDABCJK $.
+      ( sbkuzypau bb sje sbpagbu bsd df-kuzypau bi ) ABEFABGCHFCIDABCJK $.
 $}
 
 ${
@@ -4813,8 +4792,7 @@ ${
     $( Reverse inference form of ~df-kuzypau
        (Contributed by la korvo, 4-Sep-2023.) $)
     kuzypauri $p |- ko'a kuzypau ko'e $=
-      ( sje sbpagbu bb bsd sbkuzypau df-kuzypau bi-rev ) ABECFGZCLHABIGDABCJK
-      $.
+      ( sje sbpagbu bb bsd sbkuzypau df-kuzypau bi-rev ) ABECFGCHABIGDABCJK $.
 $}
 
 $(
@@ -4953,8 +4931,8 @@ $( {` ki'irni'i `} is reflexive.
    (Contributed by la korvo, 13-Aug-2024.) $)
 kihirnihi-refl $p |- ko'a ki'irni'i ko'a $=
   ( wda wde sjnaa sbckini bt brd sbkihirnihi bb sbt bgan tsb tss df-na.a bi-rev
-  id tei ax-gen1 df-kihirnihi ) BCAADZEFZCUAGZBUBGAAHIUBBUACBCTEACBEJZFZUDKTCBU
-  CFUDPAABCUCLZUEMZUFMNOQRRAABCSO $.
+  id tei ax-gen1 df-kihirnihi ) BCAADZEFZCGZBGAAHIUBBUACBCTEACBEJZFZUDKTCBUCFUD
+  PAABCUCLMMNOQRRAABCSO $.
 
 $( {` ki'irni'i `} is reflexive over any domain.
    (Contributed by la korvo, 13-Aug-2024.) $)
@@ -5085,8 +5063,8 @@ ${
        (Contributed by la korvo, 12-Aug-2024.) $)
     fancui $p |- ro da poi ke'a cmima ko'e ku'o zo'u pa de zo'u
       ge de cmima ko'i gi da ckini de ko'o $=
-      ( sbfancu bq sbcmima bb sbckini bt bge bpd tsb tss brd brdp df-fancu bi )
-      ABCDHIFCJKEFDLMNFOZBJPZUCQEUBEUBRSGABCDEFTUA $.
+      ( sbfancu bq sbcmima bb sbckini bt bge bpd tsb tss brdp df-fancu bi ) ABC
+      DHIFCJKEFDLMNFOBJPQERGABCDEFST $.
 $}
 
 ${
@@ -5095,8 +5073,8 @@ ${
     $( Inference form of ~df-fancu
        (Contributed by la korvo, 12-Aug-2024.) $)
     fancuii $p |- pa da zo'u ge da cmima ko'i gi de ckini da ko'o $=
-  ( sbcmima bb sbckini bt bge bpd bgan tsb tss fancui poi-roi spec1i ax-mp ) FB
-  IJZECIJFEDKLMENZHUBUCOFUCBIPZUDQFABCDFEGRSTUA $.
+      ( sbcmima bb sbckini bt bge bpd bgan tsb tss fancui poi-roi spec1i ax-mp
+      ) FBIJZECIJFEDKLMENZHUBUCOFUCBIPQFABCDFEGRSTUA $.
 $}
 
 $(
@@ -5140,8 +5118,8 @@ $( Under postulated definitions of la xorxes and la korvo, {` mapti `} is a
    subrelation of {` ckini `}.
    (Contributed by la korvo, 22-Aug-2024.) $)
 mapti-ckini $p |- ganai ko'a mapti ko'e ko'i gi ko'a ckini ko'e ko'i $=
-  ( wde sbmapti bt sbckini sbdu bb bgan brd bge df-mapti go-ganai ax-ge-le syl )
-  ABCEFZABCGFZDBCGFDAHIJZDSKADCGFDBHIJZDTKLZLZRQUBABCDMNRUAOP $.
+  ( wda sbmapti bt sbckini sbdu bb bgan brd bge df-mapti go-ganai ax-ge-le syl
+  ) ABCEFZABCGFZDBCGFDAHIJDKADCGFDBHIJDKLZLZRQTABCDMNRSOP $.
 
 $(
 =-=-=
