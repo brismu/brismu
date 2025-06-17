@@ -3323,11 +3323,8 @@ $)
 
 $c na'a'u $.
 
-${
-    bnd.0 $e bridi broda $.
-    $( Syntax for first-order not-free quantification. $)
-    bnd $a bridi na'a'u da zo'u broda $.
-$}
+$( Syntax for first-order not-free quantification. $)
+bnd $a bridi na'a'u da zo'u broda $.
 
 $( Definition of not-free quantification: {` na'a'u da `} means that the
    value which {` da `} takes on is effectively irrelevant to the truth value
@@ -3349,20 +3346,20 @@ ${
     $( Inference form of ~df-nahahu
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfi $p |- na'a'u da zo'u broda $=
-      ( bnd brd bgan df-nahahu bi-revg ) ABADAABAEFBABGCH $.
+      ( bnd brd bgan df-nahahu bi-revg ) ABDAABAEFBABGCH $.
 $}
 
 $( Property of not-free quantification.
    (Contributed by la korvo, 25-Jun-2024.) $)
 nfr $p |- ganai na'a'u da zo'u broda gi ganai broda gi ro da zo'u broda $=
-  ( bnd brd bgan df-nahahu ax-spec1 sylbi ) ABACAABADEZBIDIABFIBGH $.
+  ( bnd brd bgan df-nahahu ax-spec1 sylbi ) ABCAABADEZBIDIABFIBGH $.
 
 ${
     nfri.0 $e |- na'a'u da zo'u broda $.
     $( Inference form of ~nfr
        (Contributed by la korvo, 25-Jun-2024.) $)
     nfri $p |- ganai broda gi ro da zo'u broda $=
-      ( bnd brd bgan nfr ax-mp ) ABADAABAEFCABGH $.
+      ( bnd brd bgan nfr ax-mp ) ABDAABAEFCABGH $.
 $}
 
 ${
