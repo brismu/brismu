@@ -3207,11 +3207,8 @@ ${
     bsd $a bridi su'o da zo'u broda $.
 $}
 
-${
-    bsb.0 $e bridi broda $.
-    $( Syntax for second-order existential quantification. $)
-    bsb $a bridi su'o bu'a zo'u broda $.
-$}
+$( Syntax for second-order existential quantification. $)
+bsb $a bridi su'o bu'a zo'u broda $.
 
 $( The axiom of existence: at least one element exists in the universe.
    This is necessary if we want to exclude the trivial empty model. $)
