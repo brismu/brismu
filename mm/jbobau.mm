@@ -3525,11 +3525,8 @@ $)
 
 $c po'u $.
 
-${
-    brdpu.0 $e bridi ro da zo'u broda $.
-    $( Restriction for first-order identity. $)
-    brdpu $a bridi ro da po'u ko'a zo'u broda $.
-$}
+$( Restriction for first-order identity. $)
+brdpu $a bridi ro da po'u ko'a zo'u broda $.
 
 $( Definition of {` po'u `} in terms of {` poi du `}, as given by
    example 3.9-10 from [CLL] p. 8. $)
@@ -4992,14 +4989,8 @@ $c lujna'u ka'o $.
 
 sblujnahu $a selbri lujna'u $.
 
-${
-    pc.0 $e PA ku'i'a $.
-    pc.1 $e PA ku'i'e $.
-
-    $( Syntax for complex numbers.
-       (Contributed by la korvo, 3-Jan-2025.) $)
-    pc $a PA ku'i'a ka'o ku'i'e $.
-$}
+$( Syntax for complex numbers. (Contributed by la korvo, 3-Jan-2025.) $)
+pc $a PA ku'i'a ka'o ku'i'e $.
 
 $( One is a complex number. One of Megill's axioms. $)
 ax-comp-pa $a |- li pa ka'o no lujna'u $.
