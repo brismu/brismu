@@ -55,8 +55,7 @@ htmldef "bridi" as "<em>bridi</em> ";
 htmldef "selbri" as "<em>selbri</em> ";
 htmldef "sumti" as "<em>sumti</em> ";
 htmldef "brirebla" as "<em>brirebla</em> ";
-htmldef "kluselbri" as "<em>kluselbri</em> ";
-htmldef "skaselbri" as "<em>skaselbri</em> ";
+htmldef "brili'e" as "<em>brili'e</em> ";
 htmldef "PA" as "<em>PA</em> ";
 htmldef "zi'o" as "<span class='sumti'>zi'o</span> ";
 htmldef "fo'a" as "<span class='sumti'>fo'a</span> ";
@@ -77,8 +76,6 @@ htmldef "brodu" as "<span class='bridi'>brodu</span> ";
 htmldef "da" as "<span class='sumti'>da</span> ";
 htmldef "de" as "<span class='sumti'>de</span> ";
 htmldef "di" as "<span class='sumti'>di</span> ";
-htmldef "do" as "<span class='sumti'>do</span> ";
-htmldef "mi" as "<span class='sumti'>mi</span> ";
 htmldef "du" as "<span class='selbri'>du</span> ";
 htmldef "cei'i" as "<span class='selbri'>cei'i</span> ";
 htmldef "gai'o" as "<span class='selbri'>gai'o</span> ";
@@ -135,7 +132,7 @@ htmldef "bai'ei" as " 1+ ";
 htmldef "ka'au" as " # ";
 htmldef "su'i" as " + ";
 htmldef "pi'i" as " * ";
-htmldef "vu'u" as " - ";
+htmldef "ka'o" as " +i ";
 htmldef "ro" as "<small>ro</small> ";
 htmldef "su'o" as "<small>su'o</small> ";
 htmldef "na'a'u" as "<small>na'a'u</small> ";
@@ -158,7 +155,6 @@ htmldef "cnita" as "<span class='gismu'>cnita</span> ";
 htmldef "crane" as "<span class='gismu'>crane</span> ";
 htmldef "drata" as "<span class='gismu'>drata</span> ";
 htmldef "dugri" as "<span class='gismu'>dugri</span> ";
-htmldef "dukni" as "<span class='gismu'>dukni</span> ";
 htmldef "dunli" as "<span class='gismu'>dunli</span> ";
 htmldef "fancu" as "<span class='gismu'>fancu</span> ";
 htmldef "fatci" as "<span class='gismu'>fatci</span> ";
@@ -171,17 +167,16 @@ htmldef "kazmi" as "<span class='gismu'>kazmi</span> ";
 htmldef "kinfi" as "<span class='gismu'>kinfi</span> ";
 htmldef "kinra" as "<span class='gismu'>kinra</span> ";
 htmldef "kloje" as "<span class='gismu'>kloje</span> ";
+htmldef "lanzu" as "<span class='gismu'>lanzu</span> ";
 htmldef "mapti" as "<span class='gismu'>mapti</span> ";
 htmldef "mintu" as "<span class='gismu'>mintu</span> ";
 htmldef "mupli" as "<span class='gismu'>mupli</span> ";
-htmldef "natfe" as "<span class='gismu'>natfe</span> ";
 htmldef "nalti" as "<span class='gismu'>nalti</span> ";
 htmldef "nenri" as "<span class='gismu'>nenri</span> ";
 htmldef "nibli" as "<span class='gismu'>nibli</span> ";
 htmldef "pagbu" as "<span class='gismu'>pagbu</span> ";
 htmldef "pilji" as "<span class='gismu'>pilji</span> ";
 htmldef "pombo" as "<span class='gismu'>pombo</span> ";
-htmldef "prami" as "<span class='gismu'>prami</span> ";
 htmldef "pritu" as "<span class='gismu'>pritu</span> ";
 htmldef "purci" as "<span class='gismu'>purci</span> ";
 htmldef "rinka" as "<span class='gismu'>rinka</span> ";
@@ -220,9 +215,13 @@ htmldef "ki'irni'i" as "<span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as "<span class='lujvo'>ki'irvlina</span> ";
 htmldef "klojere" as "<span class='lujvo'>klojere</span> ";
 htmldef "kuzypau" as "<span class='lujvo'>kuzypau</span> ";
+htmldef "lujna'u" as "<span class='lujvo'>lujna'u</span> ";
+htmldef "lazmi'u" as "<span class='lujvo'>lazmi'u</span> ";
+htmldef "mrena'u" as "<span class='lujvo'>mrena'u</span> ";
 htmldef "pagyfancu" as "<span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as "<span class='lujvo'>selbri</span> ";
 htmldef "selcmi" as "<span class='lujvo'>selcmi</span> ";
+htmldef "zilcmi" as "<span class='lujvo'>zilcmi</span> ";
 htmldef "le" as "<span class='gadri'>le</span> ";
 htmldef "ku" as "<small>ku</small> ";
 $)
@@ -2894,8 +2893,8 @@ ${
        without a standard of comparison, which is a stronger condition.
        (Contributed by la korvo, 25-Jun-2024.) $)
     du-mintu $p |- ko'a mintu ko'e ko'i $=
-      ( sbba sjo sbckaji tsb tss dui ax-ro-inst-2u minturi ) ABCABFCGHIZEMABEDJ
-      KL $.
+      wk1 wk2 wk3 wk1 wk2 sjo wk3 sbckaji tsb tss sbba wk3 sbckaji tsb tss wk1
+      wk2 sbba du-mintu.0 dui ax-ro-inst-2u minturi $.
 $}
 
 ${
@@ -5219,8 +5218,6 @@ Cultures
 =-=-=
 $)
 
-$c kluselbri $.
-
 $(
 =-=-=
 Families: {lanzu}
@@ -5238,11 +5235,3 @@ ax-lanzu-cmima $a |- ganai ko'a lanzu ko'e ko'i gi ko'e cmima ko'a $.
 $( Definition of {` lazmi'u `} in terms of {` lanzu `} and {` cmima `} from the baseline notes. $)
 df-lazmihu $a |- go ko'a lazmi'u ko'e
   gi su'o da poi ke'a lanzu ku'o zo'u ko'a mintu ko'e pa ka ce'u cmima da kei $.
-
-$(
-=-=-=
-More constants
-=-=-=
-$)
-
-$c mivyselbri mreselbri selraklyselbri vusyselbri xumselbri xumsleselbri $.
