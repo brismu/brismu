@@ -116,6 +116,11 @@ partial order x3", which would be a remarkably powerful and general relation.
 Similarly, {porsi} might be "x1 (poset) is the partial order arising from
 order x2 (binary ka) upon set x3".
 
+For partial and total orders, it might be possible to use ``{enspoi}`` to
+associate the order's selbri to its domain. Special cases ``{cleispoi}``,
+``{moinspoi}``, and ``{mrenspoi}`` identify the canonical orderings on the
+cardinals, ordinals, and real numbers respectively.
+
 ## Connectedness
 
 A relation is connected if, for all pairs of values x and y, either xRy, yRx,
