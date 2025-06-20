@@ -112,7 +112,6 @@ elif cmd == "metavars":
     tableHeaders("Metamath type", "*cmavo*")
     for k, v in sorted(fs.items()): print(f"{v} | {k}")
 elif cmd == "vlaste":
-    d = {k: " ".join(crack(v)[1]) for k, v in dfs.items()}
     tableHeaders("*valsi*", "full statement", "*lo jbovla* (definiendum)", "*lo se jbovla* (definiens)")
     for k, v in dfs.items():
         if v[0] != "go": continue
