@@ -5077,7 +5077,7 @@ $c pagyfancu $.
 sbpagyfancu $a selbri pagyfancu $.
 
 $( Definition of {` pagyfancu `} in terms of {` ki'irni'i `}. $)
-df-pagyfancu $a
+df-pagyfancu $a |-
   go su'o da zo'u su'o de zo'u su'o di zo'u
     da pagyfancu de di pa ka ce'u bu'a ce'u kei
   gi pa ka su'o da zo'u ce'u .e ce'u bu'a da kei
