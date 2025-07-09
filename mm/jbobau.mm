@@ -148,6 +148,7 @@ htmldef "balvi" as "<span class='gismu'>balvi</span> ";
 htmldef "berti" as "<span class='gismu'>berti</span> ";
 htmldef "bridi" as "<span class='gismu'>bridi</span> ";
 htmldef "cabna" as "<span class='gismu'>cabna</span> ";
+htmldef "cajni" as "<span class='gismu'>cajni</span> ";
 htmldef "ckaji" as "<span class='gismu'>ckaji</span> ";
 htmldef "ckini" as "<span class='gismu'>ckini</span> ";
 htmldef "cmima" as "<span class='gismu'>cmima</span> ";
@@ -4177,7 +4178,31 @@ $( Definition of {` pombo `}, by analogy with ~df-pa-da . This is a slightly
    something exists with the given property, but {` pombo `} goes further and
    witnesses the thing. $)
 df-pombo $a |- go ko'a pombo ko'e
-  gi ro da zo'u go da ckaji ko'e gi ko'a du da $.
+  gi ro da zo'u da ckaji ko'e gi'o du ko'a $.
+
+${
+    pomboi.0 $e |- ko'a pombo ko'e $.
+    $( Inference form of ~df-pombo
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    pomboi $p |- ro da zo'u da ckaji ko'e gi'o du ko'a $=
+      ( sbpombo bb sbckaji tsb tss sbdu tgiho btb brd df-pombo bi ) ABEFCBGHIAJ
+      HIKLCMDABCNO $.
+$}
+
+${
+    pombori.0 $e |- ro da zo'u da ckaji ko'e gi'o du ko'a $.
+    $( Reverse inference form of ~df-pombo
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    pombori $p |- ko'a pombo ko'e $=
+      ( sbckaji tsb tss sbdu tgiho btb brd sbpombo bb df-pombo bi-rev ) CBEFGAH
+      FGIJCKABLMDABCNO $.
+$}
+
+$(
+#*#*#
+Abstract algebra I: magmas, semigroups, monoids
+#*#*#
+$)
 
 $(
 =-=-=
@@ -4222,6 +4247,24 @@ df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u kei kloje ko'a
 
 $(
 =-=-=
+Commutative operators: {cajni}
+=-=-=
+$)
+
+$c cajni $.
+
+sbcajni $a selbri cajni $.
+
+$( Definition of {` cajni `} in terms of {` klojere `}. $)
+df-cajni $a |- go pa ka ce'u bu'a ce'u ce'u kei cajni ko'a
+  gi ge pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+  gi ro da poi ke'a cmima ko'a ku'o zo'u
+     ro de poi ke'a cmima ko'a ku'o zo'u
+     ro di poi ke'a cmima ko'a ku'o zo'u
+     go da bu'a de di gi de bu'a da di $.
+
+$(
+=-=-=
 Monoids: {sezni}
 =-=-=
 $)
@@ -4249,6 +4292,19 @@ ${
       sc bi ge-rei poi-roi spec1i ax-mp ) CAGHZCDCBIDCCBIJAGKLZDMZFUFUHNCUHUGCA
       TTTBKLLOZPHZUHUGCQZUIARHUJUKJEABCDSUAUBUCUDUE $.
 $}
+
+$(
+=-=-=
+Groups: {dukni}
+=-=-=
+$)
+
+$c dukni $.
+
+sbdukni $a selbri dukni $.
+
+$( Definition of {` dukni `} in terms of {` sezni `}: a group is a monoid with
+   inverses. $)
 
 $(
 #####
