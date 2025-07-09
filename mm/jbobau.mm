@@ -28,6 +28,8 @@ Conventions:
 * Operators commute "-com", relations are symmetric "-sym"
 * Operators have identities "-id", relations are reflexive "-refl"
 * Operators compose "-syl", relations are transitive "-trans"
+* "foml" starts anything from [Margaris]
+  * Look for better names first!
 
 $)
 
@@ -410,6 +412,14 @@ ${
 $}
 
 ${
+    imim2i.0 $e |- ganai broda gi brode $.
+    $( Lift an implication to have a common antecedent as an environment.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    imim2i $p |- ganai ganai brodi gi broda gi ganai brodi gi brode $=
+      ( bgan ki si ) CABABECDFG $.
+$}
+
+${
     mpd.0 $e |- ganai broda gi brode $.
     mpd.1 $e |- ganai broda gi ganai brode gi brodi $.
     $( Deductive form of ~ax-mp
@@ -512,6 +522,15 @@ ${
        (Contributed by la korvo, 30-Jul-2023.) $)
     ganai-swap12 $p |- ganai brode gi ganai broda gi brodi $=
       sbb2 sbb2 sbb1 sbb3 sbb2 id ganai-swap12.0 syl5com $.
+$}
+
+${
+    mpcom.0 $e |- ganai broda gi brode $.
+    mpcom.1 $e |- ganai brode gi ganai broda gi brodi $.
+    $( Remove a duplicated antecedent from an inference.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    mpcom $p |- ganai broda gi brodi $=
+      ( ganai-swap12 mpd ) ABCDBACEFG $.
 $}
 
 $( A closed version of ~ax-mp
@@ -686,6 +705,11 @@ ${
       sbb1 sbb2 sbb1 sbb2 bge ge-ini.0 ge-ini.1 sbb1 sbb2 ax-ge-in mp2 $.
 $}
 
+$( Internalization of product comonads.
+   (Contributed by la korvo, 8-Jul-2025.) $)
+ancl $p |- ganai ganai broda gi brode gi ganai broda gi ge broda gi brode $=
+  ( bge ax-ge-in si ) ABABCABDE $.
+
 $( Conjunction implies implication.
    (Contributed by la korvo, 22-Jun-2024.) $)
 ge-ganai $p |- ganai ge broda gi brode gi ganai broda gi brode $=
@@ -705,11 +729,77 @@ ${
 $}
 
 ${
+    cur-swap12.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( ~cur with swapped antecedents.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    cur-swap12 $p |- ganai ge brode gi broda gi brodi $=
+      ( ganai-swap12 cur ) BACABCDEF $.
+$}
+
+${
     uncur.0 $e |- ganai ge broda gi brode gi brodi $.
     $( The natural uncurry (or "export") for any well-formed statement.
        (Contributed by la korvo, 31-Jul-2023.) $)
     uncur $p |- ganai broda gi ganai brode gi brodi $=
       ( bge ax-ge-in syl6 ) ABABECABFDG $.
+$}
+
+${
+    uncur-swap12.0 $e |- ganai ge broda gi brode gi brodi $.
+    $( ~uncur with swapped antecedents.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    uncur-swap12 $p |- ganai brode gi ganai broda gi brodi $=
+      ( uncur ganai-swap12 ) ABCABCDEF $.
+$}
+
+${
+    weakar.0 $e |- ganai broda gi brode $.
+    $( Weaken an antecedent on the right.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    weakar $p |- ganai ge broda gi brodi gi brode $=
+      ( kd cur ) ACBABCDEF $.
+$}
+
+${
+    weakard.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Deduction form of ~weakar
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    weakard $p |- ganai broda gi ganai ge brode gi brodo gi brodi $=
+      ( bge ax-ge-le syl5 ) BDFBACBDGEH $.
+$}
+
+${
+    answap.0 $e |- ganai ge broda gi brode gi brodi $.
+    $( Swap antecedents.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    answap $p |- ganai ge brode gi broda gi brodi $=
+      ( uncur ganai-swap12 cur ) BACABCABCDEFG $.
+$}
+
+${
+    syldan.0 $e |- ganai ge broda gi brode gi brodi $.
+    syldan.1 $e |- ganai ge broda gi brodi gi brodo $.
+    $( A syllogism flattening a nested pair.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    syldan $p |- ganai ge broda gi brode gi brodo $=
+      ( bge uncur-swap12 weakard mpcom ) ABGCDECADBACDFHIJ $.
+$}
+
+${
+    weakal.0 $e |- ganai broda gi brode $.
+    $( Weaken an antecedent on the left.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    weakal $p |- ganai ge brodi gi broda gi brode $=
+      ( weakar answap ) ACBABCDEF $.
+$}
+
+${
+    sylan2.0 $e |- ganai broda gi brodi $.
+    sylan2.1 $e |- ganai ge brode gi brodi gi brodo $.
+    $( A syllogism weakening the antecedent.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    sylan2 $p |- ganai ge brode gi broda gi brodo $=
+      ( weakal syldan ) BACDACBEGFH $.
 $}
 
 ${
@@ -741,12 +831,30 @@ ${
 $}
 
 ${
+    mpdan.0 $e |- ganai broda gi brode $.
+    mpdan.1 $e |- ganai ge broda gi brode gi brodi $.
+    $( A variant of ~mpan
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    mpdan $p |- ganai broda gi brodi $=
+      ( id syl2anc ) AABCAFDEG $.
+$}
+
+${
     mpan.0 $e |- broda $.
     mpan.1 $e |- ganai ge broda gi brode gi brodi $.
     $( An inference eliminating a conjunction from the antecedent.
        (Contributed by la korvo, 31-Jul-2023.) $)
     mpan $p |- ganai brode gi brodi $=
       ( ki mpancom ) BACABDFEG $.
+$}
+
+${
+    mpan2.0 $e |- brode $.
+    mpan2.1 $e |- ganai ge broda gi brode gi brodi $.
+    $( An inference eliminating a conjunction from the antecedent.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    mpan2 $p |- ganai broda gi brodi $=
+      ( ki mpdan ) ABCBADFEG $.
 $}
 
 ${
@@ -757,6 +865,60 @@ ${
        (Contributed by la korvo, 31-Jul-2023.) $)
     mp2an $p |- brodi $=
       ( mpan ax-mp ) BCEABCDFGH $.
+$}
+
+${
+    mpan9.0 $e |- ganai broda gi brode $.
+    mpan9.1 $e |- ganai brodi gi ganai brode gi brodo $.
+    $( An inference.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    mpan9 $p |- ganai ge broda gi brodi gi brodo $=
+      ( syl5 cur-swap12 ) CADABCDEFGH $.
+$}
+
+${
+    sylan.0 $e |- ganai broda gi brode $.
+    sylan.1 $e |- ganai ge brode gi brodi gi brodo $.
+    $( A syllogism refining a conjunction.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    sylan $p |- ganai ge broda gi brodi gi brodo $=
+      ( uncur-swap12 mpan9 ) ABCDEBCDFGH $.
+$}
+
+${
+    syl2an.0 $e |- ganai broda gi brode $.
+    syl2an.1 $e |- ganai brodu gi brodi $.
+    syl2an.2 $e |- ganai ge brode gi brodi gi brodo $.
+    $( A double syllogism.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    syl2an $p |- ganai ge broda gi brodu gi brodo $=
+      ( sylan sylan2 ) EACDGABCDFHIJ $.
+$}
+
+${
+    ge-pair.0 $e |- ganai broda gi brode $.
+    ge-pair.1 $e |- ganai brodi gi brodo $.
+    $( A universal property of products: given two arrows in Loj, there is an
+    arrow from the product of their sources to the product of their targets.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    ge-pair $p |- ganai ge broda gi brodi gi ge brode gi brodo $=
+      ( bge id syl2an ) ABDBDGZCEFJHI $.
+$}
+
+${
+    ge-pairl.0 $e |- ganai broda gi brode $.
+    $( ~ge-pair with only one implication, on the left.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    ge-pairl $p |- ganai ge broda gi brodi gi ge brode gi brodi $=
+      ( id ge-pair ) ABCCDCEF $.
+$}
+
+${
+    ge-pairr.0 $e |- ganai broda gi brode $.
+    $( ~ge-pair with only one implication, on the right.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    ge-pairr $p |- ganai ge brodi gi broda gi ge brodi gi brode $=
+      ( id ge-pair ) CCABCEDF $.
 $}
 
 $(
@@ -1806,6 +1968,15 @@ ${
 $}
 
 ${
+    big1.0 $e |- go ro da zo'u broda gi brode $.
+    big1.1 $e |- broda $.
+    $( Modus ponens with generalization.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    big1 $p |- brode $=
+      ( brd ax-gen1 bi ) ACFBACEGDH $.
+$}
+
+${
     ax-gen2.0 $e |- broda $.
     $( Axiom of second-order generalization. $)
     ax-gen2 $a |- ro bu'a zo'u broda $.
@@ -1828,6 +1999,14 @@ ${
        (Contributed by la korvo, 4-Jan-2025.) $)
     spec1d $p |- ganai broda gi brode $=
       ( brd ax-spec1 syl ) ABCEBDBCFG $.
+$}
+
+${
+    spec1s.0 $e |- ganai broda gi brode $.
+    $( Generalize an antecedent.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    spec1s $p |- ganai ro da zo'u broda gi brode $=
+      ( brd ax-spec1 syl ) ACEABACFDG $.
 $}
 
 $( Axiom of second-order specialization, by analogy with ~ax-spec1 $)
@@ -1865,6 +2044,23 @@ ${
        (Contributed by la korvo, 23-Jun-2024.) $)
     qi1-mp $p |- ro da zo'u brode $=
       ( brd qi1i ax-mp ) ACFBCFEABCDGH $.
+$}
+
+${
+    qi1q.0 $e |- ganai broda gi brode $.
+    $( Quantify over both sides of an implication.
+       (Contributed by la korvo, 8-Jul-2025.) $)
+    qi1q $p |- ganai ro da zo'u broda gi ro da zo'u brode $=
+      ( bgan brd ax-qi1 mpg1 ) ABEACFBCFECABCGDH $.
+$}
+
+${
+    alrimih.0 $e |- ganai broda gi ro da zo'u broda $.
+    alrimih.1 $e |- ganai broda gi brode $.
+    $( An inference.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    alrimih $p |- ganai broda gi ro da zo'u brode $=
+      ( brd qi1q syl ) AACFBCFDABCEGH $.
 $}
 
 $( A variant of ~ax-qi1 for second-order quantifiers. Very few claims will
@@ -1946,6 +2142,9 @@ ${
     ro1-coms $p |- ganai ro de zo'u ro da zo'u broda gi brode $=
       ( brd ax-ro1-com syl ) ACFDFADFCFBADCGEH $.
 $}
+
+$( First-order universal quantifiers bind their variables. $)
+ax-ro1-nf $a |- ganai ro da zo'u broda gi ro da zo'u ro da zo'u broda $.
 
 $(
 #*#*#
@@ -3201,16 +3400,18 @@ $( Syntax for second-order existential quantification. $)
 bsb $a bridi su'o bu'a zo'u broda $.
 
 $( The axiom of existence: at least one element exists in the universe.
-   This is necessary if we want to exclude the trivial empty model. $)
-ax-ex $a |- su'o da zo'u da du de $.
+   This is necessary if we want to exclude the trivial empty model. The
+   apparent mismatch between metavariable types is required in order to evade
+   the global distinctness requirement; this axiom holds even if {` da `} and
+   {` ko'a `} are syntactically equivalent. $)
+ax-ex $a |- su'o da zo'u da du ko'a $.
 
 ${
-    $d da de $.
     $( A weaker version of ~ax-ex which requires {` da `} and {` de `} to be
     distinct.
        (Contributed by la korvo, 4-Jan-2025.) $)
     exv $p |- su'o da zo'u da du de $=
-      ( ax-ex ) ABC $.
+      ( ax-ex ) BAC $.
 $}
 
 $( {` su'o da zo'u `} binds {` da `}. $)
@@ -3252,58 +3453,82 @@ $( Due to ~ax-ex there will always be a spurious witness to any true bridi.
 wit $p |- ganai broda gi su'o da zo'u broda $=
   ( bsd bgan brd id ax-eb eqih bi-rev spec1i ) AABCZDZBKKDLBEKFKABABGHIJ $.
 
-$( The Axiom of Null Set: there exists a set with no elements. $)
-ax-cmima-nul $a |- su'o da zo'u ro de zo'u naku de cmima da $.
-
-$(
-#*#*#
-Substitution
-#*#*#
-$)
-
-$c [ / ] $.
-
-$( Metasyntax for substitutions. In this example, we are replacing every
-instance of {` da `} within {` broda `} with {` ko'a `}. $)
-bsub $a bridi [ ko'a / da ] broda $.
-
-$( Definition of proper substitution following definition df-sb in [ILE] p. 0.
-   This clever gadget breaks scoping to require that substitution is correct
-   in both the case where {` da `} is free and the case where {` da `} is
-   bound by mixing both cases, skipping grammatical analysis and
-   scope-tracking entirely. $)
-df-sub $a |- go [ ko'a / da ] broda gi
-  ge ganai da du ko'a gi broda
-  gi su'o da zo'u ge da du ko'a gi broda $.
-
 ${
-    subi.0 $e |- [ ko'a / da ] broda $.
-    $( Inference form of ~df-sub
-       (Contributed by la korvo, 22-Jun-2024.) $)
-    subi $p |- ge ganai da du ko'a gi broda
-      gi su'o da zo'u ge da du ko'a gi broda $=
-      ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBICJIDABCKL $.
+    exlimih.0 $e |- ganai brode gi ro da zo'u brode $.
+    exlimih.1 $e |- ganai broda gi brode $.
+    $( Convert universal quantification to existential quantification on top of an inference.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    exlimih $p |- ganai su'o da zo'u broda gi brode $=
+      ( bgan bsd eqih big1 ) ABFACGBFCBACDHEI $.
 $}
 
-$( Property of proper substitution.
-   (Contributed by la korvo, 25-Jun-2024.) $)
-sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
-  ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHCIZMOPHA
-  BCJKL $.
+${
+    exlimdh.0 $e |- ganai broda gi ro da zo'u broda $.
+    exlimdh.1 $e |- ganai brodi gi ro da zo'u brodi $.
+    exlimdh.2 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Deduction converting universal quantification to existential quantification.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    exlimdh $p |- ganai broda gi ganai su'o da zo'u brode gi brodi $=
+      ( bgan brd bsd alrimih eqih sylib ) ABCHZDIBDJCHANDEGKCBDFLM $.
+$}
 
-subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
-  ( sbdu bb bsub bge bgan bsd ge-ganai wit df-sub sylanbrc uncur ) CADEZBABCFZO
-  BGZOBHQCIPOBJQCKABCLMN $.
+$( Internalization of the concept that, if an arrow is inhabited for all
+values of some variable, then the existence of an inhabitant in the source of
+the arrow implies an inhabitant in the target of the arrow.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+exim $p |- ganai ro da zo'u ganai broda gi brode
+  gi ganai su'o da zo'u broda gi su'o da zo'u brode $=
+  ( bgan brd bsd ax-ro1-nf ax-eb wit imim2i spec1s exlimdh ) ABDZCEABCFZCMCGBCH
+  MANDCBNABCIJKL $.
 
-subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
-  ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
-  ZNBHCIZHZNBABCJQNBOPKLM $.
+${
+    eximi.0 $e |- ganai broda gi brode $.
+    $( Inference form of ~exim
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    eximi $p |- ganai su'o da zo'u broda gi su'o da zo'u brode $=
+      ( bgan bsd exim mpg1 ) ABEACFBCFECABCGDH $.
+$}
 
-$( An identity for substitutions.
-   (Contributed by la korvo, 22-Jun-2024.) $)
-subid $p |- go [ da / da ] broda gi broda $=
-  ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 isod ax-mp go-comi ) ABABCZBBDEZAM
-  FBGNAMBABHBABIJKL $.
+${
+    eximdh.0 $e |- ganai broda gi ro da zo'u broda $.
+    eximdh.1 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Deductive form of ~exim
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    eximdh $p |- ganai broda gi ganai su'o da zo'u brode gi su'o da zo'u brodi $=
+      ( bgan brd bsd alrimih exim syl ) ABCGZDHBDICDIGAMDEFJBCDKL $.
+$}
+
+$( Theorem 19.29 of [Margaris] p. 90.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+foml19.29 $p |- ganai ge ro da zo'u broda gi su'o da zo'u brode
+  gi su'o da zo'u ge broda gi brode $=
+  ( brd bsd bge bgan ax-ge-in qi1q exim syl cur ) ACDZBCEZABFZCEZMBOGZCDNPGAQCA
+  BHIBOCJKL $.
+
+$( Universal property of products ~ax-ge-le underneath existential
+quantification.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+ge-lex $p |- ganai su'o da zo'u ge broda gi brode gi su'o da zo'u broda $=
+  ( bge ax-ge-le eximi ) ABDACABEF $.
+
+$( Distribute existential quantification over conjunction. Theorem 19.40 of [Margaris] p. 90.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+ge-dist-ex $p |- ganai su'o da zo'u ge broda gi brode
+  gi ge su'o da zo'u broda gi su'o da zo'u brode $=
+  ( bge bsd ge-lex ax-ge-re eximi jca ) ABDZCEACEBCEABCFJBCABGHI $.
+
+${
+    foml19.41.0 $e |- ganai brode gi ro da zo'u brode $.
+    $( Obsolete version of theorem 19.41 of [Margaris] p. 90.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    foml19.41 $p |- go su'o da zo'u ge broda gi brode
+      gi ge su'o da zo'u broda gi brode $=
+      ( bge bsd ge-dist-ex exlimih ge-pairr syl ge-in-swap12 eximdh cur-swap12
+      id iso ) ABEZCFZACFZBEZQRBCFZESABCGTBRBBCDBNHIJBRQBAPCDBAKLMO $.
+$}
+
+$( The Axiom of Null Set: there exists a set with no elements. $)
+ax-cmima-nul $a |- su'o da zo'u ro de zo'u naku de cmima da $.
 
 $(
 #*#*#
@@ -3391,6 +3616,112 @@ ${
        (Contributed by la korvo, 3-Jan-2025.) $)
     nfv $p |- na'a'u da zo'u broda $=
       ( ax-dgen1 nfi ) ABABCD $.
+$}
+
+$(
+#*#*#
+Substitution I
+#*#*#
+$)
+
+$c [ / ] $.
+
+$( Metasyntax for substitutions. In this example, we are replacing every
+instance of {` da `} within {` broda `} with {` ko'a `}. $)
+bsub $a bridi [ ko'a / da ] broda $.
+
+$( Definition of proper substitution following definition df-sb in [ILE] p. 0.
+   This clever gadget breaks scoping to require that substitution is correct
+   in both the case where {` da `} is free and the case where {` da `} is
+   bound by mixing both cases, skipping grammatical analysis and
+   scope-tracking entirely. $)
+df-sub $a |- go [ ko'a / da ] broda gi
+  ge ganai da du ko'a gi broda
+  gi su'o da zo'u ge da du ko'a gi broda $.
+
+${
+    subi.0 $e |- [ ko'a / da ] broda $.
+    $( Inference form of ~df-sub
+       (Contributed by la korvo, 22-Jun-2024.) $)
+    subi $p |- ge ganai da du ko'a gi broda
+      gi su'o da zo'u ge da du ko'a gi broda $=
+      ( bsub sbdu bb bgan bge bsd df-sub bi ) ABCECAFGZBHMBICJIDABCKL $.
+$}
+
+$( Property of proper substitution.
+   (Contributed by la korvo, 25-Jun-2024.) $)
+sub1 $p |- ganai [ ko'a / da ] broda gi su'o da zo'u ge da du ko'a gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub go-ganai ge-red ) ABCDZCAEFZBGZNBHCIZMOPHA
+  BCJKL $.
+
+subeq-lem1 $p |- ganai da du ko'a gi ganai broda gi [ ko'a / da ] broda $=
+  ( sbdu bb bsub bge bgan bsd ge-ganai wit df-sub sylanbrc uncur ) CADEZBABCFZO
+  BGZOBHQCIPOBJQCKABCLMN $.
+
+subeq-lem2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
+  ZNBHCIZHZNBABCJQNBOPKLM $.
+
+$( An identity for substitutions.
+   (Contributed by la korvo, 22-Jun-2024.) $)
+subid $p |- go [ da / da ] broda gi broda $=
+  ( bsub sbdu bb bgo du-refl subeq-lem1 subeq-lem2 isod ax-mp go-comi ) ABABCZBBDEZAM
+  FBGNAMBABHBABIJKL $.
+
+$( A lemma for substitutions.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+equs4 $p |- ganai ro da zo'u ganai da du ko'a gi broda
+  gi su'o da zo'u ge da du ko'a gi broda $=
+  ( sbdu bb bgan brd bge bsd ax-ex foml19.29 mpan2 ancl cur eximi syl ) CADEZBF
+  ZCGZRQHZCIZQBHZCISQCIUAACJRQCKLTUBCRQUBQBMNOP $.
+
+$( Property of proper substitution.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+sub2 $p |- ganai ro da zo'u ganai da du ko'a gi broda gi [ ko'a / da ] broda $=
+  ( sbdu bb bgan brd bge bsd bsub ax-spec1 equs4 df-sub sylanbrc ) CADEZBFZCGPO
+  BHCIABCJPCKABCLABCMN $.
+
+$(
+#*#*#
+Predicate Calculus
+#*#*#
+$)
+
+$( The Axiom of Specialization: if a statement holds for all values, then it
+holds when substituted for any particular value.
+   (Contributed by la korvo, 9-Jul-2025.) $)
+stdpc4 $p |- ganai ro da zo'u broda gi [ ko'a / da ] broda $=
+  ( brd sbdu bb bgan bsub ax-k qi1q sub2 syl ) BCDCAEFZBGZCDABCHBNCBMIJABCKL $.
+
+$(
+#*#*#
+Substitution II
+#*#*#
+$)
+
+${
+    subh.0 $e |- ganai broda gi ro da zo'u broda $.
+    $( Variables which are not free can be substituted.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    subh $p |- go [ ko'a / da ] broda gi broda $=
+      ( bsub sbdu bb bsd bge sub1 foml19.41 sylib ge-red brd stdpc4 syl iso ) A
+      BCEZBRCAFGZCHZBRSBICHTBIABCJSBCDKLMBBCNRDABCOPQ $.
+$}
+
+${
+    subf.0 $e |- na'a'u da zo'u broda $.
+    $( Variables which are not free can be substituted.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    subf $p |- go [ ko'a / da ] broda gi broda $=
+      ( nfri subh ) ABCBCDEF $.
+$}
+
+${
+    subt.0 $e |- broda $.
+    $( Theorems are invariant under substitution.
+       (Contributed by la korvo, 9-Jul-2025.) $)
+    subt $p |- [ ko'a / da ] broda $=
+      ( bsub nfth subf bi-rev ) BABCEDABCBCDFGH $.
 $}
 
 $(

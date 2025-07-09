@@ -38,11 +38,13 @@ seen = set()
 
 def visit(t):
     seen.add(t)
-    if t in m: print(t.ljust(12), "→", m[t])
+    if t in m: print(t.ljust(12), "→", m[t], "✔")
     else:
         for d in deps[t]:
             if d not in seen: visit(d)
-        if all(d in m for d in deps[t]): print(t.ljust(28), "(", " ".join(deps[t]), ")")
+        if all(d in m for d in deps[t]):
+            if deps[t]: print(t.ljust(26), "← (", " ".join(deps[t]), ")")
+            else: print(t.ljust(26), "← axiom!")
 
 visit(goal)
 print("Total leaves in tree:", len(seen))

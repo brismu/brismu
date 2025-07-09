@@ -99,6 +99,11 @@ ended up using:
 
 > "alien language" -- la gleki
 
-> "sad...pathetic, really" -- la cadgu'a
+> "sad … pathetic, really" -- la cadgu'a
 
 > "no one cares about formalism" -- la xaspeljba
+
+## Praise from the Mathematical Community
+
+> "Wow. That's amazing. … The fact this even *exists* is quite remarkable." --
+> David A. Wheeler

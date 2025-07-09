@@ -84,7 +84,10 @@
         };
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
-          packages = with pkgs; [ keychain rlwrap python3Packages.pyflakes ] ++ brismu.buildInputs;
+          packages = with pkgs; [
+            keychain rlwrap python3Packages.pyflakes
+            entr
+          ] ++ brismu.buildInputs;
         };
       }
     );
