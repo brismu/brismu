@@ -4294,6 +4294,14 @@ ${
       ( sziho sbs tsb tss seri zihoi sei ) AECBACFGHABCDIJK $.
 $}
 
+${
+    zihogi.0 $e |- ro da zo'u da bo'a $.
+    $( First-order generalization of ~zihoi.
+       (Contributed by la korvo, 12-Jul-2025.) $)
+    zihogi $p |- zi'o bo'a $=
+      ( btb spec1i zihoi ) BABADBCEF $.
+$}
+
 $(
 #*#*#
 Properties of relations
