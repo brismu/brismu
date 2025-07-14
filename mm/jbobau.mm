@@ -803,11 +803,11 @@ ${
 $}
 
 ${
-    jca.0 $e |- ganai broda gi brode $.
-    jca.1 $e |- ganai broda gi brodi $.
-    $( "Join Consequents with AND".
+    ge-prod.0 $e |- ganai broda gi brode $.
+    ge-prod.1 $e |- ganai broda gi brodi $.
+    $( All binary products exist.
        (Contributed by la korvo, 22-Jun-2024.) $)
-    jca $p |- ganai broda gi ge brode gi brodi $=
+    ge-prod $p |- ganai broda gi ge brode gi brodi $=
       ( bge ax-ge-in sylc ) ABCBCFDEBCGH $.
 $}
 
@@ -1135,7 +1135,7 @@ ${
     $( Deductive unpacking of a definition with conjoined components.
        (Contributed by la korvo, 22-Jun-2024.) $)
     sylanbrc $p |- ganai broda gi brodo $=
-      ( bge jca sylibr ) ABCHDABCEFIGJ $.
+      ( bge ge-prod sylibr ) ABCHDABCEFIGJ $.
 $}
 
 ${
@@ -1587,11 +1587,11 @@ ga-rin $p |- ganai broda gi ga brode gi broda $=
   ( bga bgan bge id df-ga bi ge-rei ) BBACZDZAJDZJJDKLEJFJBAGHI $.
 
 ${
-    garii.0 $e |- ganai broda gi brode $.
-    garii.1 $e |- ganai brodi gi brode $.
-    $( Nested inference form of ~gar
+    ga-sum.0 $e |- ganai broda gi brode $.
+    ga-sum.1 $e |- ganai brodi gi brode $.
+    $( All binary coproducts exist.
        (Contributed by la korvo, 31-Jul-2023.) $)
-    garii $p |- ganai ga broda gi brodi gi brode $=
+    ga-sum $p |- ganai ga broda gi brodi gi brode $=
       ( bgan bga gar mp2an ) ABFCBFACGBFDEBACHI $.
 $}
 
@@ -1601,7 +1601,7 @@ ${
     $( Nested deduction form of ~gar
        (Contributed by la korvo, 14-Jul-2025.) $)
     garid $p |- ganai broda gi ganai ga brode gi brodo gi brodi $=
-      ( bga bgan ganai-swap12 garii ) BDGACBACHDABCEIADCFIJI $.
+      ( bga bgan ganai-swap12 ga-sum ) BDGACBACHDABCEIADCFIJI $.
 $}
 
 ${
@@ -1619,18 +1619,18 @@ ${
     $( Disjunction over conjunctions in the antecedents.
        (Contributed by la korvo, 14-Jul-2025.) $)
     garian $p |- ganai ge ga broda gi brodo gi brode gi brodi $=
-      ( bga bgan uncur garii cur ) ADGBCABCHDABCEIDBCFIJK $.
+      ( bga bgan uncur ga-sum cur ) ADGBCABCHDABCEIDBCFIJK $.
 $}
 
 $( {` ga `} is idempotent.
    (Contributed by la korvo, 15-Aug-2024.) $)
 ga-idem $p |- go ga broda gi broda gi broda $=
-  ( bga id garii ga-lin iso ) AABAAAAACZGDAAEF $.
+  ( bga id ga-sum ga-lin iso ) AABAAAAACZGDAAEF $.
 
 $( Lemma for ~ga-com
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-com-lem $p |- ganai ga broda gi brode gi ga brode gi broda $=
-  ( bga ga-rin ga-lin garii ) ABACBABDBAEF $.
+  ( bga ga-rin ga-lin ga-sum ) ABACBABDBAEF $.
 
 $( {` ga `} commutes.
    (Contributed by la korvo, 31-Jul-2023.) $)
@@ -1641,7 +1641,7 @@ $( {` ge `} distributes over {` ga `}.
    (Contributed by la korvo, 14-Jul-2025.) $)
 ge-dist-ga $p |- go ge broda gi ga brode gi brodi
   gi ga ge broda gi brode gi ge broda gi brodi $=
-  ( bga bge ga-lin ga-rin garidan ge-pairr garii iso ) ABCDZEZABEZACEZDZABPCNOF
+  ( bga bge ga-lin ga-rin garidan ge-pairr ga-sum iso ) ABCDZEZABEZACEZDZABPCNOF
   ONGHNMOBLABCFICLACBGIJK $.
 
 ${
@@ -1681,7 +1681,7 @@ ${
     targets.
        (Contributed by la korvo, 14-Jul-2025.) $)
     ga-pair $p |- ganai ga broda gi brodi gi ga brode gi brodo $=
-      ( bga ga-lid ga-rid garii ) ABDGCABDEHCDBFIJ $.
+      ( bga ga-lid ga-rid ga-sum ) ABDGCABDEHCDBFIJ $.
 $}
 
 ${
@@ -1702,7 +1702,7 @@ $( {` ga `} distributes over {` ge `}.
    (Contributed by la korvo, 14-Jul-2025.) $)
 ga-dist-ge $p |- go ga broda gi ge brode gi brodi
   gi ge ga broda gi brode gi ga broda gi brodi $=
-  ( bge bga ax-ge-le ga-pairr ax-ge-re jca ga-lin weakal weakar ga-rin garidan
+  ( bge bga ax-ge-le ga-pairr ax-ge-re ge-prod ga-lin weakal weakar ga-rin garidan
   garian iso ) ABCDZEZABEZACEZDRSTQBABCFGQCABCHGISARCARSAQJZKACRBARCUALQAMONP
   $.
 
@@ -3582,7 +3582,7 @@ $( Distribute existential quantification over conjunction. Theorem 19.40 of [Mar
    (Contributed by la korvo, 9-Jul-2025.) $)
 ge-dist-ex $p |- ganai su'o da zo'u ge broda gi brode
   gi ge su'o da zo'u broda gi su'o da zo'u brode $=
-  ( bge bsd ge-lex ax-ge-re eximi jca ) ABDZCEACEBCEABCFJBCABGHI $.
+  ( bge bsd ge-lex ax-ge-re eximi ge-prod ) ABDZCEACEBCEABCFJBCABGHI $.
 
 ${
     foml19.41.0 $e |- ganai brode gi ro da zo'u brode $.
