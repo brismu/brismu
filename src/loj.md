@@ -36,17 +36,18 @@ Metamath statement | Lojban *bridi* | What it means
 ~ga-idem | {go ga broda gi broda gi broda} | disjunction is idempotent
 ~ge-com | {go ge broda gi brode gi ge brode gi broda} | conjunction commutes
 ~ga-com | {go ga broda gi brode gi ga brode gi broda} | disjunction commutes
+~ge-pair | {ganai broda gi brode} & {ganai brodi gi brodo} => {ganai ge broda gi brodi gi ge brode gi brodo} | conjunction pairs arrows
+~ga-pair | {ganai broda gi brode} & {ganai brodi gi brodo} => {ganai ga broda gi brodi gi ga brode gi brodo} | disjunction pairs arrows
+~ge-dist-ga | {go ge broda gi ga brode gi brodi gi ga ge broda gi brode gi ge broda gi brodi} | conjunction distributes over disjunction
+~ga-dist-ge | {go ga broda gi ge brode gi brodi gi ge ga broda gi brode gi ga broda gi brodi} | disjunction distributes over conjunction
 
 ## To Do
 
 * Implication, conjunction, disjunction should form a lattice
   * Missing ge-ind: deductive form of ax-ge-in
-  * And also a distributive lattice?
-    * {ge broda gi ga brode gi brodi} => {ga ge broda gi brode gi brodi}
   * Easy implications of being a lattice:
     * Associativity: {ge/ga broda gi ge/ga brode gi brodi}
       => {ge/ga ge/ga broda gi brode gi brodi}
-    * Absorption: {ge/ga broda gi ga/ge broda gi brode} => {broda}
 
 ## Core
 

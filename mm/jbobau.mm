@@ -898,6 +898,7 @@ $}
 ${
     ge-pair.0 $e |- ganai broda gi brode $.
     ge-pair.1 $e |- ganai brodi gi brodo $.
+
     $( A universal property of products: given two arrows in Loj, there is an
     arrow from the product of their sources to the product of their targets.
        (Contributed by la korvo, 9-Jul-2025.) $)
@@ -906,15 +907,13 @@ ${
 $}
 
 ${
-    ge-pairl.0 $e |- ganai broda gi brode $.
+    ge-pairx.0 $e |- ganai broda gi brode $.
+
     $( ~ge-pair with only one implication, on the left.
        (Contributed by la korvo, 9-Jul-2025.) $)
     ge-pairl $p |- ganai ge broda gi brodi gi ge brode gi brodi $=
       ( id ge-pair ) ABCCDCEF $.
-$}
 
-${
-    ge-pairr.0 $e |- ganai broda gi brode $.
     $( ~ge-pair with only one implication, on the right.
        (Contributed by la korvo, 9-Jul-2025.) $)
     ge-pairr $p |- ganai ge brodi gi broda gi ge brodi gi brode $=
@@ -1596,6 +1595,33 @@ ${
       ( bgan bga gar mp2an ) ABFCBFACGBFDEBACHI $.
 $}
 
+${
+    garid.0 $e |- ganai broda gi ganai brode gi brodi $.
+    garid.1 $e |- ganai broda gi ganai brodo gi brodi $.
+    $( Nested deduction form of ~gar
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    garid $p |- ganai broda gi ganai ga brode gi brodo gi brodi $=
+      ( bga bgan ganai-swap12 garii ) BDGACBACHDABCEIADCFIJI $.
+$}
+
+${
+    garidan.0 $e |- ganai ge broda gi brode gi brodi $.
+    garidan.1 $e |- ganai ge broda gi brodo gi brodi $.
+    $( Disjunction over conjunctions in the antecedents.
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    garidan $p |- ganai ge broda gi ga brode gi brodo gi brodi $=
+      ( bga uncur garid cur ) ABDGCABCDABCEHADCFHIJ $.
+$}
+
+${
+    garian.0 $e |- ganai ge broda gi brode gi brodi $.
+    garian.1 $e |- ganai ge brodo gi brode gi brodi $.
+    $( Disjunction over conjunctions in the antecedents.
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    garian $p |- ganai ge ga broda gi brodo gi brode gi brodi $=
+      ( bga bgan uncur garii cur ) ADGBCABCHDABCEIDBCFIJK $.
+$}
+
 $( {` ga `} is idempotent.
    (Contributed by la korvo, 15-Aug-2024.) $)
 ga-idem $p |- go ga broda gi broda gi broda $=
@@ -1610,6 +1636,13 @@ $( {` ga `} commutes.
    (Contributed by la korvo, 31-Jul-2023.) $)
 ga-com $p |- go ga broda gi brode gi ga brode gi broda $=
   ( bga ga-com-lem iso ) ABCBACABDBADE $.
+
+$( {` ge `} distributes over {` ga `}.
+   (Contributed by la korvo, 14-Jul-2025.) $)
+ge-dist-ga $p |- go ge broda gi ga brode gi brodi
+  gi ga ge broda gi brode gi ge broda gi brodi $=
+  ( bga bge ga-lin ga-rin garidan ge-pairr garii iso ) ABCDZEZABEZACEZDZABPCNOF
+  ONGHNMOBLABCFICLACBGIJK $.
 
 ${
     ga-i.0 $e |- broda $.
@@ -1638,6 +1671,40 @@ ${
     ga-rid $p |- ganai broda gi ga brodi gi brode $=
       ( bga ga-rin syl ) ABCBEDBCFG $.
 $}
+
+${
+    ga-pair.0 $e |- ganai broda gi brode $.
+    ga-pair.1 $e |- ganai brodi gi brodo $.
+
+    $( A universal property of coproducts: given two arrows in Loj, there is
+    an arrow from the coproduct of their sources to the coproduct of their
+    targets.
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    ga-pair $p |- ganai ga broda gi brodi gi ga brode gi brodo $=
+      ( bga ga-lid ga-rid garii ) ABDGCABDEHCDBFIJ $.
+$}
+
+${
+    ga-pairx.0 $e |- ganai broda gi brode $.
+
+    $( ~ga-pair with the arrow on the left.
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    ga-pairl $p |- ganai ga broda gi brodi gi ga brode gi brodi $=
+      ( id ga-pair ) ABCCDCEF $.
+
+    $( ~ga-pair with the arrow on the right.
+       (Contributed by la korvo, 14-Jul-2025.) $)
+    ga-pairr $p |- ganai ga brodi gi broda gi ga brodi gi brode $=
+      ( id ga-pair ) CCABCEDF $.
+$}
+
+$( {` ga `} distributes over {` ge `}.
+   (Contributed by la korvo, 14-Jul-2025.) $)
+ga-dist-ge $p |- go ga broda gi ge brode gi brodi
+  gi ge ga broda gi brode gi ga broda gi brodi $=
+  ( bge bga ax-ge-le ga-pairr ax-ge-re jca ga-lin weakal weakar ga-rin garidan
+  garian iso ) ABCDZEZABEZACEZDRSTQBABCFGQCABCHGISARCARSAQJZKACRBARCUALQAMONP
+  $.
 
 $(
 =-=-=
