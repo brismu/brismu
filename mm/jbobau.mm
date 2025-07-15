@@ -412,10 +412,11 @@ ${
 $}
 
 ${
-    imim2i.0 $e |- ganai broda gi brode $.
+    ganai-comp-rli.0 $e |- ganai broda gi brode $.
     $( Lift an implication to have a common antecedent as an environment.
+    Right-to-left composition of arrows.
        (Contributed by la korvo, 8-Jul-2025.) $)
-    imim2i $p |- ganai ganai brodi gi broda gi ganai brodi gi brode $=
+    ganai-comp-rli $p |- ganai ganai brodi gi broda gi ganai brodi gi brode $=
       ( bgan ki si ) CABABECDFG $.
 $}
 
@@ -595,19 +596,20 @@ ${
 $}
 
 ${
-    imim2d.1 $e |- ganai broda gi ganai brode gi brodi $.
-    $( A deduction.
+    ganai-comp-rld.1 $e |- ganai broda gi ganai brode gi brodi $.
+    $( A deduction form of right-to-left composition.
        (Contributed by la korvo, 1-Jan-2025.) $)
-    imim2d $p |- ganai broda gi
+    ganai-comp-rld $p |- ganai broda gi
       ganai ganai brodo gi brode gi ganai brodo gi brodi $=
       ( bgan kd sd ) ADBCABCFDEGH $.
 $}
 
-$( A closed syllogism.
+$( A closed syllogism. Categorically, this is the internal version of
+composition, using the traditional right-to-left ordering.
    (Contributed by la korvo, 1-Jan-2025.) $)
-imim2 $p |- ganai ganai broda gi brode
+ganai-comp-rl $p |- ganai ganai broda gi brode
   gi ganai ganai brodi gi broda gi ganai brodi gi brode $=
-  ( bgan id imim2d ) ABDZABCGEF $.
+  ( bgan id ganai-comp-rld ) ABDZABCGEF $.
 
 ${
     syldd.1 $e |- ganai broda gi ganai brode gi ganai brodi gi brodo $.
@@ -615,7 +617,7 @@ ${
     $( Deduction form of ~syld
        (Contributed by la korvo, 1-Jan-2025.) $)
     syldd $p |- ganai broda gi ganai brode gi ganai brodi gi brodu $=
-      ( bgan imim2 syl6c ) ABDEHCDHCEHGFDECIJ $.
+      ( bgan ganai-comp-rl syl6c ) ABDEHCDHCEHGFDECIJ $.
 $}
 
 ${
@@ -644,6 +646,31 @@ ${
     ganai-swap23 $p |- ganai broda gi ganai brodi gi ganai brode gi brodo $=
       ( bgan mpc syl9 ) ABCDFCDECDGH $.
 $}
+
+${
+    imim12d.0 $e |- ganai broda gi ganai brode gi brodi $.
+    imim12d.1 $e |- ganai broda gi ganai brodo gi brodu $.
+    $( A deduction interleaving two implications.
+       (Contributed by la korvo, 15-Jul-2025.) $)
+    imim12d $p |- ganai broda
+      gi ganai ganai brodi gi brodo gi ganai brode gi brodu $=
+      ( bgan ganai-comp-rld syl5d ) ABCCDHEFADECGIJ $.
+$}
+
+${
+    ganai-comp-lrd.0 $e |- ganai broda gi ganai brode gi brodi $.
+    $( Deductive form of left-to-right composition.
+       (Contributed by la korvo, 15-Jul-2025.) $)
+    ganai-comp-lrd $p |- ganai broda gi
+      ganai ganai brodi gi brodo gi ganai brode gi brodo $=
+      ( idd imim12d ) ABCDDEADFG $.
+$}
+
+$( Internalized version of left-to-right composition.
+   (Contributed by la korvo, 15-Jul-2025.) $)
+ganai-comp-lr $p |- ganai ganai broda gi brode gi
+  ganai ganai brode gi brodi gi ganai broda gi brodi $=
+  ( bgan id ganai-comp-lrd ) ABDZABCGEF $.
 
 $(
 #*#*#
@@ -3550,7 +3577,7 @@ the arrow implies an inhabitant in the target of the arrow.
    (Contributed by la korvo, 9-Jul-2025.) $)
 exim $p |- ganai ro da zo'u ganai broda gi brode
   gi ganai su'o da zo'u broda gi su'o da zo'u brode $=
-  ( bgan brd bsd ax-ro1-nf ax-eb wit imim2i spec1s exlimdh ) ABDZCEABCFZCMCGBCH
+  ( bgan brd bsd ax-ro1-nf ax-eb wit ganai-comp-rli spec1s exlimdh ) ABDZCEABCFZCMCGBCH
   MANDCBNABCIJKL $.
 
 ${

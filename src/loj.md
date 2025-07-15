@@ -23,10 +23,10 @@ a serious issue.
 ## Category
 
 [Identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist.
-[Composition](https://ncatlab.org/nlab/show/composition) is allowed and
-well-typed.
+[Composition](https://ncatlab.org/nlab/show/composition) is allowed, 
+well-typed, and internalized.
 
-~table id syl
+~table id syl ganai-comp-lr ganai-comp-rl
 
 ## Initial Object
 
