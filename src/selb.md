@@ -38,12 +38,12 @@ axioms, we show that **Selb** is an allegory relative to 1Lab's foundations
 Agda syntax | brismu syntax
 ---|---
 `Hom`, `Type` | `bridi` (metatheoretical)
-`≤` | ganai
-`≡` | go
+`≤` | *ki'irni'i*
+`≡` | *go*
 `→` | `&`, `=>` (metatheoretical)
-`†` | se
+`†` | *se*
 `∘` | (non-primitive)
-`∩` | ge
+`∩` | *je*
 
 Note that hom-sets and types are both simplified to bridi. Also note that
 Metamath is uncurried and Agda is curried, so Agda arrows can be either
@@ -53,30 +53,29 @@ especially worried about h-levels, so this is not a serious issue.
 
 1Lab axiom | Metamath entry
 ---|---
-`_≤_` | ~bgan
-`≤-refl` | ~id
-`≤-trans` | ~syl
-`≤-antisym` | ~iso
-`_◆_` | todo
-`_†` | ~sbs
-`dual` | no closed form yet, can be inferred from ~se-invo and ~seri ~seri respectively
-`dual-∘` | todo
-`dual-≤` | ~se-dual
-`_∩_` | ~bge
-`∩-le-l` | ~ax-ge-le
-`∩-le-r` | ~ax-ge-re
-`∩-univ` | no closed form yet, deductive form of ~ge-ini
-`modular` | todo
+`_≤_`       | primitive
+`≤-refl`    | ~kihirnihi-refl
+`≤-trans`   | ~ax-kihirnihi-trans
+`≤-antisym` | todo
+`_◆_`       | todo
+`_†`        | ~sbs
+`dual`      | no closed form yet, can be inferred from ~se-invo and ~seri ~seri respectively
+`dual-∘`    | todo
+`dual-≤`    | todo
+`_∩_`       | primitive
+`∩-le-l`    | todo
+`∩-le-r`    | todo
+`∩-univ`    | todo
+`modular`   | todo
 
 We also reprove the following theorems:
 
 1Lab theorem | Metamath theorem
 ---|---
 `≤-yoneda` | todo
-`dual-≤ₗ` | ~se-dual-l
-`dual-≤ᵣ` | ~se-dual-r
-`_dual-∩` | todo
-`dual-id` | ~se-du-elim
+`dual-≤`   | todo
+`_dual-∩`  | todo
+`dual-id`  | ~se-du-elim
 
 ## Interpreting natural deduction
 
