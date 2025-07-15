@@ -2347,7 +2347,7 @@ $}
 
 $( {` cei'i `} is the terminal object.
    (Contributed by la korvo, 4-Jan-2025.) $)
-k-ceihi $p |- ganai broda gi cei'i $=
+ceihi-term $p |- ganai broda gi cei'i $=
   ( bceihi ceihi ki ) BACD $.
 
 $(
@@ -2474,6 +2474,11 @@ ${
     efqii $p |- brode $=
       ( efqi ax-mp ) ABDABCEF $.
 $}
+
+$( From falsity, anything is possible.
+   (Contributed by la korvo, 14-Jul-2025.) $)
+gaiho-init $p |- ganai gai'o gi broda $=
+  ( bgaiho na-gaiho efqi ) BACD $.
 
 ${
     con2d.1 $e |- ganai broda gi ganai brode gi naku brodi $.

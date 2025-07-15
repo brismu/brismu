@@ -17,30 +17,50 @@ To read Metamath theorems as statements about **Loj**, encode:
 * Isomorphisms from X to Y as {go X gi Y}
 
 Note that while **Loj** is thin, its formal verification in Metamath is
-non-thin. This is not a serious issue.
+non-thin; there are multiple possible proofs for some statements. This is not
+a serious issue.
 
-## Table of proofs
+## Category
 
-Metamath statement | Lojban *bridi* | What it means
----|---|---
-~id | {ganai broda gi broda} | [identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist
-~syl | {ganai broda gi brode} & {ganai brode gi brodi} => {ganai broda gi brodi} | [composition](https://ncatlab.org/nlab/show/composition) is allowed and well-typed
-~k-ceihi | {ganai broda gi cei'i} | trivial truth is the terminal object
-~iso | {ganai broda gi brode} & {ganai brode gi broda} => {go broda gi brode} | isomorphisms are allowed
-~ax-ge-le | {ganai ge broda gi brode gi broda} | conjunction is a left lower bound
-~ax-ge-re | {ganai ge broda gi brode gi brode} | conjunction is a right lower bound
-~ga-lin | {ganai broda gi ga broda gi brode} | disjunction is a left upper bound
-~ga-rin | {ganai broda gi ga broda gi broda} | disjunction is a right upper bound
-~ga-sum | {ganai broda gi brode} & {ganai brodi gi brode} => {ganai ga broda gi brodi gi brode} | disjunction is the greatest upper bound; all binary disjunctions exist
-~ge-prod | {ganai broda gi brode} & {ganai broda gi brodi} => {ganai broda gi ge brode gi brodi} | conjunction is the least lower bound; all binary conjunctions exist
-~ge-idem | {go ge broda gi broda gi broda} | conjunction is idempotent
-~ga-idem | {go ga broda gi broda gi broda} | disjunction is idempotent
-~ge-com | {go ge broda gi brode gi ge brode gi broda} | conjunction commutes
-~ga-com | {go ga broda gi brode gi ga brode gi broda} | disjunction commutes
-~ge-pair | {ganai broda gi brode} & {ganai brodi gi brodo} => {ganai ge broda gi brodi gi ge brode gi brodo} | conjunction pairs arrows
-~ga-pair | {ganai broda gi brode} & {ganai brodi gi brodo} => {ganai ga broda gi brodi gi ga brode gi brodo} | disjunction pairs arrows
-~ge-dist-ga | {go ge broda gi ga brode gi brodi gi ga ge broda gi brode gi ge broda gi brodi} | conjunction distributes over disjunction
-~ga-dist-ge | {go ga broda gi ge brode gi brodi gi ge ga broda gi brode gi ga broda gi brodi} | disjunction distributes over conjunction
+[Identity arrows](https://ncatlab.org/nlab/show/identity%20morphism) exist.
+[Composition](https://ncatlab.org/nlab/show/composition) is allowed and
+well-typed.
+
+~table id syl
+
+## Initial Object
+
+Trivial falsehood is the initial object.
+
+~table gaiho-init
+
+## Terminal Object
+
+Trivial truth is the terminal object.
+
+~table ceihi-term
+
+## Products
+
+Conjunction is the categorical product. Conjunction is a lower bound on the
+left and right, and indeed the least lower bound; in other words, all binary
+conjunctions exist. Conjunction is idempotent and commutes. In addition to the
+standard product, pointwise conjunctions of arrows are possible. Conjunction
+distributes over disjunction, making **Loj** into a [distributive
+category](https://en.wikipedia.org/wiki/Distributive_category).
+
+~table ax-ge-le ax-ge-re ge-prod ge-idem ge-com ge-pair ge-dist-ga
+
+## Coproducts
+
+Disjunction is the coproduct. Disjunction is an upper bound on the left and
+right, and indeed the greatest upper bound; in other words, all binary
+disjunctions exist. Disjunction is idempotent and commutes. In addition to the
+standard coproduct, pointwise disjunctions of arrows are possible. Disjunction
+distributes over conjunction, making **Loj** into a distributive lattice and
+therefore a distributive category.
+
+~table ga-lin ga-rin ga-sum ga-idem ga-com ga-pair ga-dist-ge
 
 ## Core
 
@@ -57,14 +77,18 @@ To read Metamath theorems as statements about **Core(Loj)**, encode:
 * arrows from X to Y as {go X gi Y}
 * pasting diagrams as applications of ~bi
 
-### Table of proofs
+The core is a category.
 
-Metamath statement | Lojban *bridi* | What it means
----|---|---
-~go-id | {go broda gi broda} | identity arrows exist
-~go-syl | {go broda gi brode} & {go brode gi brodi} => {go broda gi brodi} | composition is allowed and well-typed
-~go-ganai | {go broda gi brode} => {ganai broda gi brode} | the core is a subcategory
-~go-comi | {go broda gi brode} => {go brode gi broda} | the core is its own opposite category
+~table go-id go-syl
+
+The core is a subcategory. The core is its own opposite category.
+
+~table go-ganai go-comi
+
+Because **Loj** is thin, there is an embedding from any pair of inverse arrows
+to the corresponding core arrow.
+
+~table iso 
 
 ## Double Negation
 
@@ -80,8 +104,6 @@ functor's image yields a category whose:
   to *bridi*, and
 * arrows are implications from one refutation-equipped *bridi* to another.
 
-### Table of proofs
+The functor is covariant.
 
-Metamath statement | Lojban *bridi* | What it means
----|---|---
-~nakunaku | {ganai broda gi naku naku broda} | the functor exists and is covariant
+~table nakunaku
