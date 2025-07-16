@@ -213,6 +213,7 @@ htmldef "jompau" as " <span class='lujvo'>jompau</span> ";
 htmldef "kacli'e" as " <span class='lujvo'>kacli'e</span> ";
 htmldef "kacme'a" as " <span class='lujvo'>kacme'a</span> ";
 htmldef "kacna'u" as " <span class='lujvo'>kacna'u</span> ";
+htmldef "ki'irdu'i" as " <span class='lujvo'>ki'irdu'i</span> ";
 htmldef "ki'irkanxe" as " <span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as " <span class='lujvo'>ki'irni'i</span> ";
 htmldef "ki'irvlina" as " <span class='lujvo'>ki'irvlina</span> ";
@@ -5433,6 +5434,40 @@ $( {` ki'irni'i `} is transitive. $)
 ax-kihirnihi-trans $a |-
   ganai ge ko'a ki'irni'i ko'e gi ko'e ki'irni'i ko'i
   gi ko'a ki'irni'i ko'i $.
+
+$(
+=-=-=
+{ki'irdu'i}
+=-=-=
+$)
+
+$c ki'irdu'i $.
+sbkihirduhi $a selbri ki'irdu'i $.
+
+$( Definition of {` ki'irdu'i `} in terms of {` ckini `} and {` .o `}. $)
+df-kihirduhi $a |- go ko'a ki'irdu'i ko'e
+  gi ro da zo'u ro de zo'u da ckini de ko'a .o ko'e $.
+
+$( {` ki'irdu'i `} is reflexive.
+   (Contributed by la korvo, 15-Jul-2025.) $)
+kihirduhi-refl $p |- ko'a ki'irdu'i ko'a $=
+  ( wda wde sjo sbckini bt brd sbkihirduhi bb sbt bgo go-id tsb tss df-o bi-rev
+  tei ax-gen1 df-kihirduhi ) BCAADZEFZCGZBGAAHIUBBUACBCTEACBEJZFZUDKTCBUCFUDLAA
+  BCUCMNNOPQRRAABCSP $.
+
+${
+    kihirnihi-antisym.0 $e |- ko'a ki'irni'i ko'e $.
+    kihirnihi-antisym.1 $e |- ko'e ki'irni'i ko'a $.
+    $( {` ki'irni'i `} is antisymmetric, reducing to {` ki'irdu'i `}.
+       (Contributed by la korvo, 15-Jul-2025.) $)
+    kihirnihi-antisym $p |- ko'a ki'irdu'i ko'e $=
+      ( wda wde sbckini bt brd bb sjnaa bgan sbkihirnihi df-kihirnihi bi spec1i
+      teri tss df-na.a bi-rev sjo sbkihirduhi sbt bgo tsb iso df-o df-kihirduhi
+      tei ax-gen1 ) EFABUAZGHZFIZEIABUBJUMEULFEFUKGAFEGUCZHZBFEUNHZUDUKFEUNHUOU
+      PABKZFEUNHUOUPLEFUQGEFUQGHZFURFIZEABMJUSEICABEFNOPPQABEFUNUERRZSOBAKZFEUN
+      HUPUOLEFVAGEFVAGHZFVBFIZEBAMJVCEIDBAEFNOPPQBAUTSOUFABUTUGTUIUJUJABEFUHT
+      $.
+$}
 
 $(
 =-=-=

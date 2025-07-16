@@ -56,7 +56,7 @@ especially worried about h-levels, so this is not a serious issue.
 `_≤_`       | primitive
 `≤-refl`    | ~kihirnihi-refl
 `≤-trans`   | ~ax-kihirnihi-trans
-`≤-antisym` | todo
+`≤-antisym` | ~kihirnihi-antisym
 `_◆_`       | todo
 `_†`        | ~sbs
 `dual`      | no closed form yet, can be inferred from ~se-invo and ~seri ~seri respectively
