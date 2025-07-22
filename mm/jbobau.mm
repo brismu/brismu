@@ -173,6 +173,7 @@ htmldef "kloje" as " <span class='gismu'>kloje</span> ";
 htmldef "lanzu" as " <span class='gismu'>lanzu</span> ";
 htmldef "mapti" as " <span class='gismu'>mapti</span> ";
 htmldef "mintu" as " <span class='gismu'>mintu</span> ";
+htmldef "mokca" as " <span class='gismu'>mokca</span> ";
 htmldef "mupli" as " <span class='gismu'>mupli</span> ";
 htmldef "nalti" as " <span class='gismu'>nalti</span> ";
 htmldef "nenri" as " <span class='gismu'>nenri</span> ";
@@ -206,6 +207,7 @@ htmldef "du'u" as " <small>du'u</small> ";
 htmldef "ka" as " <small>ka</small> ";
 htmldef "ce'u" as " <small>ce'u</small> ";
 htmldef "kei" as " <small>kei</small> ";
+htmldef "cfabalvi" as " <span class='lujvo'>cfabalvi</span> ";
 htmldef "efklipi" as " <span class='lujvo'>efklipi</span> ";
 htmldef "efklizu" as " <span class='lujvo'>efklizu</span> ";
 htmldef "gripau" as " <span class='lujvo'>gripau</span> ";
@@ -222,6 +224,7 @@ htmldef "kuzypau" as " <span class='lujvo'>kuzypau</span> ";
 htmldef "lujna'u" as " <span class='lujvo'>lujna'u</span> ";
 htmldef "lazmi'u" as " <span class='lujvo'>lazmi'u</span> ";
 htmldef "mrena'u" as " <span class='lujvo'>mrena'u</span> ";
+htmldef "mulpru" as " <span class='lujvo'>mulpru</span> ";
 htmldef "pagyfancu" as " <span class='lujvo'>pagyfancu</span> ";
 htmldef "selbri" as " <span class='lujvo'>selbri</span> ";
 htmldef "selcmi" as " <span class='lujvo'>selcmi</span> ";
@@ -1489,6 +1492,12 @@ ${
     eri $p |- ko'a .e ko'e bo'a $=
       ( btb bge sje df-e bi-rev ) ACEBCEFABGCEDABCHI $.
 $}
+
+$( {` .e `} is commutative.
+   (Contributed by la korvo, 21-Jul-2025.) $)
+e-com $p |- go ko'a .e ko'e bo'a gi ko'e .e ko'a bo'a $=
+  ( sje btb bge df-e ge-com go-syl go-comi ) ABDCEACEZBCEZFZBADCEZABCGNMNLKFMBA
+  CGLKHIJI $.
 
 $(
 =-=-=
@@ -5355,31 +5364,42 @@ $)
 
 $(
 =-=-=
-{cabna}
+Events: {cfabalvi}, {mulpru}
 =-=-=
 $)
 
-$c cabna $.
+$c cfabalvi mulpru $.
+
+sbcfabalvi $a selbri cfabalvi $.
+sbmulpru $a selbri mulpru $.
+
+$( Definition of {` mulpru `} as the dagger of {` cfabalvi `}. $)
+df-mulpru $a |- go ko'a mulpru ko'e gi ko'e cfabalvi ko'a $.
+
+$( {` cfabalvi `} is transitive. $)
+ax-cfabalvi-trans $a |- ganai ge ko'a cfabalvi ko'e gi ko'e cfabalvi ko'i
+  gi ko'a cfabalvi ko'i $.
+
+$(
+=-=-=
+Simultaneity: {cabna}
+=-=-=
+$)
+
+$c cabna mokca $.
 sbcabna $a selbri cabna $.
+sbmokca $a selbri mokca $.
+
+$( Definition of {` cabna `} in terms of {` mokca `}: two events are
+simultaneous when they have a moment in common. $)
+df-cabna $a |- go ko'a cabna ko'e gi su'o da zo'u da mokca ko'a .e ko'e $.
 
 $( {` cabna `} is symmetric. $)
 ax-cabna-sym $a |- go ko'a cabna ko'e gi ko'e cabna ko'a $.
 
 $(
 =-=-=
-{xlane}
-=-=-=
-$)
-
-$c xlane $.
-sbxlane $a selbri xlane $.
-
-$( {` xlane `} is symmetric. $)
-ax-xlane-sym $a |- go ko'a xlane ko'e gi ko'e xlane ko'a $.
-
-$(
-=-=-=
-{balvi}, {purci}
+Non-aorist events: {balvi}, {purci}
 =-=-=
 $)
 
@@ -5389,8 +5409,32 @@ sbbalvi $a selbri balvi $.
 $c purci $.
 sbpurci $a selbri purci $.
 
+$( Definition of non-aorist {` balvi `} in terms of aorist {` cfabalvi `} and
+{` cabna `}. $)
+df-balvi $a |- go ko'a balvi ko'e gi ko'a cfabalvi ja cabna ko'e $.
+
+$( Definition of non-aorist {` purci `} in terms of aorist {` mulpru `} and
+{` cabna `}. $)
+df-purci $a |- go ko'a purci ko'e gi ko'a mulpru ja cabna ko'e $.
+
 $( {` balvi `} and {` purci `} are each other's daggers. $)
 ax-balvi-purci $a |- go ko'a balvi ko'e gi ko'e purci ko'a $.
+
+$(
+=-=-=
+Elsewhen: {xlane}
+=-=-=
+$)
+
+$c xlane $.
+sbxlane $a selbri xlane $.
+
+$( Proposed definition of {` xlane `} in terms of {` balvi `} and {` purci `}: two
+events are separated when they are neither in each other's past nor future. $)
+df-xlane $a |- go ko'a xlane ko'e gi naku zo'u ko'a balvi ja purci ko'e $.
+
+$( {` xlane `} is symmetric. $)
+ax-xlane-sym $a |- go ko'a xlane ko'e gi ko'e xlane ko'a $.
 
 $(
 #####
