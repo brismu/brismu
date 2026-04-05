@@ -50,7 +50,7 @@ names that you must memorize in order to read English prose about logic; it
 occurs too frequently in Anglophone literature and is too fundamental to not be
 understood by readers. I apologize and wish it had a better common name.
 
-In Lojban, there are several schema we might consider. Here is one classic
+In Lojban, there are several schemata we might consider. Here is one classic
 schema:
 
 1. Suppose: {*broda*}
@@ -133,8 +133,8 @@ Then we might say that the unary selbri {*bu'a*} is defined in terms of
 placeholder, or metasyntax, for some terbri — to appear in {*brode*}, but not
 required. The idea is that we may treat any occurrence of {*bu'a*} as
 equivalent to {*brode*} and *vice versa*, so if everything in {*brode*} is
-already defined in terms of the basis set, then {*bu'a*} is defined in terms
-of the basis set too.
+already defined in terms of the basis set then {*bu'a*} is defined in terms of
+the basis set too.
 
 Ironically, we cannot define {go} and {ge} fully in terms of themselves, and
 this is the best way to understand why they are in the basis set. However,

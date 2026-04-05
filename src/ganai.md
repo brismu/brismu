@@ -59,14 +59,18 @@ as a suspicious pseudo-definition ~df-go, in order to achieve our bootstrap:
 
 ~table ax-ge-le ax-ge-re ax-ge-in df-go
 
-But once this is done, we can define our final two connectives:
+~df-go is the lone `{ge}` definition; we can't define `{go}` purely in terms
+of `{go}` without circularity, so instead we provide a `{ge}` which contains
+all of the essential facts about `{go}` and incrementally unpack it. Like the
+initial axioms, ~df-go is an admissible tautology. Once this is done, we can
+define our final two connectives:
 
 ~table df-ga df-gonai
 
 ## Negation
 
 It is convenient to define negation alongside `{gonai}`. We define experimental
-*valsi* `{cei'i}` and `{gai'o}` for vacuous truth and falsehood respectively,
+*brivla* `{cei'i}` and `{gai'o}` for vacuous truth and falsehood respectively,
 along with `{naku}` for negating entire *bridi* at once:
 
 ~table df-ceihi df-naku
