@@ -1,7 +1,7 @@
 {
   description = "Lojban notes";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-26.05";
     flake-utils.url = "github:numtide/flake-utils";
     zaha = {
       url = "github:MostAwesomeDude/zaha";
@@ -22,17 +22,30 @@
           url = "https://lojban.org/publications/wordlists/gismu.txt";
           sha256 = "1dym3m76kaya8jmdqy6v2v37iykzcas36rym2wkx0ni69zzlrz7j";
         };
+        mdbook-graphviz = pkgs.rustPlatform.buildRustPackage {
+          pname = "mdbook-graphviz";
+          version = "0.3.1";
+          src = pkgs.fetchFromGitHub {
+            owner = "dylanowen";
+            repo = "mdbook-graphviz";
+            rev = "v0.3.1";
+            sha256 = "sha256-uqNgP1rRgP6NecReqpinsg7u01gNDpIxX2qag8IyklY=";
+          };
+          cargoHash = "sha256-OBCECv9ZN9xjkOestZbjCXNAA/hAl2u0AtfqxA+cV78=";
+          nativeCheckInputs = [ pkgs.graphviz ];
+          meta = pkgs.mdbook-graphviz.meta;
+        };
         brismu = pkgs.stdenv.mkDerivation {
           name = "brismu";
-          version = "0.0.1";
+          version = "0.0.2";
 
           src = ./.;
 
           buildInputs = with pkgs; [
             graphviz python3
             metamath
-            mdbook mdbook-admonish mdbook-graphviz mdbook-linkcheck
-          ];
+            mdbook mdbook-linkcheck2
+          ] ++ [ mdbook-graphviz ];
 
           buildPhase = ''
             # Generate DAGs.
@@ -61,7 +74,6 @@
             python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md
 
-            mdbook-admonish install
             mdbook build
 
             pushd mm/

@@ -49,12 +49,12 @@ so-called internal homs ([WP](https://en.wikipedia.org/wiki/Hom_functor),
 [nLab](https://ncatlab.org/nlab/show/internal+hom)), which will allow us to
 treat *selbri* as *terbri*.
 
-```admonish note
-Readers acquainted with category theory may find the terminology curious. Note
-that the internal hom in [**Loj**](loj.md) is the trivial syntactic one over
-`{ganai}` and `{ge}`, with its curry witnessed by theorems ~cur and ~uncur. The
-internal hom described here is for the logic of *selbri*: [**Selb**](selb.md).
-```
+> [!NOTE]
+> Readers acquainted with category theory may find the terminology curious.
+> Note that the internal hom in [**Loj**](loj.md) is the trivial syntactic one
+> over `{ganai}` and `{ge}`, with its curry witnessed by theorems ~cur and
+> ~uncur. The internal hom described here is for the logic of *selbri*:
+> [**Selb**](selb.md).
 
 We use this to define many classic *gismu*. Here are some examples:
 

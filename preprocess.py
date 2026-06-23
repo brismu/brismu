@@ -39,18 +39,18 @@ def makeTable(ts):
                      list(map(lookupStatement, ts)))
 findTable = lambda l: makeTable(l.split()[1:]) if l.startswith("~table ") else l
 
-def processSection(section):
-    if "Chapter" not in section: return
-    content = section["Chapter"]["content"].split("\n")
+def processChapter(chapter):
+    content = chapter["content"].split("\n")
     content = map(subLink, map(findTable, content))
-    section["Chapter"]["content"] = "\n".join(content)
+    chapter["content"] = "\n".join(content)
 
 def main(argv):
     if len(argv) == 3 and argv[1] == "supports": return 0
     elif len(argv) != 1: return 1
 
     context, book = json.load(sys.stdin)
-    for i, section in enumerate(book["sections"]): processSection(section)
+    for item in book["items"]:
+        if "Chapter" in item: processChapter(item["Chapter"])
     json.dump(book, sys.stdout)
     return 0
 
