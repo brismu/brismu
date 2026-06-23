@@ -3098,8 +3098,11 @@ ${
       ( sbckaji tsb tss bb ge-ini eri simsari ) ABCABCFGHACFIBCFIDEJKL $.
 $}
 
-$( {` simsa `} is symmetric. $)
-ax-simsa-sym $a |- go ko'a simsa ko'e ko'i gi ko'e simsa ko'a ko'i $.
+$( {` simsa `} is symmetric.
+   (Contributed by la korvo, 23-Jun-2026.) $)
+simsa-sym $p |- go ko'a simsa ko'e ko'i gi ko'e simsa ko'a ko'i $=
+  ( sbsimsa bt sje sbckaji bb df-simsa tsb tss e-com go-syl go-comi ) ABCDEZBAF
+  CGHZBACDEZOABFCGHPABCIABCGJKLMQPBACINM $.
 
 $(
 =-=-=
