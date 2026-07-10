@@ -74,6 +74,9 @@
             python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md
 
+            # Generate short rows.
+            python3 gen.py cmapinpau > cmapinpau.json
+
             mdbook build
 
             pushd mm/
@@ -88,12 +91,11 @@
             mkdir -p $out/share/
             cp -r mm/* $out/share/
             cp -r book/* $out/share/
+            cp cmapinpau.json $out/share/
           '';
         };
       in {
-        packages = {
-          default = brismu;
-        };
+        packages.default = brismu;
         devShells.default = pkgs.mkShell {
           name = "brismu-env";
           packages = with pkgs; [
