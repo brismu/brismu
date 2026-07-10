@@ -42,7 +42,7 @@ That has not worked in the past, and it probably won't start working now. I
 recommend studying a basic introduction to first-order predicate logic in your
 native language, and then hopefully an introduction to relational algebra. For
 English-speakers, I recommend Peter Smith's [An Introduction to Gödel's
-Theorems](https://www.logicmatters.net/resources/pdfs/godelbook/GodelBookLM.pdf),
+Theorems](https://logicmatters.net/igt/pdfs/GodelBookLM.pdf) (second edition),
 the "Gödel book," which covers every relevant feature of first-order logic and
 also several tangents which are relevant to formalization.
 
