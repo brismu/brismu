@@ -2944,7 +2944,7 @@ sc $a sumti ce'u $.
 
 $( If {` bo'a `} is a brirebla, then filling its first place with a sumti and
    wrapping it with {` pa ka `} yields sumti. $)
-spk $a sumti pa ka ko'a bo'a kei $.
+spk $a sumti pa ka ko'a bo'a ku $.
 
 $(
 =-=-=
@@ -2958,14 +2958,14 @@ sbckaji $a selbri ckaji $.
 
 $( {` ckaji `} is often found with this conjugation.
    (Contributed by la korvo, 14-Aug-2023.) $)
-bckaji $p bridi ko'a ckaji pa ka ce'u bo'a kei $=
+bckaji $p bridi ko'a ckaji pa ka ce'u bo'a ku $=
   ( sc spk sbckaji bb ) ACBDEF $.
 
 $( Definition of {` ckaji `} from {` ka `}. Based on example 4.1-2 of [CLL] p. 11. $)
-df-ckaji $a |- go ko'a ckaji pa ka ce'u bo'a kei gi ko'a bo'a $.
+df-ckaji $a |- go ko'a ckaji pa ka ce'u bo'a ku gi ko'a bo'a $.
 
 ${
-    ckajii.0 $e |- ko'a ckaji pa ka ce'u bo'a kei $.
+    ckajii.0 $e |- ko'a ckaji pa ka ce'u bo'a ku $.
     $( Inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
     ckajii $p |- ko'a bo'a $=
@@ -2976,7 +2976,7 @@ ${
     ckajiri.0 $e |- ko'a bo'a $.
     $( Reverse inference form of ~df-ckaji
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ckajiri $p |- ko'a ckaji pa ka ce'u bo'a kei $=
+    ckajiri $p |- ko'a ckaji pa ka ce'u bo'a ku $=
       ( btb bckaji df-ckaji bi-rev ) ABDABECABFG $.
 $}
 
@@ -2992,13 +2992,13 @@ sbckini $a selbri ckini $.
 
 $( {` ckini `} is often found with this conjugation.
    (Contributed by la korvo, 14-Aug-2023.) $)
-bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $=
+bckini $p bridi ko'a ckini ko'e pa ka ce'u bu'a ce'u ku $=
   ( sc tsb tss spk sbckini bt ) ABDDCEFGHI $.
 
-df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u kei gi ko'a bu'a ko'e $.
+df-ckini $a |- go ko'a ckini ko'e pa ka ce'u bu'a ce'u ku gi ko'a bu'a ko'e $.
 
 ${
-    ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $.
+    ckinii.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u ku $.
     $( Inference form of ~df-ckini
        (Contributed by la korvo, 17-Jul-2023.) $)
     ckinii $p |- ko'a bu'a ko'e $=
@@ -3009,17 +3009,17 @@ ${
     ckiniri.0 $e |- ko'a bu'a ko'e $.
     $( Reverse inference form of ~df-ckini
        (Contributed by la korvo, 17-Jul-2023.) $)
-    ckiniri $p |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $=
+    ckiniri $p |- ko'a ckini ko'e pa ka ce'u bu'a ce'u ku $=
       wk1 wk2 sbba bb wk1 wk2 sbba bckini ckiniri.0 wk1 wk2 sbba df-ckini
       bi-rev $.
 $}
 
 ${
-    ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u kei $.
+    ckini-se.0 $e |- ko'a ckini ko'e pa ka ce'u bu'a ce'u ku $.
     $( {` se `} can be inserted underneath ckini3. Example theorem from early
        draft of la brismu.
        (Contributed by la korvo, 12-Jul-2023.) $)
-    ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u kei $=
+    ckini-se $p |- ko'e ckini ko'a pa ka ce'u se bu'a ce'u ku $=
       wk2 wk1 sbba sbs wk1 wk2 sbba wk1 wk2 sbba ckini-se.0 ckinii seri ckiniri
       $.
 $}
@@ -3051,7 +3051,7 @@ sbsimsa $a selbri simsa $.
 
 $( {` simsa `} is often found with this conjugation.
    (Contributed by la korvo, 6-Aug-2023.) $)
-bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a kei $=
+bsimsa $p bridi ko'a simsa ko'e pa ka ce'u bu'a ku $=
   ( sc tsb spk sbsimsa bt ) ABDCEFGH $.
 
 $( Definition of {` simsa `} in terms of {` ckaji `}. $)
@@ -3116,7 +3116,7 @@ sbdunli $a selbri dunli $.
 
 $( {` dunli `} is often found with this conjugation.
    (Contributed by la korvo, 23-Jun-2024.) $)
-bdunli $p bridi ko'a dunli ko'e pa ka ce'u bu'a ce'u kei $=
+bdunli $p bridi ko'a dunli ko'e pa ka ce'u bu'a ce'u ku $=
   ( sc tsb tss spk sbdunli bt ) ABDDCEFGHI $.
 
 $( Definition of {` dunli `} by la ilmen in terms of {` ckini `}. A
@@ -3163,7 +3163,7 @@ sbmintu $a selbri mintu $.
 
 $( {` mintu `} is often found with this conjugation.
    (Contributed by la korvo, 6-Aug-2023.) $)
-bmintu $p bridi ko'a mintu ko'e pa ka ce'u bu'a kei $=
+bmintu $p bridi ko'a mintu ko'e pa ka ce'u bu'a ku $=
   ( sc tsb spk sbmintu bt ) ABDCEFGH $.
 
 $( Definition of {` mintu `} in terms of {` ckaji `}. $)
@@ -4103,7 +4103,7 @@ $)
 $c du'u $.
 
 $( If {` broda `} is a bridi, then {` pa du'u `} captures it as a sumti. $)
-sdu $a sumti pa du'u broda kei $.
+sdu $a sumti pa du'u broda ku $.
 
 $(
 =-=-=
@@ -4117,20 +4117,20 @@ sceho $a sumti ko'a ce'o ko'e $.
 
 sbbridi $a selbri bridi $.
 
-df-bridi-u $a |- pa du'u ko'a bu'a kei
-  bridi pa ka ce'u bu'a kei
+df-bridi-u $a |- pa du'u ko'a bu'a ku
+  bridi pa ka ce'u bu'a ku
   ko'a $.
 
-df-bridi-b $a |- pa du'u ko'a bu'a ko'e kei
-  bridi pa ka ce'u bu'a ce'u kei
+df-bridi-b $a |- pa du'u ko'a bu'a ko'e ku
+  bridi pa ka ce'u bu'a ce'u ku
   ko'a ce'o ko'e $.
 
-df-bridi-t $a |- pa du'u ko'a bu'a ko'e ko'i kei
-  bridi pa ka ce'u bu'a ce'u ce'u kei
+df-bridi-t $a |- pa du'u ko'a bu'a ko'e ko'i ku
+  bridi pa ka ce'u bu'a ce'u ce'u ku
   ko'a ce'o ko'e ce'o ko'i $.
 
-df-bridi-q $a |- pa du'u ko'a bu'a ko'e ko'i ko'o kei
-  bridi pa ka ce'u bu'a ce'u ce'u ce'u kei
+df-bridi-q $a |- pa du'u ko'a bu'a ko'e ko'i ko'o ku
+  bridi pa ka ce'u bu'a ce'u ce'u ce'u ku
   ko'a ce'o ko'e ce'o ko'i ce'o ko'o $.
 
 sbselbri $a selbri selbri $.
@@ -4164,10 +4164,10 @@ $c fatci $.
 sbfatci $a selbri fatci $.
 
 $( Definition of {` fatci `} in terms of {` du'u `}. $)
-df-fatci $a |- go pa du'u broda kei fatci gi broda $.
+df-fatci $a |- go pa du'u broda ku fatci gi broda $.
 
 ${
-    fatcii.0 $e |- pa du'u broda kei fatci $.
+    fatcii.0 $e |- pa du'u broda ku fatci $.
     $( Inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
     fatcii $p |- broda $=
@@ -4178,13 +4178,13 @@ ${
     fatciri.0 $e |- broda $.
     $( Reverse inference form of ~df-fatci
        (Contributed by la korvo, 10-Mar-2024.) $)
-    fatciri $p |- pa du'u broda kei fatci $=
+    fatciri $p |- pa du'u broda ku fatci $=
       ( sdu sbfatci bu df-fatci bi-rev ) AACDEBAFG $.
 $}
 
 $( {` cei'i `} is absolutely true when abstracted.
    (Contributed by la korvo, 10-Mar-2024.) $)
-fatci-ceihi $p |- pa du'u cei'i kei fatci $=
+fatci-ceihi $p |- pa du'u cei'i ku fatci $=
   ( bceihi ceihi fatciri ) ABC $.
 
 $(
@@ -4199,11 +4199,11 @@ sbnibli $a selbri nibli $.
 
 $( {` nibli `} internalizes implication. $)
 df-nibli $a |-
-  go pa du'u broda kei nibli pa du'u brode kei
+  go pa du'u broda ku nibli pa du'u brode ku
   gi ganai broda gi brode $.
 
 ${
-    niblii.0 $e |- pa du'u broda kei nibli pa du'u brode kei $.
+    niblii.0 $e |- pa du'u broda ku nibli pa du'u brode ku $.
     $( Inference form of ~df-nibli
        (Contributed by la korvo, 19-Jul-2024.) $)
     niblii $p |- ganai broda gi brode $=
@@ -4211,7 +4211,7 @@ ${
 $}
 
 ${
-    nibliii.0 $e |- pa du'u broda kei nibli pa du'u brode kei $.
+    nibliii.0 $e |- pa du'u broda ku nibli pa du'u brode ku $.
     nibliii.1 $e |- broda $.
     $( Inference form of ~df-nibli
        (Contributed by la korvo, 19-Jul-2024.) $)
@@ -4223,13 +4223,13 @@ ${
     nibliri.0 $e |- ganai broda gi brode $.
     $( Reverse inference form of ~df-nibli
        (Contributed by la korvo, 19-Jul-2024.) $)
-    nibliri $p |- pa du'u broda kei nibli pa du'u brode kei $=
+    nibliri $p |- pa du'u broda ku nibli pa du'u brode ku $=
       ( bgan sdu sbnibli bb df-nibli bi-rev ) ABDAEBEFGCABHI $.
 $}
 
 $( {` nibli `} is reflexive.
    (Contributed by la korvo, 19-Jul-2024.) $)
-nibli-refl $p |- pa du'u broda kei nibli pa du'u broda kei $=
+nibli-refl $p |- pa du'u broda ku nibli pa du'u broda ku $=
   ( id nibliri ) AAABC $.
 
 $(
@@ -4244,10 +4244,10 @@ sbsigda $a selbri sigda $.
 
 $( {` sigda `} internalizes implication. $)
 df-sigda $a |-
-  pa du'u ganai broda gi brode kei
+  pa du'u ganai broda gi brode ku
   sigda
-  pa du'u broda kei
-  pa du'u brode kei $.
+  pa du'u broda ku
+  pa du'u brode ku $.
 
 $(
 =-=-=
@@ -4261,10 +4261,10 @@ sbtsida $a selbri tsida $.
 
 $( {` tsida `} internalizes biimplication. $)
 df-tsida $a |-
-  pa du'u go broda gi brode kei
+  pa du'u go broda gi brode ku
   tsida
-  pa du'u broda kei
-  pa du'u brode kei $.
+  pa du'u broda ku
+  pa du'u brode ku $.
 
 $(
 =-=-=
@@ -4278,10 +4278,10 @@ sbkanxe $a selbri kanxe $.
 
 $( {` kanxe `} internalizes conjunction. $)
 df-kanxe $a |-
-  pa du'u ge broda gi brode kei
+  pa du'u ge broda gi brode ku
   kanxe
-  pa du'u broda kei
-  pa du'u brode kei $.
+  pa du'u broda ku
+  pa du'u brode ku $.
 
 $(
 =-=-=
@@ -4295,10 +4295,10 @@ sbvlina $a selbri vlina $.
 
 $( {` vlina `} internalizes disjunction. $)
 df-vlina $a |-
-  pa du'u ga broda gi brode kei
+  pa du'u ga broda gi brode ku
   vlina
-  pa du'u broda kei
-  pa du'u brode kei $.
+  pa du'u broda ku
+  pa du'u brode ku $.
 
 $(
 =-=-=
@@ -4313,16 +4313,16 @@ sbnalti $a selbri nalti $.
 $( {` nalti `} internalizes negation. This direction adds the {` naku `}
    prenex to the second bridi. $)
 df-nalti-ana $a |-
-  pa du'u broda kei
+  pa du'u broda ku
   nalti
-  pa du'u naku broda kei $.
+  pa du'u naku broda ku $.
 
 $( {` nalti `} internalizes negation. This direction adds the {` naku `}
    prenex to the first bridi. $)
 df-nalti-kata $a |-
-  pa du'u naku broda kei
+  pa du'u naku broda ku
   nalti
-  pa du'u broda kei $.
+  pa du'u broda ku $.
 
 $(
 #*#*#
@@ -4505,19 +4505,19 @@ ${
     $( If a selbri is reflexive over any metasyntactic terbri, then it is
        reflexive over any domain.
        (Contributed by la korvo, 13-Aug-2024.) $)
-    refl-kinra $p |- pa ka ce'u bu'a ce'u kei kinra ko'e $=
+    refl-kinra $p |- pa ka ce'u bu'a ce'u ku kinra ko'e $=
       ( sc tsb tss spk bckini sbcmima ckiniri poi-gen kinrari ) EEBFGHACCCBIAJF
       GCCCBDKLM $.
 $}
 
 $( {` du `} is reflexive over any domain.
    (Contributed by la korvo, 25-Jun-2024.) $)
-du-kinra $p |- pa ka ce'u du ce'u kei kinra ko'e $=
+du-kinra $p |- pa ka ce'u du ce'u ku kinra ko'e $=
   ( wda sbdu du-refl refl-kinra ) ACBBDE $.
 
 $( {` gripau `} is reflexive over any domain.
    (Contributed by la korvo, 19-Jul-2024.) $)
-gripau-kinra $p |- pa ka ce'u gripau ce'u kei kinra ko'e $=
+gripau-kinra $p |- pa ka ce'u gripau ce'u ku kinra ko'e $=
   ( wda sbgripau gripau-refl refl-kinra ) ACBBDE $.
 
 $(
@@ -4670,7 +4670,7 @@ $( Definition of {` klojere `}. This is our most foundational definition for
    over a set such that, for every ordered pair of elements in the closure,
    there is a unique related element. In terms of abstract algebra, our binary
    operators are magmas. $)
-df-klojere $a |- go pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+df-klojere $a |- go pa ka ce'u bu'a ce'u ce'u ku klojere ko'a
   gi ro da poi ke'a cmima ko'a ku'o zo'u
      ro de poi ke'a cmima ko'a ku'o zo'u
      pa di poi ke'a cmima ko'a ku'o zo'u
@@ -4688,8 +4688,8 @@ sbkloje $a selbri kloje $.
 
 $( Definition of {` kloje `} in terms of {` klojere `}: a semigroup is an
    associative magma. $)
-df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u kei kloje ko'a
-  gi ge pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+df-kloje $a |- go pa ka ce'u bu'a ce'u ce'u ku kloje ko'a
+  gi ge pa ka ce'u bu'a ce'u ce'u ku klojere ko'a
   gi ro da poi ke'a cmima ko'a ku'o zo'u
      ro de poi ke'a cmima ko'a ku'o zo'u
      ro di poi ke'a cmima ko'a ku'o zo'u
@@ -4707,8 +4707,8 @@ $c cajni $.
 sbcajni $a selbri cajni $.
 
 $( Definition of {` cajni `} in terms of {` klojere `}. $)
-df-cajni $a |- go pa ka ce'u bu'a ce'u ce'u kei cajni ko'a
-  gi ge pa ka ce'u bu'a ce'u ce'u kei klojere ko'a
+df-cajni $a |- go pa ka ce'u bu'a ce'u ce'u ku cajni ko'a
+  gi ge pa ka ce'u bu'a ce'u ce'u ku klojere ko'a
   gi ro da poi ke'a cmima ko'a ku'o zo'u
      ro de poi ke'a cmima ko'a ku'o zo'u
      ro di poi ke'a cmima ko'a ku'o zo'u
@@ -4726,14 +4726,14 @@ sbsezni $a selbri sezni $.
 
 $( Definition of {` sezni `} in terms of {` kloje `}: a monoid is a semigroup
    with an identity element. $)
-df-sezni $a |- go pa ka ce'u bu'a ce'u ce'u kei sezni ko'a
-  gi ge ko'a kloje pa ka ce'u bu'a ce'u ce'u kei
+df-sezni $a |- go pa ka ce'u bu'a ce'u ce'u ku sezni ko'a
+  gi ge ko'a kloje pa ka ce'u bu'a ce'u ce'u ku
   gi ro da poi ke'a cmima ko'a ku'o zo'u
      pa de poi ke'a cmima ko'a ku'o zo'u
      ge da bu'a de da gi de bu'a da da $.
 
 ${
-    sezni-elt.0 $e |- pa ka ce'u bu'a ce'u ce'u kei sezni ko'a $.
+    sezni-elt.0 $e |- pa ka ce'u bu'a ce'u ce'u ku sezni ko'a $.
     sezni-elt.1 $e |- da cmima ko'a $.
     $( The identity element of monoids is unique.
        (Contributed by la korvo, 16-Oct-2024.) $)
@@ -5165,7 +5165,7 @@ $}
 
 $( A unary relation describes the empty set when it never holds. An axiom of
    Fregean cardinality. $)
-ax-card-ex $a |- go li no kazmi pa ka ce'u bo'a kei
+ax-card-ex $a |- go li no kazmi pa ka ce'u bo'a ku
   gi naku su'o da zo'u da bo'a $.
 
 $(
@@ -5199,7 +5199,7 @@ ax-pagbu-refl $a |- ko'a pagbu ko'a $.
 
 $( {` pagbu `} is reflexive over any domain.
    (Contributed by la korvo, 31-Aug-2024.) $)
-pagbu-kinra $p |- pa ka ce'u pagbu ce'u kei kinra ko'e $=
+pagbu-kinra $p |- pa ka ce'u pagbu ce'u ku kinra ko'e $=
   ( wda sbpagbu ax-pagbu-refl refl-kinra ) ACBBDE $.
 
 $( Parthood is antisymmetric. $)
@@ -5474,7 +5474,7 @@ kihirnihi-refl $p |- ko'a ki'irni'i ko'a $=
 
 $( {` ki'irni'i `} is reflexive over any domain.
    (Contributed by la korvo, 13-Aug-2024.) $)
-kihirnihi-kinra $p |- pa ka ce'u ki'irni'i ce'u kei kinra ko'e $=
+kihirnihi-kinra $p |- pa ka ce'u ki'irni'i ce'u ku kinra ko'e $=
   ( wda sbkihirnihi kihirnihi-refl refl-kinra ) ACBBDE $.
 
 $( {` ki'irni'i `} is transitive. $)
@@ -5527,10 +5527,10 @@ sbkihirkanxe $a selbri ki'irkanxe $.
 
 $( Definition of {` ki'irkanxe `} $)
 df-kihirkanxe $a |-
-  pa ka ce'u bu'a je bu'e ce'u kei
+  pa ka ce'u bu'a je bu'e ce'u ku
   ki'irkanxe
-  pa ka ce'u bu'a ce'u kei
-  pa ka ce'u bu'e ce'u kei $.
+  pa ka ce'u bu'a ce'u ku
+  pa ka ce'u bu'e ce'u ku $.
 
 $(
 =-=-=
@@ -5543,10 +5543,10 @@ sbkihirvlina $a selbri ki'irvlina $.
 
 $( Definition of {` ki'irvlina `} $)
 df-kihirvlina $a |-
-  pa ka ce'u bu'a ja bu'e ce'u kei
+  pa ka ce'u bu'a ja bu'e ce'u ku
   ki'irvlina
-  pa ka ce'u bu'a ce'u kei
-  pa ka ce'u bu'e ce'u kei $.
+  pa ka ce'u bu'a ce'u ku
+  pa ka ce'u bu'e ce'u ku $.
 
 $(
 #*#*#
@@ -5655,9 +5655,9 @@ sbpagyfancu $a selbri pagyfancu $.
 $( Definition of {` pagyfancu `} in terms of {` ki'irni'i `}. $)
 df-pagyfancu $a |-
   go su'o da zo'u su'o de zo'u su'o di zo'u
-    da pagyfancu de di pa ka ce'u bu'a ce'u kei
-  gi pa ka su'o da zo'u ce'u .e ce'u bu'a da kei
-    ki'irni'i pa ka ce'u du ce'u kei $.
+    da pagyfancu de di pa ka ce'u bu'a ce'u ku
+  gi pa ka su'o da zo'u ce'u .e ce'u bu'a da ku
+    ki'irni'i pa ka ce'u du ce'u ku $.
 
 $(
 #*#*#
@@ -5779,7 +5779,7 @@ ${
     skaselbri.0 $e skaselbri bu'a $.
     $( To be colored is to appear colored in a certain context. $)
     df-skaselbri $a |- go ko'a bu'a
-      gi su'o da zo'u su'o de zo'u ko'a skari pa ka ce'u bu'a kei da de $.
+      gi su'o da zo'u su'o de zo'u ko'a skari pa ka ce'u bu'a ku da de $.
 $}
 
 $c xinmo $.
@@ -5810,4 +5810,4 @@ ax-lanzu-cmima $a |- ganai ko'a lanzu ko'e ko'i gi ko'e cmima ko'a $.
 
 $( Definition of {` lazmi'u `} in terms of {` lanzu `} and {` cmima `} from the baseline notes. $)
 df-lazmihu $a |- go ko'a lazmi'u ko'e
-  gi su'o da poi ke'a lanzu ku'o zo'u ko'a mintu ko'e pa ka ce'u cmima da kei $.
+  gi su'o da poi ke'a lanzu ku'o zo'u ko'a mintu ko'e pa ka ce'u cmima da ku $.
