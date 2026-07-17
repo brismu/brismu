@@ -97,11 +97,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782245108,
-        "narHash": "sha256-XRdJ0XOyPRkBtnav3UZS7mMRi9rTJ6CSZ1xV00GQAQs=",
+        "lastModified": 1784324813,
+        "narHash": "sha256-jZjwu5lZKbcxfhH1gVJ+pcHC+eJN6PjepN2112NuH+w=",
         "owner": "MostAwesomeDude",
         "repo": "zaha",
-        "rev": "d8e0c06fde89c29144b713c8269b43f653a88d0e",
+        "rev": "34e58f45d9441f791fbbd91628a41d5453e69051",
         "type": "github"
       },
       "original": {
