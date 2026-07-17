@@ -135,6 +135,8 @@ def isIdPerm(p): return all(x == y for x, y in zip(p, range(len(p))))
 def invertPerm(p): return [x for _, x in sorted(zip(p, range(len(p))))]
 def composePerms(p1, p2): return [p2[x] for x in invertPerm(p1)]
 
+def dearitize(s): return s[:-2] if s.endswith("/2") else s
+
 cmd = sys.argv[-1]
 if cmd == "cover_defs":
     tableHeaders("Grammatical class", "Metamath class",
@@ -179,7 +181,11 @@ elif cmd == "dependencies":
             print(f'"{v1}" -> "{v2}";')
     print("}")
 elif cmd == "cmapinpau":
+    with open("edges.json") as handle: edges = json.load(handle)
     rows = []
+    for u in edges:
+        for v in edges[u]:
+            rows.append((dearitize(u), dearitize(v), [0, 1]))
     for k, v in chain(dfs.items(), axs.items()):
         if v[0] in ("go", "ganai"):
             j1, j2 = crack(v)

@@ -49,17 +49,19 @@
 
           buildPhase = ''
             # Generate DAGs.
-            ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png
-            ${z}/bin/zaha dot latest.png > danlu.dot
+            ${z}/bin/zaha dot posets/approximant-clades.png > approximant-clades.dot
+            ${z}/bin/zaha dot posets/exact-clades.png > exact-clades.dot
 
             ${z}/bin/zaha dot ${z}/share/jbobau/danlu/mlatu.png > mlatu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/nu.png > nu.dot
             ${z}/bin/zaha dot ${z}/share/jbobau/nu/suhu.png > suhu.dot
 
             # Generate ontology axioms from zaha DAGs.
-            ${z}/bin/zaha edges latest.png > edges1.json
-            ${z}/bin/zaha edges ${z}/share/jbobau/spati.png > edges2.json
-            ${pkgs.jq}/bin/jq -s '.[0] * .[1]' edges{1,2}.json > edges.json
+            ${z}/bin/zaha union ${z}/share/jbobau/danlu/*.png \
+              ${z}/share/jbobau/spati.png \
+              posets/approximant-clades.png posets/exact-clades.png
+            ${z}/bin/zaha dot latest.png > big.dot
+            ${z}/bin/zaha edges latest.png > edges.json
             python3 gen-ax.py edges.json classes.json mm/jbobau.mm
 
             # Augment valsi listing with baseline data.
@@ -74,7 +76,7 @@
             python3 gen.py vlaste > src/vlaste-table.md
             python3 gen.py metavars > src/metavar-table.md
 
-            # Generate short rows.
+            # Generate short rows. Includes edges.json!
             python3 gen.py cmapinpau > cmapinpau.json
 
             mdbook build

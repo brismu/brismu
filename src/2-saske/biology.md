@@ -53,6 +53,12 @@ ku'urkupresu | ckunu
 since | respa
 smani | mabru
 
+As a diagram:
+
+```dot process
+{{#include ../../exact-clades.dot}}
+```
+
 ### Approximant Clades
 
 The following cladistic assignments aren't tight; there may be members of the
@@ -133,6 +139,12 @@ toldi | cinki
 xanto | mabru
 xarju | mabru
 xruki | cipni
+
+As a diagram:
+
+```dot process
+{{#include ../../approximant-clades.dot}}
+```
 
 ## Non-clastistic Animals
 
