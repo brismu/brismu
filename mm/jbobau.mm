@@ -134,6 +134,7 @@ htmldef "bai'ei" as " bai'ei ";
 htmldef "ka'au" as " ka'au ";
 htmldef "su'i" as " su'i ";
 htmldef "pi'i" as " pi'i ";
+htmldef "fe'a" as " fe'a ";
 htmldef "ka'o" as " ka'o ";
 htmldef "ro" as " <small>ro</small> ";
 htmldef "su'o" as " <small>su'o</small> ";
@@ -208,13 +209,18 @@ htmldef "ka" as " <small>ka</small> ";
 htmldef "ce'u" as " <small>ce'u</small> ";
 htmldef "kei" as " <small>kei</small> ";
 htmldef "cfabalvi" as " <span class='lujvo'>cfabalvi</span> ";
+htmldef "dilcymu'o" as " <span class='lujvo'>dilcymu'o</span> ";
+htmldef "dilcysle" as " <span class='lujvo'>dilcysle</span> ";
 htmldef "efklipi" as " <span class='lujvo'>efklipi</span> ";
 htmldef "efklizu" as " <span class='lujvo'>efklizu</span> ";
+htmldef "frinydu'i" as " <span class='lujvo'>frinydu'i</span> ";
+htmldef "frinyna'u" as " <span class='lujvo'>frinyna'u</span> ";
 htmldef "gripau" as " <span class='lujvo'>gripau</span> ";
 htmldef "jompau" as " <span class='lujvo'>jompau</span> ";
 htmldef "kacli'e" as " <span class='lujvo'>kacli'e</span> ";
 htmldef "kacme'a" as " <span class='lujvo'>kacme'a</span> ";
 htmldef "kacna'u" as " <span class='lujvo'>kacna'u</span> ";
+htmldef "kacnalmau" as " <span class='lujvo'>kacnalmau</span> ";
 htmldef "ki'irdu'i" as " <span class='lujvo'>ki'irdu'i</span> ";
 htmldef "ki'irkanxe" as " <span class='lujvo'>ki'irkanxe</span> ";
 htmldef "ki'irni'i" as " <span class='lujvo'>ki'irni'i</span> ";
@@ -5083,6 +5089,13 @@ $( Recursive definition of {` kacme'a `}. This is Robinson axiom 11. $)
 df-kacmeha $a |- go ko'a kacme'a ko'e
   gi su'o da poi ke'a kacli'e ko'a zo'u ga da kacme'a ko'e gi da du ko'e $.
 
+$c kacnalmau $.
+
+sbkacnalmau $a selbri kacnalmau $.
+
+$( A less-than-or-equal relation. $)
+df-kacnalmau $a |- go ko'a kacnalmau ko'e gi ga ko'a du ko'e gi ko'a kacme'a ko'e $.
+
 $(
 #*#*#
 Exponents I: {tenfa}
@@ -5167,6 +5180,30 @@ $( A unary relation describes the empty set when it never holds. An axiom of
    Fregean cardinality. $)
 ax-card-ex $a |- go li no kazmi pa ka ce'u bo'a ku
   gi naku su'o da zo'u da bo'a $.
+
+$(
+=-=-=
+Primes: {dilcysle}, {dilcymu'o}
+=-=-=
+$)
+
+$c dilcysle dilcymu'o $.
+
+sbdilcysle $a selbri dilcysle $.
+sbdilcymuho $a selbri dilcymu'o $.
+
+$( A relation between multiples and divisors. $)
+df-dilcymuho $a |- go ko'a dilcymu'o ko'e gi ko'e pilji ko'i ko'a $.
+
+$( The set of prime numbers. $)
+df-dilcysle $a |- go ko'a dilcysle
+  gi go ko'a dilcymu'o ko'e gi ko'e du ko'a .a li pa $.
+
+$( Bertand's postulate. Chebyshev said it and we'll say it again. Theorem 98
+of [Freek]. $)
+bpos $p |- ganai li ku'i'a kacna'u
+  gi su'o da poi ce'u dilcysle ku'o zo'u
+  ge li ku'i'a kacme'a da gi da kacnalmau li pi'i re ku'i'a $= ? $.
 
 $(
 #####
@@ -5550,6 +5587,52 @@ df-kihirvlina $a |-
 
 $(
 #*#*#
+Fractions
+#*#*#
+$)
+
+$(
+=-=-=
+Rational number predicate: {frinyna'u}
+=-=-=
+$)
+
+$c fi'u frinyna'u frinydu'i $.
+
+sbfrinynahu $a selbri frinyna'u $.
+
+sbfrinyduhi $a selbri frinydu'i $.
+
+$( Definition of equivalence classes of the field of fractions of natural
+numbers. $)
+df-frinynahu $a |- go li ku'i'a fi'u ku'i'e frinyna'u li ku'i'a li ku'i'e
+  gi ge ge li ku'i'a kacna'u gi li ku'i'e kacna'u
+  gi naku li ku'i'e du li no $.
+
+$( Definition of equivalence of fractions. $)
+df-frinyduhi $a |- go ko'a frinydu'i ko'e
+  gi ge ge ko'a frinyna'u fo'a fo'e
+  gi ko'e frinyna'u fo'i fo'o
+  gi ge fo'a pilji fo'o fo'u gi fo'e pilji fo'i fo'u $.
+
+$(
+=-=-=
+Square roots: {fe'a}
+=-=-=
+$)
+
+$c fe'a $.
+
+$( Syntax for square roots. $)
+pf $a PA fe'a ku'i'a $.
+
+df-feha $a |- go li fe'a ku'i'a du ko'a gi li ku'i'a li ku'i'a sumji ko'a $.
+
+$( The square root of two is not rational. Theorem 1 of [Freek]. $)
+feha2irr $p |- naku li fe'a re frinyna'u ko'a ko'e $= ? $.
+
+$(
+#*#*#
 Complex numbers
 #*#*#
 $)
@@ -5585,6 +5668,25 @@ ax-comp-i2m1 $a |- li su'i pi'i no ka'o pa no ka'o pa pa du li no $.
 
 $( One is not zero. One of Megill's axioms. $)
 ax-comp-1ne0 $a |- naku li pa du li no $.
+
+$(
+=-=-=
+Norm: {cu'a}
+=-=-=
+$)
+
+$c cu'a $.
+
+pcn $a PA cu'a ku'i'a $.
+
+$( The norm or absolute value of a number. This generic definition operates
+over any multiplicative structure. $)
+df-cuha $a |- li cu'a ku'i'a du li fe'a pi'i ku'i'a ku'i'a $.
+
+$( Norms in the complex plane have a triangle inequality. Theorem 91 of
+[Freek]. $)
+cuhatri $p |- ganai li ku'i'a .e li ku'i'e lujna'u
+  gi li cu'a su'i ku'i'a ku'i'e kacnalmau li su'i cu'a ku'i'a cu'a ku'i'e $= ? $.
 
 $(
 =-=-=
