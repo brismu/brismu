@@ -5613,6 +5613,9 @@ $)
 
 $c fi'u frinyna'u frinydu'i $.
 
+$( Syntax for fractions. $)
+pfr $a PA ku'i'a fi'u ku'i'e $.
+
 sbfrinynahu $a selbri frinyna'u $.
 
 sbfrinyduhi $a selbri frinydu'i $.
@@ -5623,11 +5626,31 @@ df-frinynahu $a |- go li ku'i'a fi'u ku'i'e frinyna'u li ku'i'a li ku'i'e
   gi ge ge li ku'i'a kacna'u gi li ku'i'e kacna'u
   gi naku li ku'i'e du li no $.
 
+${
+    frinynahu-kacnahu.0 $e |- li ku'i'a fi'u ku'i'e frinyna'u li ku'i'a li ku'i'e $.
+    $( Numerators of fractions are natural numbers.
+       (Contributed by la korvo, 11-Aug-2026.) $)
+    frinynahu-kacnahul $p |- li ku'i'a kacna'u $=
+      ( sli bkacnahu bu bge sl0 sbdu bb bnk pfr sbfrinynahu df-frinynahu ge-lei
+      bt bi ) ADZEFZBDZEFZSUAGZTHIJKZABLDRTMPUBUCGCABNQOO $.
+    $( Denominators of fractions are natural numbers.
+       (Contributed by la korvo, 11-Aug-2026.) $)
+    frinynahu-kacnahur $p |- li ku'i'e kacna'u $=
+      ( sli bkacnahu bu bge sl0 sbdu bb bnk pfr sbfrinynahu df-frinynahu ge-lei
+      bt bi ge-rei ) ADZEFZBDZEFZTUBGZUAHIJKZABLDSUAMPUCUDGCABNQOR $.
+$}
+
 $( Definition of equivalence of fractions. $)
 df-frinyduhi $a |- go ko'a frinydu'i ko'e
   gi ge ge ko'a frinyna'u fo'a fo'e
   gi ko'e frinyna'u fo'i fo'o
-  gi fo'u pilji fo'a fo'o gi'e pilji fo'e fo'i $.
+  gi su'o da zo'u da pilji fo'a fo'o gi'e pilji fo'e fo'i $.
+
+${
+    frinyduhi-refl.0 $e |- ko'a frinyna'u ko'e ko'i $.
+    $( Fractions are equivalent to themselves. $)
+    frinyduhi-refl $p |- ko'a frinydu'i ko'a $= ? $.
+$}
 
 $(
 =-=-=
