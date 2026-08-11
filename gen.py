@@ -31,12 +31,12 @@ while i < len(db):
         j = i
         while not db[i].startswith("$"): i += 1
         scopes[-1].append(db[j:i])
-    elif scopes and db[i + 1] == "$p":
+    elif db[i + 1] == "$p":
         k = db[i]
         i += 3
         j = i
         while not db[i].startswith("$"): i += 1
-        theos[k] = db[j:i], scopes[-1][:]
+        theos[k] = db[j:i], (scopes[-1][:] if scopes else [])
     elif not scopes and db[i].startswith("df-") and db[i + 1] == "$a":
         k = apos(db[i].split("-")[1])
         i += 3
@@ -205,6 +205,15 @@ elif cmd == "cmapinpau":
             try:
                 cselb, cperm = parsePerm(cons)
                 aselb, aperm = parsePerm(ants[0])
+                if noDupes(aperm):
+                    rows.append((aselb, cselb, composePerms(aperm, cperm)))
+            except IndexError: continue
+            except TypeError: continue
+        elif len(ants) == 0 and cons[0] in ("go", "ganai"):
+            j1, j2 = crack(cons)
+            try:
+                cselb, cperm = parsePerm(j2)
+                aselb, aperm = parsePerm(j1)
                 if noDupes(aperm):
                     rows.append((aselb, cselb, composePerms(aperm, cperm)))
             except IndexError: continue

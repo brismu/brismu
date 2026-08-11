@@ -78,6 +78,7 @@
 
             # Generate short rows. Includes edges.json!
             python3 gen.py cmapinpau > cmapinpau.json
+            python3 cmapinpau.py < cmapinpau.json > cmapinpau.dot
 
             mdbook build
 

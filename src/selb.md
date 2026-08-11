@@ -88,3 +88,19 @@ form "P is true at least once;" we can imagine that a bridi is not just true
 or false, but true for each of the many possible values that are being
 related, and that there may be multiple worlds that provide a context where a
 statement is true.
+
+## Inclusions
+
+The following non-commuting diagram in **Selb** shows how *selbri* are related
+to each other by inclusions. Edges are labeled with a mapping of *sumti*
+indices from the *terbri* of subrelations to the *terbri* of superrelations;
+unlabeled edges have the identity mapping. For example, the common mappings
+(1, 0) and (1, 0, 2) correspond to *se*-conversion. A arrow (1, 0) mapping a
+*selbri* to itself indicates that it denotes a symmetric binary relation.
+
+```dot process
+{{#include ../cmapinpau.dot}}
+```
+
+The data in the diagram is available in *cmapinpau* format at
+[`cmapinpau.json`](/cmapinpau.json).
