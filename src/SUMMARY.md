@@ -57,4 +57,5 @@
 - [Informal Lojban](appendices/informal.md)
 - [Posets](appendices/posets.md)
 - [Size issues](appendices/size-issues.md)
+- [Formalizing 100 Theorems](appendices/100theorems.md)
 - [FAQ](appendices/faq.md)
