@@ -5013,14 +5013,15 @@ $c sumji $.
 bsumji $a selbri sumji $.
 
 $( Definition of {` sumji `} in terms of {` su'i `}. $)
-df-sumji $a |- go li ku'i'a sumji li ku'i'e ko'a
-  gi li su'i ku'i'a ku'i'e du ko'a $.
+df-sumji $a |- go ko'a sumji li ku'i'a li ku'i'e
+  gi ko'a du li su'i ku'i'a ku'i'e $.
 
-$( Every natural number is equal to zero plus itself.
+$( Every natural number is equal to itself plus zero. This theorem is usually
+stated on the left, but we state it on the right to align with ~ax-plus-zero
    (Contributed by la korvo, 30-Aug-2024.) $)
-sumji-no $p |- li ku'i'a sumji li no li ku'i'a $=
-  ( p0 msuhi sli sbdu bb sl0 bsumji bt ax-plus-zero df-sumji bi-rev ) ABCDADZEF
-  MGMHIAJMABKL $.
+sumji-no $p |- li ku'i'a sumji li ku'i'a li no $=
+  ( sli p0 msuhi sbdu bb sl0 bsumji bt ax-plus-zero du-symi df-sumji bi-rev ) A
+  BZACDBZEFNNGHIONAJKNACLM $.
 
 ${
     ax-sumji-succ.0 $e |- su'o da zo'u
@@ -5059,14 +5060,14 @@ $c pilji $.
 bpilji $a selbri pilji $.
 
 $( Definition of {` pilji `} in terms of {` pi'i `}. $)
-df-pilji $a |- go li ku'i'a pilji li ku'i'e ko'a
-  gi li pi'i ku'i'a ku'i'e du ko'a $.
+df-pilji $a |- go ko'a pilji li ku'i'a li ku'i'e
+  gi ko'a du li pi'i ku'i'a ku'i'e $.
 
 $( Every natural number times zero is zero.
    (Contributed by la korvo, 30-Aug-2024.) $)
-pilji-no $p |- li ku'i'a pilji li no li no $=
-  ( p0 mpihi sli sl0 sbdu bb bpilji bt ax-mul-zero df-pilji bi-rev ) ABCDEFGADE
-  EHIAJEABKL $.
+pilji-no $p |- li no pilji li ku'i'a li no $=
+  ( sl0 p0 mpihi sli sbdu bb bpilji bt ax-mul-zero du-symi df-pilji bi-rev ) BA
+  CDEZFGBAEBHINBAJKBACLM $.
 
 ${
     ax-pilji-succ.0 $e |- su'o da zo'u
@@ -5206,7 +5207,7 @@ sbdilcysle $a selbri dilcysle $.
 sbdilcymuho $a selbri dilcymu'o $.
 
 $( A relation between multiples and divisors. $)
-df-dilcymuho $a |- go ko'a dilcymu'o ko'e gi ko'e pilji ko'i ko'a $.
+df-dilcymuho $a |- go ko'a dilcymu'o ko'e gi ko'a pilji ko'e ko'i $.
 
 $( The set of prime numbers. $)
 df-dilcysle $a |- go ko'a dilcysle
@@ -5626,7 +5627,7 @@ $( Definition of equivalence of fractions. $)
 df-frinyduhi $a |- go ko'a frinydu'i ko'e
   gi ge ge ko'a frinyna'u fo'a fo'e
   gi ko'e frinyna'u fo'i fo'o
-  gi ge fo'a pilji fo'o fo'u gi fo'e pilji fo'i fo'u $.
+  gi fo'u pilji fo'a fo'o gi'e pilji fo'e fo'i $.
 
 $(
 =-=-=
@@ -5639,7 +5640,7 @@ $c fe'a $.
 $( Syntax for square roots. $)
 pf $a PA fe'a ku'i'a $.
 
-df-feha $a |- go li fe'a ku'i'a du ko'a gi li ku'i'a li ku'i'a sumji ko'a $.
+df-feha $a |- go ko'a du li fe'a ku'i'a gi ko'a pilji li ku'i'a li ku'i'a $.
 
 $( The square root of two is not rational. Theorem 1 of [Freek]. $)
 feha2irr $p |- naku li fe'a re frinyna'u ko'a ko'e $= ? $.
