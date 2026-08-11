@@ -3157,6 +3157,19 @@ dunli-sym $p |- go ko'a dunli ko'e ko'i gi ko'e dunli ko'a ko'i $=
   ( wk4 sbdunli bt sjo sbckini df-dunli tsb tss o-com go-syl go-comi ) ABCEFZBA
   GDCHFZBACEFZOABGDCHFPABCDIABCDHJKKLMQPBACDINM $.
 
+$( XXX metamath-exe bug(223) when the following proof is compressed and
+   printed to HTML $)
+${
+    du-dunli.0 $e |- ko'a du ko'e $.
+    $( Suggested by CLL definition of {` dunli `}: {` du `} is {` dunli `}
+       without a standard of comparison, which is a stronger condition.
+       See discussion around example 7.2 from [CLL] p. 18.
+       (Contributed by la korvo, 10-Aug-2026.) $)
+    du-dunli $p |- ko'a dunli ko'e ko'i $=
+      wk1 wk2 wk3 wk4 wk1 wk2 sjo wk3 wk4 sbckini tsb tss tss sbba wk3 wk4
+      sbckini tsb tss tss wk1 wk2 sbba du-dunli.0 dui ax-ro-inst-2u dunliri $.
+$}
+
 $(
 =-=-=
 {mintu}
