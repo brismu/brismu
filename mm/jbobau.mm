@@ -2341,6 +2341,14 @@ du-sym-go $p |- go ko'a du ko'e gi ko'e du ko'a $=
   ( sbdu bb du-sym-ganai iso ) ABCDBACDABEBAEF $.
 
 ${
+    du-syms.0 $e |- ganai ko'a du ko'e gi broda $.
+    $( Commute an equality in an antecedent.
+       (Contributed by la korvo, 11-Aug-2026.) $)
+    du-syms $p |- ganai ko'e du ko'a gi broda $=
+      ( sbdu bb du-sym-ganai syl ) BAEFABEFCBAGDH $.
+$}
+
+${
     se-du-elim.0 $e |- ko'a se du ko'e $.
     $( {` se du `} may be replaced with {` du `}.
        Theorem Cat.Allegory.Base.dual-id in [1Lab] p. 0.
@@ -3812,6 +3820,12 @@ sub2 $p |- ganai ro da zo'u ganai da du ko'a gi broda gi [ ko'a / da ] broda $=
   ( sbdu bb bgan brd bge bsd bsub ax-spec1 equs4 df-sub sylanbrc ) CADEZBFZCGPO
   BHCIABCJPCKABCLABCMN $.
 
+$( Use an equality to remove a substitution.
+   (Contributed by la korvo, 11-Aug-2026.) $)
+subequ2 $p |- ganai da du ko'a gi ganai [ ko'a / da ] broda gi broda $=
+  ( bsub sbdu bb bgan bge bsd df-sub ax-ge-le ganai-swap12 syl5bi ) ABCDCAEFZBG
+  ZNBHCIZHZNBABCJQNBOPKLM $.
+
 $(
 #*#*#
 Predicate Calculus
@@ -3823,6 +3837,16 @@ holds when substituted for any particular value.
    (Contributed by la korvo, 9-Jul-2025.) $)
 stdpc4 $p |- ganai ro da zo'u broda gi [ ko'a / da ] broda $=
   ( brd sbdu bb bgan bsub ax-k qi1q sub2 syl ) BCDCAEFZBGZCDABCHBNCBMIJABCKL $.
+
+$( An axiom of equality for predicate calculus.
+   (Contributed by la korvo, 11-Aug-2026.) $)
+stdpc6 $p |- ro da zo'u da du da $=
+  ( sbdu bb du-refl ax-gen1 ) AABCAADE $.
+
+$( An axiom of equality for predicate calculus.
+   (Contributed by la korvo, 11-Aug-2026.) $)
+stdpc7 $p |- ganai ko'a du da gi ganai [ ko'a / da ] broda gi broda $=
+  ( bsub bgan subequ2 du-syms ) CAABCDBEABCFG $.
 
 $(
 #*#*#
@@ -3888,6 +3912,15 @@ ${
     $( Forget the inhabitant of a set.
        (Contributed by la korvo, 19-Sep-2024.) $)
     cmima-zilcmi $p |- ko'a zilcmi $=
+      ( snomei sbdu bb sbcmima bsd bga sbzilcmi ga-rin ax-mp df-zilcmi bi-rev
+      bu ) ADEFZBAGFBHZIZAJOQRCQPKLABMN $.
+$}
+
+${
+    selcmi-zilcmi.0 $e |- ko'e cmima ko'a $.
+    $( Inhabited sets are sets.
+       (Contributed by la korvo, 19-Sep-2024.) $)
+    selcmi-zilcmi $p |- ko'a zilcmi $=
       ( snomei sbdu bb sbcmima bsd bga sbzilcmi ga-rin ax-mp df-zilcmi bi-rev
       bu ) ADEFZBAGFBHZIZAJOQRCQPKLABMN $.
 $}
