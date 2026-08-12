@@ -13,6 +13,12 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        mmreference = pkgs.fetchFromGitHub {
+          owner = "LegionMammal978";
+          repo = "mm-verifier-tests";
+          rev = "9b4165b8c9ac7a27c18dcf836c42979ca4b7a67f";
+          sha256 = "sha256-iY5fIYrKXSgLoV5u9rNxaWAU6LP7Of3iRygWfK5a0hc=";
+        };
         z = zaha.packages.${system}.default;
         cmavo = pkgs.fetchurl {
           url = "https://lojban.org/publications/wordlists/cmavo.txt";
@@ -48,6 +54,9 @@
           ] ++ [ mdbook-graphviz ];
 
           buildPhase = ''
+            # Verify the DB.
+            python3 ${mmreference}/mmreference.py mm/jbobau.mm
+
             # Generate DAGs.
             ${z}/bin/zaha dot posets/approximant-clades.png > approximant-clades.dot
             ${z}/bin/zaha dot posets/exact-clades.png > exact-clades.dot
